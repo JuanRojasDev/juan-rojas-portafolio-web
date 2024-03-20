@@ -98,14 +98,15 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="Projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <Title>Proyectos</Title>
         <Desc
           style={{
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          He estado involucrado en una gran cantidad de proyectos, desde la
+          creación de aplicaciones web hasta el desarrollo de apps para Android.
+          Aquí tienes algunos ejemplos de lo que he hecho.
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton
