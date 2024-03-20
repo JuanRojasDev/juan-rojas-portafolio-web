@@ -153,7 +153,7 @@ const Navbar = () => {
           <NavLink href="#Skills">Habilidades</NavLink>
           <NavLink href="#Experience">Experiencia</NavLink>
           <NavLink href="#Projects">Proyectos</NavLink>
-          <NavLink href="#Education">Educacion</NavLink>
+          <NavLink href="#Education">Educación</NavLink>
         </NavItems>
 
         {isOpen && (

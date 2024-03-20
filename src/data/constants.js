@@ -10,10 +10,7 @@ export const Bio = {
   "Soy una persona motivada y versátil, siempre dispuesta a enfrentar nuevos desafíos. Apasionado por el aprendizaje, me dedico a ofrecer resultados de alta calidad. Poseo una actitud positiva y una mentalidad de crecimiento, lo que me impulsa constantemente a mejorar y desarrollarme tanto personal como profesionalmente.",
   github: "https://github.com/JuanRojasDev",
   resume: "https://drive.google.com/file/d/1-wXqcZvVIeq3jmmbLi20HZvWCLMaAASf/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-  twitter: "https://twitter.com/RishavChanda",
-  insta: "https://www.instagram.com/rishav_chanda/",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
 };
 
 export const skills = [
@@ -553,7 +550,7 @@ export const projects = [
     description:
       "Desarrolle una PWA (Progresive Web Application) en un marco de trabajo (Scrum) con el objetivo de crear y fomentar comunidades de vecinos unidas seguras y colaborativas. Utilize Python para conectarme con los servicios de FastAPI, Uvicorn, Poetry, SqlAlchemy para la conexion a la base datos con PostgreSQL. Cree servicios de Publicaciones, Comentarios y Calificacion para los usuarios y Dockerize el proyecto para que fuera multiplataforma. Con Flutter creamos la aplicación para dispositivos Móvile, para que fuera compatible con IOS y Android.",
     image:
-      "https://private-user-images.githubusercontent.com/114270458/314604684-4a6d3536-d473-4cb6-8111-a453028168f0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA5NTYwNzQsIm5iZiI6MTcxMDk1NTc3NCwicGF0aCI6Ii8xMTQyNzA0NTgvMzE0NjA0Njg0LTRhNmQzNTM2LWQ0NzMtNGNiNi04MTExLWE0NTMwMjgxNjhmMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMyMFQxNzI5MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNjczYTc5MGY3NzAzOTA5NjI2MjczNTI2MDliNDRlYzliMmU4NTg5NGQ0MTk1YTkxYmEyNTI0NWFiYTU0OTY0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.4axkzMkvL3oEMvcEGWpCTkogedkFeGU0DX2yU_HCYpA",
+      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_800/0/1710960857051?e=1714003200&v=beta&t=jABri6KWVsOkKfPGJWAkUHVHHPn0g4MRsrzQOhGq1gY",
     tags: [
       "Docker",
       "Python",
@@ -618,7 +615,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una calculadora con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a hacer operaciones matematicas. Implementé funciones clave como seguimiento Suma, Resta, Multiplicacion, Division, etc. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
     image:
-      "https://private-user-images.githubusercontent.com/114270458/314569502-3e6ed99b-c299-4854-bd09-74e7189dcfed.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA5NTAxMTAsIm5iZiI6MTcxMDk0OTgxMCwicGF0aCI6Ii8xMTQyNzA0NTgvMzE0NTY5NTAyLTNlNmVkOTliLWMyOTktNDg1NC1iZDA5LTc0ZTcxODlkY2ZlZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMyMFQxNTUwMTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMmM0MzE2YzhhMzNkZjEzNjAzMzAxYjU3MWZmYWJmY2ViZjEwZjUxZGY0OGFhMjZmZjhmMjgxMWZiZGM0ZmEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Dh0nmcOTywICSQgavOvC5VGAyCpQS-9CZRWVYwBpBcw",
+      "https://media.licdn.com/dms/image/D4E22AQHOnWHXCqVVKg/feedshare-shrink_800/0/1710961014866?e=1714003200&v=beta&t=XTEyCgapq7jNsQQFMEtGFmuwwLGN-92c4MVFu6VcTto",
     tags: [
       "React Js",
       "HTML",
