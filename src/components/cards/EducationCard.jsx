@@ -5,9 +5,9 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 const Top = styled.div`
   width: 100%;
   display: flex;
-  max-width: 100%;
   gap: 12px;
 `;
+
 const Image = styled.img`
   height: 50px;
   border-radius: 10px;
@@ -17,8 +17,8 @@ const Image = styled.img`
     height: 40px;
   }
 `;
+
 const Body = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -32,6 +32,7 @@ const Name = styled.div`
     font-size: 14px;
   }
 `;
+
 const Degree = styled.div`
   font-size: 14px;
   font-weight: 500px;
@@ -41,6 +42,7 @@ const Degree = styled.div`
     font-size: 12px;
   }
 `;
+
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400px;
@@ -50,36 +52,40 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
+
 const Grade = styled.div`
   font-size: 14px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary + 99};
+  
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 
 const Description = styled.div`
-  width: 100%;
   font-size: 15px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   margin-bottom: 10px;
+  
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 
 const Skills = styled.div`
-  width: 100%;
   display: flex;
   gap: 12px;
   margin-top: -10px;
 `;
+
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
+  text-align: left; /* Alinea el texto a la izquierda */
+
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -112,7 +118,6 @@ const EducationCard = ({ education }) => {
         background: "#1d1836",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: "rgba(17, 25, 40, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
@@ -131,7 +136,7 @@ const EducationCard = ({ education }) => {
         </Body>
       </Top>
       <Grade>
-        <b>Grade :</b>
+        <b>Grade : </b>
         {education.grade}
       </Grade>
       <Description>
@@ -141,10 +146,10 @@ const EducationCard = ({ education }) => {
         {education?.skills && (
           <>
             <Skills>
-              <b>Skills:</b>
+              <b>Enseñanzas: </b>
               <ItemWrapper>
                 {education?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>

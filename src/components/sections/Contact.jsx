@@ -145,17 +145,17 @@ const Contact = () => {
     <Container>
       <Wrapper>
         <EarthCanvas />
-        <Title>Contact</Title>
+        <Title>Contactame</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          ¡No dudes en comunicarte conmigo si tienes alguna pregunta u inquietud!
         </Desc>
         <ContactForm onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>Enviame un E-Mail 🚀</ContactTitle>
+          <ContactInput placeholder="Tu E-Mail" name="from_email" />
+          <ContactInput placeholder="Tu Nombre" name="from_name" />
+          <ContactInput placeholder="Titulo" name="subject" />
+          <ContactInputMessage placeholder="Descripción" name="message" rows={4} />
+          <ContactButton type="submit" value="Enviar" />
         </ContactForm>
       </Wrapper>
     </Container>

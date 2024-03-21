@@ -2,6 +2,8 @@ import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
+import GithubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Container = styled.div`
   width: 100%;
@@ -180,6 +182,22 @@ const Button = styled.a`
   }
 `;
 
+const StyledGithubIcon = styled(GithubIcon)`
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
+const StyledLinkedInIcon = styled(LinkedInIcon)`
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
   return (
@@ -212,22 +230,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               <Label>Members</Label>
               <Members>
                 {project?.member.map((member) => (
-                  <Member>
+                  <Member key={member.name}>
                     <MemberImage src={member.img} />
                     <MemberName>{member.name}</MemberName>
-                    <a
-                      href={member.github}
-                      target="new"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <GitHub />
+                    <a href={member.github} target="_blank">
+                      <StyledGithubIcon />
                     </a>
-                    <a
-                      href={member.linkedin}
-                      target="new"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <LinkedIn />
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      <StyledLinkedInIcon />
                     </a>
                   </Member>
                 ))}
@@ -236,10 +246,10 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           )}
           <ButtonGroup>
             <Button dull href={project?.github} target="new">
-              View Code
+              Ir al Código
             </Button>
             <Button href={project?.webapp} target="new">
-              View Live App
+              Ir a la App en Vivo
             </Button>
           </ButtonGroup>
         </Wrapper>

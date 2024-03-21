@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GmailIcon from "@mui/icons-material/Mail";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -100,6 +101,9 @@ const Footer = () => {
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display">
             <LinkedInIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon href={Bio.gmail} target="display">
+            <GmailIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>&copy; 2024 Juan Rojas. All rights reserved.</Copyright>

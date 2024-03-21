@@ -97,10 +97,7 @@ const TextLoop = styled.div`
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
+  text-align: center;
 
   @media (max-width: 960px) {
     font-size: 22px;
