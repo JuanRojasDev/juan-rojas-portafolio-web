@@ -69,6 +69,28 @@ const Description = styled.div`
     font-size: 12px;
   }
 `;
+
+const Skills = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  margin-top: -10px;
+`;
+const Skill = styled.div`
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+
 const Span = styled.div``;
 
 const EducationCard = ({ education }) => {
@@ -114,6 +136,20 @@ const EducationCard = ({ education }) => {
       </Grade>
       <Description>
         <Span>{education.desc}</Span>
+      </Description>
+      <Description>
+        {education?.skills && (
+          <>
+            <Skills>
+              <b>Skills:</b>
+              <ItemWrapper>
+                {education?.skills?.map((skill, index) => (
+                  <Skill>• {skill}</Skill>
+                ))}
+              </ItemWrapper>
+            </Skills>
+          </>
+        )}
       </Description>
     </VerticalTimelineElement>
   );
