@@ -5,6 +5,34 @@ Welcome to my portfolio! This project showcases my skills, projects, and experie
 
 ![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/17e0e958-e7e5-403a-b077-0a467dd20730)
 
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/00db3baf-9907-4411-8e34-0b24490cd061)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/00f5a556-6193-4097-a4ee-13743b0533d1)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/24256f7d-bbff-44fa-9dbb-1d8c32d64ec5)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/f8377390-4322-4a4f-a9ff-e7ecb83e2086)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d11257c0-59a5-4347-aa2d-3acb7c232836)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d7848372-400e-4445-9f2d-872aa0c6da90)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d8461d05-f94f-4f0c-9909-e5768b726faa)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/aa61d29e-75ec-47bd-911a-cb444380dd57)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/007eda7b-23ce-423f-b8fe-4fd082dea58d)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/14b8ecc9-3efd-4575-b991-c84832e88804)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/2323007d-159c-4a7e-aed4-576d0b720249)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/105d5fff-b991-467a-bcf8-a1c1a957b1d4)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/daf590b5-db80-40fc-bb16-2338d42208c1)
+
+![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/0277f181-a97e-48fc-abb5-98825851e89e)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
