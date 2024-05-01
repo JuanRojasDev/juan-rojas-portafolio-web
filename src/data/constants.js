@@ -349,7 +349,7 @@ export const projects = [
     description:
     "Este es un sitio web de portafolio creado con React JS y Material UI. Tiene una página de inicio animada con un svg y distintas secciones donde puedes hablar de ti, habilidades, proyectos y e-mail de tu contacto. Tiene una barra de navegación que te lleva a cada sección del sitio web.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFFQJZqBJidOQ/feedshare-shrink_2048_1536/0/1710956648579?e=1714003200&v=beta&t=UAO2GIkSThllcDAk1_yGGIiqozKPADDqbOg6oLuZd5A",
+      "https://media.licdn.com/dms/image/D4E22AQFFQJZqBJidOQ/feedshare-shrink_2048_1536/0/1710956648579?e=1717632000&v=beta&t=5McgXBswdjNbVts6Kb-sv43ALNYm32PT6f2MhrXDe5o",
     tags: [
       "React Js",
       "HTML",
@@ -376,7 +376,7 @@ export const projects = [
     description:
     "Una aplicación web Todo creada con React JS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de tareas. Tiene una barra de busqueda donde los usuarios pueden ver todas las tareas y pueden crear una nueva tarea. En la parte inferior de la barra de búsqueda los usuarios pueden buscar una tarea en particular.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGcXevDJJ8e3A/feedshare-shrink_800/0/1710956729488?e=1714003200&v=beta&t=fGQHBUAxMbKMfvsu1qKtQ979r94QZkuCQZhCIolmUo4",
+      "https://media.licdn.com/dms/image/D4E22AQGcXevDJJ8e3A/feedshare-shrink_2048_1536/0/1710956729501?e=1717632000&v=beta&t=VsrCh6MO4sh72B6DOriYAZIp2s3CByVbxEXpZiagZz0",
     tags: [
       "React Js",
       "HTML",
@@ -405,7 +405,7 @@ export const projects = [
     description:
       "Apoye en una aplicación web completa que permite a los usuarios buscar, reproducir y pausar sus podcasts favoritos a pedido y crear podcasts. Se implementó la autenticación de usuario utilizando Google Auth y Jwt Auth, se creó una interfaz de usuario responsiva con React JS que brinda a los usuarios una experiencia perfecta en todos los dispositivos. Practiqué metodologías ágiles para optimizar la eficiencia y la comunicación del equipo.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGyX-Sj4FjpAg/feedshare-shrink_2048_1536/0/1710956812746?e=1714003200&v=beta&t=BC8F4cZCViHFq15zDwQ-s7tXQNv31ZvcxxBMkOb6c_I",
+      "https://media.licdn.com/dms/image/D4E22AQGyX-Sj4FjpAg/feedshare-shrink_2048_1536/0/1710956812746?e=1717632000&v=beta&t=Yn2WdRpFXMEkUL67gBOKk_pSHLdW9On1Nbzmr59kxRM",
     tags: [
     "React Js", 
     "MongoDb", 
@@ -438,7 +438,7 @@ export const projects = [
     description:
     "Desarrollé para mi clase de Programación Web una Landing Page para una empresa de Ingeniería. La Landing Page fue creada con HTML, CSS y JavaScript. Tiene una página de inicio con un slider de imágenes, una sección de servicios, una sección de proyectos, una sección de contacto y un footer.",
     image:
-    "https://media.licdn.com/dms/image/D4E22AQHy32f6LkP71A/feedshare-shrink_800/0/1710956934596?e=1714003200&v=beta&t=DYHR-bVJ294s6L2cAOnZqlUu6Bu86HhAR5nkYATDk6I",
+    "https://media.licdn.com/dms/image/D4E22AQHy32f6LkP71A/feedshare-shrink_2048_1536/0/1710956934671?e=1717632000&v=beta&t=_RWIWWH6NlWx1YeaO2GRYpTlMqBqOkZnNI_AnkKzZj8",
     tags: [
       "HTML", 
       "CSS", 
@@ -464,7 +464,7 @@ export const projects = [
     description:
       "Apoye en una Aplicación Web la cual Preprocesé y aumenté el conjunto de datos para mejorar la precisión del modelo, entrené el modelo, Mejore la API usando el modelo y Python, y usé la aplicación web React para la interfaz del proyecto. Logros: Logró una precisión del 99,2% para detectar con precisión tumores cerebrales a partir de imágenes médicas.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHVeJmgLgXdJg/feedshare-shrink_800/0/1710957017738?e=1714003200&v=beta&t=UYVlNickzfmGGxfZhoq51njx25uXpf5ubGslEbtO5a8",
+      "https://media.licdn.com/dms/image/D4E22AQHVeJmgLgXdJg/feedshare-shrink_2048_1536/0/1710957017741?e=1717632000&v=beta&t=-XEAS9StSa4KJQIBnnVdRjG1r-fbW3L3m5Rv9i_6RXA",
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
     category: "machine learning",
     github: "https://github.com/JuanRojasDev/Brain-Tumor-Detection/tree/main",
@@ -491,7 +491,7 @@ export const projects = [
     description:
       "La Aplicación Móvil se quiere lanzar en Playstore en Noviembre del año 2024. Este Proyecto propone un “Desarollo de una Aplicación Móvil para prevenir, informar y preservar las distintas especies de serpientes en el Meta”. Lleva un registro de todas las serpientes del Departamento mediante una API con su Taxonomía, Datos, Informacion y Georeferenciacion. Tiene la API de Google Maps para georeferenciar la serpiente en la base de datos de la sala de usuarios. Hecho con Flutter en Arquitectura MVVM y Live Data.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHM1mtiQ0aBPA/feedshare-shrink_800/0/1710953065393?e=1714003200&v=beta&t=i9tLlSPjeMTh0sizKi9eU1zNHeUiqTiVnr4t9btxoSk",
+      "https://media.licdn.com/dms/image/D4E22AQHM1mtiQ0aBPA/feedshare-shrink_2048_1536/0/1710953065501?e=1717632000&v=beta&t=k0DWhymfZPlgaTEQ6P8Ngs_Qxyd3usalYt47CHmBMsU",
     tags: [
       "Python",
       "Flask",
@@ -521,7 +521,7 @@ export const projects = [
     description:
       "Desarrolle una PWA (Progresive Web Application) en un marco de trabajo (Scrum) con el objetivo de crear y fomentar comunidades de vecinos unidas seguras y colaborativas. Utilize Python para conectarme con los servicios de FastAPI, Uvicorn, Poetry, SqlAlchemy para la conexion a la base datos con PostgreSQL. Cree servicios de Publicaciones, Comentarios y Calificacion para los usuarios y Dockerize el proyecto para que fuera multiplataforma. Con Flutter creamos la aplicación para dispositivos Móvile, para que fuera compatible con IOS y Android.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_800/0/1710960857051?e=1714003200&v=beta&t=jABri6KWVsOkKfPGJWAkUHVHHPn0g4MRsrzQOhGq1gY",
+      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_2048_1536/0/1710960857056?e=1717632000&v=beta&t=0B0iG0mUYH-HOwKKnKXyoNkC1AF2rSi7Jg8ID66rH2Q",
     tags: [
       "Docker",
       "Python",
@@ -558,7 +558,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una Biblioteca Virtual mediante un API de GoogleApis con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a buscar un libro, mediante un filtro en el buscador. Implementé funciones clave como Palabras Clave, Precio y Card de los Libros. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGrSf5kJoA8uw/feedshare-shrink_2048_1536/0/1710957103564?e=1714003200&v=beta&t=Eqzd6D9OQj-LGxlXlGpbJWBYvhx_UmLfyDFCG5-uTH8",
+      "https://media.licdn.com/dms/image/D4E22AQGrSf5kJoA8uw/feedshare-shrink_2048_1536/0/1710957103564?e=1717632000&v=beta&t=-SRtPwZjqdwK_nepSJqPpLApVPWY-_4sw9PNh8BfbZs",
     tags: [
       "React Js",
       "HTML",
@@ -586,7 +586,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una calculadora con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a hacer operaciones matematicas. Implementé funciones clave como seguimiento Suma, Resta, Multiplicacion, Division, etc. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHOnWHXCqVVKg/feedshare-shrink_800/0/1710961014866?e=1714003200&v=beta&t=XTEyCgapq7jNsQQFMEtGFmuwwLGN-92c4MVFu6VcTto",
+      "https://media.licdn.com/dms/image/D4E22AQHOnWHXCqVVKg/feedshare-shrink_2048_1536/0/1710961014826?e=1717632000&v=beta&t=5aaFTcbgvBneFszjAVp3E91TfS4Lo8Y3PWFSoNyeGOA",
     tags: [
       "React Js",
       "HTML",
