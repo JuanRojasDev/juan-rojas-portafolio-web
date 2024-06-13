@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 import EarthCanvas from "../canvas/Earth";
 
 const Container = styled.div`
@@ -76,15 +76,21 @@ const ContactTitle = styled.div`
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
+  border: 1px solid ${({ theme, error }) => (error ? "red" : theme.text_secondary + 50)};
   outline: none;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
+  margin-bottom: ${({ error }) => (error ? "6px" : "0px")};
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
+`;
+
+const ErrorMessage = styled.div`
+  font-size: 14px;
+  color: red;
 `;
 
 const ContactInputMessage = styled.textarea`
@@ -123,22 +129,54 @@ const ContactButton = styled.input`
   }
 `;
 
+const Notification = styled.div`
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50; /* Fondo verde */
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const CheckIcon = styled.span`
+  margin-right: 10px;
+  font-size: 20px;
+`;
+
 const Contact = () => {
   const form = useRef();
+  const [emailError, setEmailError] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
+    const email = formData.get("from_email");
+
+    if (!validateEmail(email)) {
+      setEmailError(true);
+      return;
+    }
+
+    setEmailError(false);
+
     emailjs
       .sendForm(
-        "service_1g0njf7", // Tu Service ID de EmailJS
-        "template_24ia49x", // Tu Template ID de EmailJS
-        form.current,
-        "OoFydm2AoCvcBZ54F" // Tu Public Key de EmailJS
+      "service_1g0njf7",
+      "template_24ia49x", 
+      form.current,
+      "OoFydm2AoCvcBZ54F" 
       )
       .then(
         (result) => {
-          alert("Mensaje enviado");
+          setShowNotification(true);
           form.current.reset();
+          setTimeout(() => setShowNotification(false), 3000); // Ocultar notificación después de 3 segundos
         },
         (error) => {
           alert("Error al enviar el mensaje: " + error.text);
@@ -146,8 +184,19 @@ const Contact = () => {
       );
   };
 
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
+
   return (
     <Container>
+      {showNotification && (
+        <Notification>
+          <CheckIcon>✓</CheckIcon>
+          ¡Correo electrónico enviado correctamente!
+        </Notification>
+      )}
       <Wrapper>
         <EarthCanvas />
         <Title>Contactame</Title>
@@ -156,7 +205,13 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Enviame un E-Mail 🚀</ContactTitle>
-          <ContactInput placeholder="Tu E-Mail" name="from_email" />
+          <ContactInput
+            placeholder="Tu E-Mail"
+            name="from_email"
+            error={emailError}
+            onChange={() => setEmailError(false)}
+          />
+          {emailError && <ErrorMessage>Por favor ingresa un correo electrónico válido.</ErrorMessage>}
           <ContactInput placeholder="Tu Nombre" name="from_name" />
           <ContactInput placeholder="Titulo" name="subject" />
           <ContactInputMessage placeholder="Descripción" name="message" rows={4} />
