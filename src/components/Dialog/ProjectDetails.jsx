@@ -1,7 +1,7 @@
-import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
-import { Modal } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
+import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
+import { Modal } from "@mui/material";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -200,9 +200,10 @@ const StyledLinkedInIcon = styled(LinkedInIcon)`
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+
   return (
     <Modal
-      open={true}
+      open={openModal.state}
       onClose={() => setOpenModal({ state: false, project: null })}
     >
       <Container>
@@ -215,13 +216,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               cursor: "pointer",
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
+            aria-label="Close project details"
           />
           <Image src={project?.image} />
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           <Tags>
-            {project?.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {project?.tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
             ))}
           </Tags>
           <Desc>{project?.description}</Desc>
@@ -229,14 +231,22 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             <>
               <Label>Members</Label>
               <Members>
-                {project?.member.map((member) => (
-                  <Member key={member.name}>
+                {project?.member.map((member, index) => (
+                  <Member key={index}>
                     <MemberImage src={member.img} />
                     <MemberName>{member.name}</MemberName>
-                    <a href={member.github} target="_blank">
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <StyledGithubIcon />
                     </a>
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <StyledLinkedInIcon />
                     </a>
                   </Member>
@@ -245,10 +255,19 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             </>
           )}
           <ButtonGroup>
-            <Button dull href={project?.github} target="new">
+            <Button
+              dull
+              href={project?.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Ir al Código
             </Button>
-            <Button href={project?.webapp} target="new">
+            <Button
+              href={project?.webapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Ir a la App en Vivo
             </Button>
           </ButtonGroup>
@@ -257,5 +276,4 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
     </Modal>
   );
 };
-
 export default ProjectDetails;

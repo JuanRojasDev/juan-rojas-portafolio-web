@@ -30,7 +30,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
 `;
-const NavLogo = styled(LinkR)`
+const NavLogo = styled.a`
   display: flex;
   align-items: center;
   width: 80%;
@@ -39,6 +39,7 @@ const NavLogo = styled(LinkR)`
   font-size: 18px;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 `;
 
 const NavItems = styled.ul`
@@ -138,7 +139,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
+        <NavLogo href="#About">
           <ColorText>&lt;</ColorText>Juan
           <div style={{ color: theme.primary }}>/</div>Rojas
           <ColorText>&gt;</ColorText>

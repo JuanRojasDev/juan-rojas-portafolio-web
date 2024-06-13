@@ -86,6 +86,11 @@ export const frameworks = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
+        name: "Vue Js",
+        image:
+          "https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png?f=webp",
+      },
+      {
         name: "Astro",
         image:
           "https://astro.build/assets/press/astro-icon-light-gradient.svg",
@@ -118,11 +123,6 @@ export const frameworks = [
         name: "Tailwind CSS",
         image:
           "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg",
-      },
-      {
-        name: "Flutter",
-        image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
       },
     ],
   },
@@ -176,6 +176,11 @@ export const frameworks = [
   {
     title: "Android",
     frameworks: [
+      {
+        name: "Flutter",
+        image:
+          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
+      },
       {
         name: "Java",
         image:
@@ -291,7 +296,7 @@ export const experiences = [
     role: "Desarrollador Web, Diseñador Web",
     company: "IT Ingeniera",
     date: "18 Feb 2024  - 22 Feb 2024",
-    desc: "En clase de Programación Web, Desarrolle una pagina web completa utilizando solo HTML y CSS para la venta y gestión de diferentes servicios implementando un diseño interactivo para el usuario. Fui el de mejor desempeño en el trabajo",
+    desc: "En clase de Programación Web, Desarrolle una página web completa utilizando solo HTML y CSS para la venta y gestión de diferentes servicios implementando un diseño interactivo para el usuario. Fui el de mejor desempeño en el trabajo",
     skills: [
       "HTML",
       "CSS",
@@ -349,7 +354,7 @@ export const projects = [
     description:
     "Este es un sitio web de portafolio creado con React JS y Material UI. Tiene una página de inicio animada con un svg y distintas secciones donde puedes hablar de ti, habilidades, proyectos y e-mail de tu contacto. Tiene una barra de navegación que te lleva a cada sección del sitio web.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFFQJZqBJidOQ/feedshare-shrink_2048_1536/0/1710956648579?e=1717632000&v=beta&t=5McgXBswdjNbVts6Kb-sv43ALNYm32PT6f2MhrXDe5o",
+      "https://media.licdn.com/dms/image/D4E22AQFFQJZqBJidOQ/feedshare-shrink_2048_1536/0/1710956648579?e=1721260800&v=beta&t=oLUcWZoM1nrj23mqgZXdnkZVmQypjPPY3Mv72D2KTO0",
     tags: [
       "React Js",
       "HTML",
@@ -371,24 +376,22 @@ export const projects = [
   },
   {
     id: 11,
-    title: "Todo - App",
+    title: "2 Type",
     date: "March 2024 - March 2023",
     description:
-    "Una aplicación web Todo creada con React JS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de tareas. Tiene una barra de busqueda donde los usuarios pueden ver todas las tareas y pueden crear una nueva tarea. En la parte inferior de la barra de búsqueda los usuarios pueden buscar una tarea en particular.",
+    "Una página web conectada mediante 2 API'S, una de TheMobieDB y GoogleTranslate creada con VueJS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de peliculas. Tiene una barra de busqueda donde los usuarios pueden buscar las peliculas por su titulo, también tiene traductor, filtro de busquedad por género, cambio de modo y páginación. En la parte inferior de la página cree un footer con mis datos y los de la página.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGcXevDJJ8e3A/feedshare-shrink_2048_1536/0/1710956729501?e=1717632000&v=beta&t=VsrCh6MO4sh72B6DOriYAZIp2s3CByVbxEXpZiagZz0",
+      "https://private-user-images.githubusercontent.com/114270458/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTgzMTQ5MTYsIm5iZiI6MTcxODMxNDYxNiwicGF0aCI6Ii8xMTQyNzA0NTgvMzMzNDQ3NjkyLTI4NDBiMmJhLTYyYzQtNDEzNi05Yzk4LTYzNGQ5MDUzNDU3Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYxM1QyMTM2NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wN2Y2YTg0ZDEyYjFmNWJiYWFmMmFhODg0MmZjYjcxN2RjY2U0NjMzOWEzZjdkMGJiZGRmZjAzYmJmOWU1M2UyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.qBuNE64B9YSM3WJ6Uhy7wPp41kJ6E3FnSryYvjLdZyc",
     tags: [
-      "React Js",
+      "Vue Js",
       "HTML",
       "CSS",
-      "JavaScript",
-      "React Flow",
-      "React Native",
+      "Tailwind CSS",
       "Material UI",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/react-todo-list",
-    webapp: "https://react-todo-list-sigma-henna.vercel.app/",
+    github: "https://github.com/JuanRojasDev/API-Peliculas",
+    webapp: "https://2type.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
@@ -405,7 +408,7 @@ export const projects = [
     description:
       "Apoye en una aplicación web completa que permite a los usuarios buscar, reproducir y pausar sus podcasts favoritos a pedido y crear podcasts. Se implementó la autenticación de usuario utilizando Google Auth y Jwt Auth, se creó una interfaz de usuario responsiva con React JS que brinda a los usuarios una experiencia perfecta en todos los dispositivos. Practiqué metodologías ágiles para optimizar la eficiencia y la comunicación del equipo.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGyX-Sj4FjpAg/feedshare-shrink_2048_1536/0/1710956812746?e=1717632000&v=beta&t=Yn2WdRpFXMEkUL67gBOKk_pSHLdW9On1Nbzmr59kxRM",
+      "https://media.licdn.com/dms/image/D4E22AQGyX-Sj4FjpAg/feedshare-shrink_2048_1536/0/1710956812746?e=1721260800&v=beta&t=xdFp9zooO5q-IOwR2YwYzhb1oZIckH4OrGVkCXJFfgU",
     tags: [
     "React Js", 
     "MongoDb", 
@@ -438,7 +441,7 @@ export const projects = [
     description:
     "Desarrollé para mi clase de Programación Web una Landing Page para una empresa de Ingeniería. La Landing Page fue creada con HTML, CSS y JavaScript. Tiene una página de inicio con un slider de imágenes, una sección de servicios, una sección de proyectos, una sección de contacto y un footer.",
     image:
-    "https://media.licdn.com/dms/image/D4E22AQHy32f6LkP71A/feedshare-shrink_2048_1536/0/1710956934671?e=1717632000&v=beta&t=_RWIWWH6NlWx1YeaO2GRYpTlMqBqOkZnNI_AnkKzZj8",
+    "https://media.licdn.com/dms/image/D4E22AQHy32f6LkP71A/feedshare-shrink_2048_1536/0/1710956934671?e=1721260800&v=beta&t=467Y_dF0FboY40V7Q8XjYRyIwsODe1nwEJfVzXxVknU",
     tags: [
       "HTML", 
       "CSS", 
@@ -464,7 +467,7 @@ export const projects = [
     description:
       "Apoye en una Aplicación Web la cual Preprocesé y aumenté el conjunto de datos para mejorar la precisión del modelo, entrené el modelo, Mejore la API usando el modelo y Python, y usé la aplicación web React para la interfaz del proyecto. Logros: Logró una precisión del 99,2% para detectar con precisión tumores cerebrales a partir de imágenes médicas.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHVeJmgLgXdJg/feedshare-shrink_2048_1536/0/1710957017741?e=1717632000&v=beta&t=-XEAS9StSa4KJQIBnnVdRjG1r-fbW3L3m5Rv9i_6RXA",
+      "https://media.licdn.com/dms/image/D4E22AQHVeJmgLgXdJg/feedshare-shrink_2048_1536/0/1710957017741?e=1721260800&v=beta&t=k6Q9PwdOdo8_8qUVaKGtmJqM8aIXy0j-sjUiTQgOdSg",
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
     category: "machine learning",
     github: "https://github.com/JuanRojasDev/Brain-Tumor-Detection/tree/main",
@@ -491,7 +494,7 @@ export const projects = [
     description:
       "La Aplicación Móvil se quiere lanzar en Playstore en Noviembre del año 2024. Este Proyecto propone un “Desarollo de una Aplicación Móvil para prevenir, informar y preservar las distintas especies de serpientes en el Meta”. Lleva un registro de todas las serpientes del Departamento mediante una API con su Taxonomía, Datos, Informacion y Georeferenciacion. Tiene la API de Google Maps para georeferenciar la serpiente en la base de datos de la sala de usuarios. Hecho con Flutter en Arquitectura MVVM y Live Data.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHM1mtiQ0aBPA/feedshare-shrink_2048_1536/0/1710953065501?e=1717632000&v=beta&t=k0DWhymfZPlgaTEQ6P8Ngs_Qxyd3usalYt47CHmBMsU",
+      "https://media.licdn.com/dms/image/D4E22AQHM1mtiQ0aBPA/feedshare-shrink_2048_1536/0/1710953065501?e=1721260800&v=beta&t=2Tx7gfTQ2JNlQNbW9qleR7ZOL-kRND86HJ2P-ozzYpM",
     tags: [
       "Python",
       "Flask",
@@ -521,7 +524,7 @@ export const projects = [
     description:
       "Desarrolle una PWA (Progresive Web Application) en un marco de trabajo (Scrum) con el objetivo de crear y fomentar comunidades de vecinos unidas seguras y colaborativas. Utilize Python para conectarme con los servicios de FastAPI, Uvicorn, Poetry, SqlAlchemy para la conexion a la base datos con PostgreSQL. Cree servicios de Publicaciones, Comentarios y Calificacion para los usuarios y Dockerize el proyecto para que fuera multiplataforma. Con Flutter creamos la aplicación para dispositivos Móvile, para que fuera compatible con IOS y Android.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_2048_1536/0/1710960857056?e=1717632000&v=beta&t=0B0iG0mUYH-HOwKKnKXyoNkC1AF2rSi7Jg8ID66rH2Q",
+      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_2048_1536/0/1710960857056?e=1721260800&v=beta&t=ILy9x6fC3Hagc90_ARPk2iG23WU-IRg2jafxPXOKqew",
     tags: [
       "Docker",
       "Python",
@@ -558,7 +561,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una Biblioteca Virtual mediante un API de GoogleApis con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a buscar un libro, mediante un filtro en el buscador. Implementé funciones clave como Palabras Clave, Precio y Card de los Libros. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGrSf5kJoA8uw/feedshare-shrink_2048_1536/0/1710957103564?e=1717632000&v=beta&t=-SRtPwZjqdwK_nepSJqPpLApVPWY-_4sw9PNh8BfbZs",
+      "https://media.licdn.com/dms/image/D4E22AQGrSf5kJoA8uw/feedshare-shrink_2048_1536/0/1710957103564?e=1721260800&v=beta&t=ikmM2UA3WmGYEW1k3fYhWzL2jZnmtyNAOnGGoLFOE5I",
     tags: [
       "React Js",
       "HTML",
@@ -581,22 +584,23 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Calculadora",
+    title: "Landing Page - Unillanos",
     date: "Oct 2022 - Jan 2023",
     description:
-      "Diseñé y desarrollé una calculadora con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a hacer operaciones matematicas. Implementé funciones clave como seguimiento Suma, Resta, Multiplicacion, Division, etc. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
+      "Diseñé y desarrollé una Landing Page con Astro, Tailwind CSS y Material UI, se trata de una página web dedicada a los agradecimientos por nuestro grado de compañeros de estudio. Implementé un diseño creativo donde se podra ver el discurso de agradecimientos en varios Inglés y Español además que implemente un carrusel de fotos de los estudiantes que se irán a graduar. Di seguimiento a la landing-page para mejorar la eficazia y la calidez del proyecto.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHOnWHXCqVVKg/feedshare-shrink_2048_1536/0/1710961014826?e=1717632000&v=beta&t=5aaFTcbgvBneFszjAVp3E91TfS4Lo8Y3PWFSoNyeGOA",
+      "https://private-user-images.githubusercontent.com/114270458/339564117-1ae8ef4b-5976-46f3-a734-bf104aeef405.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTgzMTU4ODksIm5iZiI6MTcxODMxNTU4OSwicGF0aCI6Ii8xMTQyNzA0NTgvMzM5NTY0MTE3LTFhZThlZjRiLTU5NzYtNDZmMy1hNzM0LWJmMTA0YWVlZjQwNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYxM1QyMTUzMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMWY1NDJhNDE5Y2MzYzRiMDJjMTQ4NWQ0YzU3NGQ3NTZiZDdjY2IwODY2ZTM5ZDY0OGNmMzM3ZmZiOGM2ZjA1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.98x7AkkbQ3ktqNQg1nCzZBx9OcjWEwBNVXq7KeP7S3E",
     tags: [
-      "React Js",
+      "Astro",
       "HTML",
       "CSS",
       "JavaScript",
+      "Tailwind CSS",
       "Material UI",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/react-calculadora",
-    webapp: "https://react-calculadora-coral.vercel.app/",
+    github: "https://github.com/JuanRojasDev/landing-page-unillanos",
+    webapp: "https://acknowledgment-c1.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",

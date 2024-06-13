@@ -51,6 +51,7 @@ const Desc = styled.div`
     font-size: 16px;
   }
 `;
+
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -64,12 +65,14 @@ const ContactForm = styled.form`
   margin-top: 28px;
   gap: 12px;
 `;
+
 const ContactTitle = styled.div`
   font-size: 28px;
   margin-bottom: 6px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `;
+
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -83,6 +86,7 @@ const ContactInput = styled.input`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
@@ -96,11 +100,12 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(18, 100%, 33%, 1); /* Naranja más oscuro */
+  background: hsla(18, 100%, 33%, 1);
   background: linear-gradient(225deg, hsla(18, 100%, 33%, 1) 0%, hsla(41, 100%, 40%, 1) 100%);
   background: -moz-linear-gradient(225deg, hsla(18, 100%, 33%, 1) 0%, hsla(41, 100%, 40%, 1) 100%);
   background: -webkit-linear-gradient(225deg, hsla(18, 100%, 33%, 1) 0%, hsla(41, 100%, 40%, 1) 100%);
@@ -125,18 +130,18 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        "service_1g0njf7", // Tu Service ID de EmailJS
+        "template_24ia49x", // Tu Template ID de EmailJS
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "OoFydm2AoCvcBZ54F" // Tu Public Key de EmailJS
       )
       .then(
         (result) => {
-          alert("Message Sent");
-          form.current.resut();
+          alert("Mensaje enviado");
+          form.current.reset();
         },
         (error) => {
-          alert(error);
+          alert("Error al enviar el mensaje: " + error.text);
         }
       );
   };
@@ -149,7 +154,7 @@ const Contact = () => {
         <Desc>
           ¡No dudes en comunicarte conmigo si tienes alguna pregunta u inquietud!
         </Desc>
-        <ContactForm onSubmit={handleSubmit}>
+        <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Enviame un E-Mail 🚀</ContactTitle>
           <ContactInput placeholder="Tu E-Mail" name="from_email" />
           <ContactInput placeholder="Tu Nombre" name="from_name" />
