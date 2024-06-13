@@ -381,7 +381,7 @@ export const projects = [
     description:
     "Una página web conectada mediante 2 API'S, una de TheMobieDB y GoogleTranslate creada con VueJS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de peliculas. Tiene una barra de busqueda donde los usuarios pueden buscar las peliculas por su titulo, también tiene traductor, filtro de busquedad por género, cambio de modo y páginación. En la parte inferior de la página cree un footer con mis datos y los de la página.",
     image:
-      "https://private-user-images.githubusercontent.com/114270458/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTgzMTQ5MTYsIm5iZiI6MTcxODMxNDYxNiwicGF0aCI6Ii8xMTQyNzA0NTgvMzMzNDQ3NjkyLTI4NDBiMmJhLTYyYzQtNDEzNi05Yzk4LTYzNGQ5MDUzNDU3Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYxM1QyMTM2NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wN2Y2YTg0ZDEyYjFmNWJiYWFmMmFhODg0MmZjYjcxN2RjY2U0NjMzOWEzZjdkMGJiZGRmZjAzYmJmOWU1M2UyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.qBuNE64B9YSM3WJ6Uhy7wPp41kJ6E3FnSryYvjLdZyc",
+      "https://media.licdn.com/dms/image/D5622AQENVOarhE6N9A/feedshare-shrink_2048_1536/0/1718319878693?e=1721260800&v=beta&t=4I_Tm-3WX7ZjaLzxG7OQiEe9mDUsHzPNYld_1Z4GfYc",
     tags: [
       "Vue Js",
       "HTML",
@@ -589,7 +589,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una Landing Page con Astro, Tailwind CSS y Material UI, se trata de una página web dedicada a los agradecimientos por nuestro grado de compañeros de estudio. Implementé un diseño creativo donde se podra ver el discurso de agradecimientos en varios Inglés y Español además que implemente un carrusel de fotos de los estudiantes que se irán a graduar. Di seguimiento a la landing-page para mejorar la eficazia y la calidez del proyecto.",
     image:
-      "https://private-user-images.githubusercontent.com/114270458/339564117-1ae8ef4b-5976-46f3-a734-bf104aeef405.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTgzMTU4ODksIm5iZiI6MTcxODMxNTU4OSwicGF0aCI6Ii8xMTQyNzA0NTgvMzM5NTY0MTE3LTFhZThlZjRiLTU5NzYtNDZmMy1hNzM0LWJmMTA0YWVlZjQwNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYxM1QyMTUzMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMWY1NDJhNDE5Y2MzYzRiMDJjMTQ4NWQ0YzU3NGQ3NTZiZDdjY2IwODY2ZTM5ZDY0OGNmMzM3ZmZiOGM2ZjA1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.98x7AkkbQ3ktqNQg1nCzZBx9OcjWEwBNVXq7KeP7S3E",
+      "https://media.licdn.com/dms/image/D5622AQFvC1640Jd7Fw/feedshare-shrink_2048_1536/0/1718319807965?e=1721260800&v=beta&t=gGrVbLubdAvcIywF92mYIQArw0s9SHZwemVfJp41fe4",
     tags: [
       "Astro",
       "HTML",
