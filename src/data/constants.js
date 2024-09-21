@@ -349,26 +349,27 @@ export const experiences = [
 export const projects = [
   {
     id: 9,
-    title: "Portafolio - Ejemplo",
-    date: "March 2024 - March 2024",
+    title: "Houseplant Store",
+    date: "September 2024 - September 2024",
     description:
-    "Este es un sitio web de portafolio creado con React JS y Material UI. Tiene una página de inicio animada con un svg y distintas secciones donde puedes hablar de ti, habilidades, proyectos y e-mail de tu contacto. Tiene una barra de navegación que te lleva a cada sección del sitio web.",
+    "Este proyecto se trata de una tienda de plantas desarrollada en React que utiliza Redux para la gestión del estado. El propósito principal del proyecto es ofrecer una plataforma para la venta de plantas, permitiendo a los usuarios explorar diferentes opciones de productos, agregar elementos al carrito de compras y gestionar sus transacciones de manera eficiente. El enfoque en Redux garantiza que la aplicación maneje el estado de manera eficiente, facilitando la actualización del inventario, el seguimiento de las selecciones del cliente y la gestión de pedidos. Además, el diseño de la interfaz busca ser atractivo y funcional, ofreciendo una experiencia fluida tanto en dispositivos móviles como en escritorio.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFFQJZqBJidOQ/feedshare-shrink_2048_1536/0/1710956648579?e=1721260800&v=beta&t=oLUcWZoM1nrj23mqgZXdnkZVmQypjPPY3Mv72D2KTO0",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314558560-162c81c9-826a-4dbb-b354-2d24b9541e94.png?alt=media&token=19b7ddf7-a48c-46b1-ae31-7e720d3c9554",
     tags: [
       "React Js",
       "HTML",
       "CSS",
+      "Redux",
       "JavaScript",
       "Material UI",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/Portafolio-web-react",
-    webapp: "https://portafolio-web-react.vercel.app/",
+    github: "https://github.com/JuanRojasDev/Houseplant-Store",
+    webapp: "https://houseplant-store.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -381,7 +382,7 @@ export const projects = [
     description:
     "Una página web conectada mediante 2 API'S, una de TheMobieDB y GoogleTranslate creada con VueJS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de peliculas. Tiene una barra de busqueda donde los usuarios pueden buscar las peliculas por su titulo, también tiene traductor, filtro de busquedad por género, cambio de modo y páginación. En la parte inferior de la página cree un footer con mis datos y los de la página.",
     image:
-      "https://media.licdn.com/dms/image/D5622AQENVOarhE6N9A/feedshare-shrink_2048_1536/0/1718319878693?e=1721260800&v=beta&t=4I_Tm-3WX7ZjaLzxG7OQiEe9mDUsHzPNYld_1Z4GfYc",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?alt=media&token=bee6c9a4-af41-43c2-a5e4-86af27a5f491",
     tags: [
       "Vue Js",
       "HTML",
@@ -395,7 +396,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -408,7 +409,7 @@ export const projects = [
     description:
       "Apoye en una aplicación web completa que permite a los usuarios buscar, reproducir y pausar sus podcasts favoritos a pedido y crear podcasts. Se implementó la autenticación de usuario utilizando Google Auth y Jwt Auth, se creó una interfaz de usuario responsiva con React JS que brinda a los usuarios una experiencia perfecta en todos los dispositivos. Practiqué metodologías ágiles para optimizar la eficiencia y la comunicación del equipo.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGyX-Sj4FjpAg/feedshare-shrink_2048_1536/0/1710956812746?e=1721260800&v=beta&t=xdFp9zooO5q-IOwR2YwYzhb1oZIckH4OrGVkCXJFfgU",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314565375-7a4d7a7f-06d5-432f-b880-6a31ab57f05d.png?alt=media&token=affaab16-76d9-4784-85a0-29e792275521",
     tags: [
     "React Js", 
     "MongoDb", 
@@ -422,7 +423,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -441,7 +442,7 @@ export const projects = [
     description:
     "Desarrollé para mi clase de Programación Web una Landing Page para una empresa de Ingeniería. La Landing Page fue creada con HTML, CSS y JavaScript. Tiene una página de inicio con un slider de imágenes, una sección de servicios, una sección de proyectos, una sección de contacto y un footer.",
     image:
-    "https://media.licdn.com/dms/image/D4E22AQHy32f6LkP71A/feedshare-shrink_2048_1536/0/1710956934671?e=1721260800&v=beta&t=467Y_dF0FboY40V7Q8XjYRyIwsODe1nwEJfVzXxVknU",
+    "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314596712-711b5683-aa6f-4403-9daf-8dcaccc6ea67.png?alt=media&token=48b2f8a5-6ce7-4536-8dff-abedd2ca9a38",
     tags: [
       "HTML", 
       "CSS", 
@@ -454,7 +455,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -467,7 +468,7 @@ export const projects = [
     description:
       "Apoye en una Aplicación Web la cual Preprocesé y aumenté el conjunto de datos para mejorar la precisión del modelo, entrené el modelo, Mejore la API usando el modelo y Python, y usé la aplicación web React para la interfaz del proyecto. Logros: Logró una precisión del 99,2% para detectar con precisión tumores cerebrales a partir de imágenes médicas.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHVeJmgLgXdJg/feedshare-shrink_2048_1536/0/1710957017741?e=1721260800&v=beta&t=k6Q9PwdOdo8_8qUVaKGtmJqM8aIXy0j-sjUiTQgOdSg",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image2.png?alt=media&token=b5434934-a5ec-4b26-9066-01353631320a",
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
     category: "machine learning",
     github: "https://github.com/JuanRojasDev/Brain-Tumor-Detection/tree/main",
@@ -475,7 +476,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -494,7 +495,7 @@ export const projects = [
     description:
       "La Aplicación Móvil se quiere lanzar en Playstore en Noviembre del año 2024. Este Proyecto propone un “Desarollo de una Aplicación Móvil para prevenir, informar y preservar las distintas especies de serpientes en el Meta”. Lleva un registro de todas las serpientes del Departamento mediante una API con su Taxonomía, Datos, Informacion y Georeferenciacion. Tiene la API de Google Maps para georeferenciar la serpiente en la base de datos de la sala de usuarios. Hecho con Flutter en Arquitectura MVVM y Live Data.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQHM1mtiQ0aBPA/feedshare-shrink_2048_1536/0/1710953065501?e=1721260800&v=beta&t=2Tx7gfTQ2JNlQNbW9qleR7ZOL-kRND86HJ2P-ozzYpM",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314591666-1aeb68fe-2a23-440d-b877-39d57a317eef.png?alt=media&token=24e9af9b-5027-4f25-a17f-611a303e1c5c",
     tags: [
       "Python",
       "Flask",
@@ -511,7 +512,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -524,7 +525,7 @@ export const projects = [
     description:
       "Desarrolle una PWA (Progresive Web Application) en un marco de trabajo (Scrum) con el objetivo de crear y fomentar comunidades de vecinos unidas seguras y colaborativas. Utilize Python para conectarme con los servicios de FastAPI, Uvicorn, Poetry, SqlAlchemy para la conexion a la base datos con PostgreSQL. Cree servicios de Publicaciones, Comentarios y Calificacion para los usuarios y Dockerize el proyecto para que fuera multiplataforma. Con Flutter creamos la aplicación para dispositivos Móvile, para que fuera compatible con IOS y Android.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQFOl5MwY3ftCA/feedshare-shrink_2048_1536/0/1710960857056?e=1721260800&v=beta&t=ILy9x6fC3Hagc90_ARPk2iG23WU-IRg2jafxPXOKqew",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image3.png?alt=media&token=6476cf9e-c421-4bde-9457-181712350c13",
     tags: [
       "Docker",
       "Python",
@@ -542,7 +543,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -556,14 +557,14 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Biblioteca Virtual",
+    title: "Tableros",
     date: "March 2024 - March 2024",
     description:
-      "Diseñé y desarrollé una Biblioteca Virtual mediante un API de GoogleApis con React JS y Material UI, se trata de una aplicación web que ayuda a los usuarios a buscar un libro, mediante un filtro en el buscador. Implementé funciones clave como Palabras Clave, Precio y Card de los Libros. Además di seguimiento de la App para mejorar la eficazia y los resultados del proyecto.",
+      "Es una aplicación que utiliza Vue.js para crear y gestionar tableros visuales, probablemente con el objetivo de mostrar datos, métricas o información organizada en tarjetas o paneles. Este proyecto podría incluir funcionalidades como: Creación, edición y eliminación de tableros o tarjetas personalizadas. Interacción con los datos de manera dinámica y en tiempo real. Uso de componentes Vue.js para estructurar la interfaz de forma modular, permitiendo una experiencia de usuario fluida y responsiva. Posible integración con gráficos o visualizaciones para representar información de manera visual. El proyecto puede ser ideal para practicar la creación de interfaces interactivas y reactivas, usando el framework Vue.js.",
     image:
-      "https://media.licdn.com/dms/image/D4E22AQGrSf5kJoA8uw/feedshare-shrink_2048_1536/0/1710957103564?e=1721260800&v=beta&t=ikmM2UA3WmGYEW1k3fYhWzL2jZnmtyNAOnGGoLFOE5I",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/326130970-6b55f41f-f319-4be7-920a-89e2932d6bbe.png?alt=media&token=894dfbab-72c7-4a29-a83d-3e97fa5a18c7",
     tags: [
-      "React Js",
+      "VueJs",
       "HTML",
       "CSS",
       "JavaScript",
@@ -571,12 +572,12 @@ export const projects = [
       "Material UI",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/react-libreria/tree/main",
-    webapp: "https://react-libreria.vercel.app/",
+    github: "https://github.com/JuanRojasDev/Tableros-vue.js",
+    webapp: "https://tableros-vue-js.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -589,7 +590,7 @@ export const projects = [
     description:
       "Diseñé y desarrollé una Landing Page con Astro, Tailwind CSS y Material UI, se trata de una página web dedicada a los agradecimientos por nuestro grado de compañeros de estudio. Implementé un diseño creativo donde se podra ver el discurso de agradecimientos en varios Inglés y Español además que implemente un carrusel de fotos de los estudiantes que se irán a graduar. Di seguimiento a la landing-page para mejorar la eficazia y la calidez del proyecto.",
     image:
-      "https://media.licdn.com/dms/image/D5622AQFvC1640Jd7Fw/feedshare-shrink_2048_1536/0/1718319807965?e=1721260800&v=beta&t=gGrVbLubdAvcIywF92mYIQArw0s9SHZwemVfJp41fe4",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/339564117-1ae8ef4b-5976-46f3-a734-bf104aeef405.png?alt=media&token=e95c48ca-fdaf-4779-acbc-192d88e5263a",
     tags: [
       "Astro",
       "HTML",
@@ -604,7 +605,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://media.licdn.com/dms/image/D4E03AQGcXkATe_V6SA/profile-displayphoto-shrink_800_800/0/1713375075896?e=1718841600&v=beta&t=u4F5CyO0XC3qrZ_L7Obf2ZmS6-fc4vrBjcz67cAfghQ",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
