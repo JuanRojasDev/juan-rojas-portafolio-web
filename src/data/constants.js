@@ -382,7 +382,7 @@ export const projects = [
     description:
     "Una página web conectada mediante 2 API'S, una de TheMobieDB y GoogleTranslate creada con VueJS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de peliculas. Tiene una barra de busqueda donde los usuarios pueden buscar las peliculas por su titulo, también tiene traductor, filtro de busquedad por género, cambio de modo y páginación. En la parte inferior de la página cree un footer con mis datos y los de la página.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?alt=media&token=bee6c9a4-af41-43c2-a5e4-86af27a5f491",
+      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?alt=media&token=1b9aff5e-f465-4dbf-b676-ee282154d858",
     tags: [
       "Vue Js",
       "HTML",
