@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { skills } from "../../data/constants";
+import { useLanguage } from "../../context/LanguageContext";
 import { Tilt } from "react-tilt";
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content-center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -55,6 +56,7 @@ const SkillsContainer = styled.div`
   gap: 50px;
   justify-content: center;
 `;
+
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
@@ -90,6 +92,7 @@ const SkillList = styled.div`
   gap: 12px;
   margin-bottom: 20px;
 `;
+
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
@@ -101,7 +104,9 @@ const SkillItem = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
-
+  width: 426px;
+  height: 76px; 
+  text-align: center;
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;
@@ -118,22 +123,43 @@ const SkillImage = styled.img`
 `;
 
 const Skills = () => {
+  const { translate } = useLanguage();
+
+  const skills = [
+    {
+      title: translate("technical_skills"),
+      skills: [
+        { name: translate("skill_1"), image: "https://cdn-icons-png.flaticon.com/512/11532/11532626.png" },
+        { name: translate("skill_2"), image: "https://cdn-icons-png.flaticon.com/512/11532/11532626.png" },
+        { name: translate("skill_3"), image: "https://cdn-icons-png.flaticon.com/512/11532/11532626.png" },
+        { name: translate("skill_4"), image: "https://cdn-icons-png.flaticon.com/512/11532/11532626.png" },
+        { name: translate("skill_5"), image: "https://cdn-icons-png.flaticon.com/512/11532/11532626.png" },
+      ],
+    },
+    {
+      title: translate("soft_skills"),
+      skills: [
+        { name: translate("soft_skill_1"), image: "https://cdn-icons-png.flaticon.com/512/3062/3062533.png" },
+        { name: translate("soft_skill_2"), image: "https://cdn-icons-png.flaticon.com/512/3062/3062533.png" },
+        { name: translate("soft_skill_3"), image: "https://cdn-icons-png.flaticon.com/512/3062/3062533.png" },
+        { name: translate("soft_skill_4"), image: "https://cdn-icons-png.flaticon.com/512/3062/3062533.png" },
+        { name: translate("soft_skill_5"), image: "https://cdn-icons-png.flaticon.com/512/3062/3062533.png" },
+      ],
+    },
+  ];
+
   return (
     <Container id="Skills">
       <Wrapper>
-        <Title>Habilidades</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          Estas son algunas de las habilidades en las que he estado trabajando y desarrollándome durante los últimos 3 años.
+        <Title>{translate("skills")}</Title>
+        <Desc style={{ marginBottom: "40px" }}>
+          {translate("skill_desc")}
         </Desc>
 
         <SkillsContainer>
           {skills.map((skill, index) => (
-            <Tilt>
-              <Skill key={`skill-${index}`}>
+            <Tilt key={`skill-${index}`}>
+              <Skill>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item, index_x) => (
@@ -147,12 +173,7 @@ const Skills = () => {
             </Tilt>
           ))}
         </SkillsContainer>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-        </Desc>
+        <Desc style={{ marginBottom: "40px" }}></Desc>
       </Wrapper>
     </Container>
   );

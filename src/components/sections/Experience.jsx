@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { experiences } from "../../data/constants";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import ExperienceCard from "../cards/ExperienceCard";
+import { useLanguage } from "../../context/LanguageContext";
+import { experiences } from "../../data/constants"; // O importas las traducciones directamente si lo prefieres
 
 const Container = styled.div`
-margin-top: 100px;
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -51,22 +53,20 @@ const Desc = styled.div`
 `;
 
 const Experience = () => {
+  const { translate } = useLanguage(); // Hook para acceder a la traducción
+
   return (
     <Container id="Experience">
       <Wrapper>
-        <Title>Experiencia</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          Como estudiante, estoy en la etapa inicial de mi trayectoria profesional en Tecnología en Desarollo de software. Aunque aún estoy en proceso de adquirir experiencia laboral en el campo, estoy comprometido con mi desarrollo académico y estoy explorando oportunidades para aplicar mis conocimientos en proyectos prácticos.
+        <Title>{translate("experience_title")}</Title>
+        <Desc style={{ marginBottom: "40px" }}>
+          {translate("experience_desc")}
         </Desc>
 
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {experiences.map((experience) => (
             <ExperienceCard
-              key={`experience-${index}`}
+              key={`experience-${experience.id}`} // Cambio para una key única
               experience={experience}
             />
           ))}

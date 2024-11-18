@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Top = styled.div`
   width: 100%;
@@ -95,15 +96,41 @@ const ItemWrapper = styled.div`
 `;
 
 const ExperienceCard = ({ experience }) => {
+  const { translate } = useLanguage();
+  const [translatedExperience, setTranslatedExperience] = useState(null);
+
+  useEffect(() => {
+    const translateExperience = async () => {
+      const skills = Array.isArray(experience.skills) ? experience.skills : [];
+
+      const translated = {
+        ...experience,
+        role: translate(`experience_${experience.id}_role`),
+        company: translate(`experience_${experience.id}_company`),
+        date: translate(`experience_${experience.id}_date`),
+        desc: translate(`experience_${experience.id}_desc`),
+        skills: skills.map((skill) => translate(skill)),
+      };
+
+      setTranslatedExperience(translated);
+    };
+
+    translateExperience();
+  }, [experience, translate]);
+
+  if (!translatedExperience) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <VerticalTimelineElement
       icon={
         <img
           width="100%"
           height="100%"
-          alt={experience.school}
+          alt={translatedExperience.school}
           style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={experience.img}
+          src={translatedExperience.img}
         />
       }
       contentStyle={{
@@ -113,7 +140,6 @@ const ExperienceCard = ({ experience }) => {
         background: "#1d1836",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: "rgba(17, 25, 40, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
@@ -121,26 +147,26 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
       }}
-      date={experience.date}
+      date={translatedExperience.date}
     >
       <Top>
-        <Image src={experience.img} />
+        <Image src={translatedExperience.img} />
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{translatedExperience.role}</Role>
+          <Company>{translatedExperience.company}</Company>
+          <Date>{translatedExperience.date}</Date>
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
-        {experience?.skills && (
+        {translatedExperience?.desc && <Span>{translatedExperience.desc}</Span>}
+        {translatedExperience?.skills.length > 0 && (
           <>
             <br />
             <Skills>
-              <b>Skills:</b>
+              <b>{translate("skills")}:</b>
               <ItemWrapper>
-                {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                {translatedExperience?.skills?.map((skill, index) => (
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>

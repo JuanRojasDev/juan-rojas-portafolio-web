@@ -89,11 +89,11 @@ const Footer = () => {
       <FooterWrapper>
         <Logo>Juan Rojas</Logo>
         <Nav>
-          <NavLink href="#About">Acerca</NavLink>
-          <NavLink href="#Skills">Habilidades</NavLink>
-          <NavLink href="#Experience">Experiencia</NavLink>
-          <NavLink href="#Projects">Proyectos</NavLink>
-          <NavLink href="#Education">Educación</NavLink>
+          <NavLink href="About">Acerca</NavLink>
+          <NavLink href="Skills">Habilidades</NavLink>
+          <NavLink href="Experience">Experiencia</NavLink>
+          <NavLink href="Projects">Proyectos</NavLink>
+          <NavLink href="Education">Educación</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.github} target="display">

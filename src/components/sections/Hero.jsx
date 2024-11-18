@@ -12,6 +12,7 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
+import { useLanguage } from "../../context/LanguageContext";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -198,6 +199,15 @@ const HeroBg = styled.div`
 `;
 
 const Hero = () => {
+  const { translate } = useLanguage();
+
+  const roles = [
+    translate("full_stack_developer"),
+    translate("android_developer"),
+    translate("ui_ux_designer"),
+    translate("programmer"),
+  ];
+
   return (
     <div id="About">
       <HeroContainer>
@@ -211,14 +221,14 @@ const Hero = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I am <br /> {Bio.name}
+                  {translate("hi")} <br /> {Bio.name}
                 </Title>
                 <TextLoop>
-                  I am a
+                  {translate("i_am_a")}
                   <Span>
                     <Typewriter
                       options={{
-                        strings: Bio.roles,
+                        strings: roles,
                         autoStart: true,
                         loop: true,
                       }}
@@ -228,11 +238,11 @@ const Hero = () => {
               </motion.div>
 
               <motion.div {...headContentAnimation}>
-                <SubTitle>{Bio.description}</SubTitle>
+                <SubTitle>{translate("bio_description")}</SubTitle>
               </motion.div>
 
               <ResumeButton href={Bio.resume} target="_blank">
-                View CV
+                {translate("view_cv")}
               </ResumeButton>
             </HeroLeftContainer>
             <HeroRightContainer>

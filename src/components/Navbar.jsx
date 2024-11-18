@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link as LinkR } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
+import { useLanguage } from "../context/LanguageContext";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -16,6 +17,7 @@ const Nav = styled.div`
   z-index: 10;
   color: white;
 `;
+
 const ColorText = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 32px;
@@ -30,6 +32,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
 `;
+
 const NavLogo = styled.a`
   display: flex;
   align-items: center;
@@ -133,13 +136,77 @@ const MobileMenu = styled.ul`
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
 
+const LanguageDropdown = styled.div`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+`;
+
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: ${({ theme }) => theme.bg};
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  ${LanguageDropdown}:hover & {
+    display: block;
+  }
+
+  a {
+    color: ${({ theme }) => theme.text_primary};
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      background-color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.text_primary};
+    }
+  }
+`;
+
+const LanguageButton = styled.div`
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  color: ${({ theme }) => theme.text_primary};
+  cursor: pointer;
+  margin-right: 2px;
+`;
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
+  const navigate = useNavigate();
+  const { language, setLanguage, translate } = useLanguage();
+
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      navigate(`${sectionId}`);
+    }
+  };
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo href="#About">
+        <NavLogo href="">
           <ColorText>&lt;</ColorText>Juan
           <div style={{ color: theme.primary }}>/</div>Rojas
           <ColorText>&gt;</ColorText>
@@ -150,38 +217,35 @@ const Navbar = () => {
         </MobileIcon>
 
         <NavItems>
-          <NavLink href="#About">Acerca</NavLink>
-          <NavLink href="#Skills">Habilidades</NavLink>
-          <NavLink href="#Experience">Experiencia</NavLink>
-          <NavLink href="#Projects">Proyectos</NavLink>
-          <NavLink href="#Education">Educación</NavLink>
+          <NavLink onClick={() => scrollToSection("About")}>{translate("about")}</NavLink>
+          <NavLink onClick={() => scrollToSection("Skills")}>{translate("skills")}</NavLink>
+          <NavLink onClick={() => scrollToSection("Experience")}>{translate("experience")}</NavLink>
+          <NavLink onClick={() => scrollToSection("Projects")}>{translate("projects")}</NavLink>
+          <NavLink onClick={() => scrollToSection("Education")}>{translate("education")}</NavLink>
+
+          <LanguageDropdown>
+            <LanguageButton>
+              <span>{language.toUpperCase()}</span>
+              <span style={{ marginLeft: "2px" }}>▼</span>
+            </LanguageButton>
+            <DropdownContent>
+              <NavLink onClick={() => handleLanguageChange("es")}>ES</NavLink>
+              <NavLink onClick={() => handleLanguageChange("en")}>EN</NavLink>
+            </DropdownContent>
+          </LanguageDropdown>
         </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
-              About
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
-            </NavLink>
-            <GithubButton
-              href={Bio.github}
-              target="_Blank"
-              style={{
-                background: theme.primary,
-                color: theme.text_primary,
-              }}
-            >
+            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("About"); }}>{translate("about")}</NavLink>
+            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Skills"); }}>{translate("skills")}</NavLink>
+            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Experience"); }}>{translate("experience")}</NavLink>
+            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Projects"); }}>{translate("projects")}</NavLink>
+            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Education"); }}>{translate("education")}</NavLink>
+            <NavLink>Idioma</NavLink>
+            <NavLink onClick={() => handleLanguageChange("es")}>Español</NavLink>
+            <NavLink onClick={() => handleLanguageChange("en")}>Inglés</NavLink>
+            <GithubButton href={Bio.github} target="_Blank">
               Github Profile
             </GithubButton>
           </MobileMenu>

@@ -91,14 +91,14 @@ export const frameworks = [
           "https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png?f=webp",
       },
       {
+        name: "Flask",
+        image:
+        "https://pbs.twimg.com/media/GLd6BhSXcAA1wo7?format=png&name=360x360",
+      },
+      {
         name: "Astro",
         image:
           "https://astro.build/assets/press/astro-icon-light-gradient.svg",
-      },
-      {
-        name: "Next Js",
-        image:
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
       },
       {
         name: "HTML",
@@ -134,24 +134,14 @@ export const frameworks = [
         image: "https://nodejs.org/static/images/logo.svg",
       },
       {
-        name: "Express Js",
-        image:
-        "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png",      
-      },
-      {
-        name: "Docker",
-        image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
-      },
-      {
-        name: "Flask",
-        image:
-          "https://pbs.twimg.com/media/GLd6BhSXcAA1wo7?format=png&name=360x360",
-      },
-      {
         name: "Python",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "FastAPI",
+        image:
+          "https://cdn.worldvectorlogo.com/logos/fastapi.svg",
       },
       {
         name: "MySQL",
@@ -174,7 +164,7 @@ export const frameworks = [
     ],
   },  
   {
-    title: "Android",
+    title: "Mobile",
     frameworks: [
       {
         name: "Flutter",
@@ -184,7 +174,12 @@ export const frameworks = [
       {
         name: "Java",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+      },
+      {
+        name: "Kotlin",
+        image:
+          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
       },
       {
         name: "Hive",
@@ -237,9 +232,9 @@ export const frameworks = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
       {
-        name: "FastAPI",
+        name: "Docker",
         image:
-          "https://cdn.worldvectorlogo.com/logos/fastapi.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
       {
         name: "Figma",
@@ -268,7 +263,6 @@ export const experiences = [
       "Firebase",
       "Google Maps API",
     ],
-    doc: "https://avatars.githubusercontent.com/u/153551520?s=200&v=4",
   },
   {
     id: 1,
@@ -288,20 +282,18 @@ export const experiences = [
       "Flutter",
       "JWT",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
   },
   {
     id: 2,
     img: "https://media.licdn.com/dms/image/C4E0BAQE479kcnodujA/company-logo_200_200/0/1630632726020/it_ingenieria_logo?e=2147483647&v=beta&t=_QvNHf40ks8IfgoABzp8skWwLQHvbEZfqby0xMcN350",
     role: "Desarrollador Web, Diseñador Web",
     company: "IT Ingeniera",
-    date: "18 Feb 2024  - 22 Feb 2024",
+    date: "18 Feb 2024 - 22 Feb 2024",
     desc: "En clase de Programación Web, Desarrolle una página web completa utilizando solo HTML y CSS para la venta y gestión de diferentes servicios implementando un diseño interactivo para el usuario. Fui el de mejor desempeño en el trabajo",
     skills: [
       "HTML",
       "CSS",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1691181448873.jpeg?alt=media&token=ee85eb8f-7247-43cd-9a1d-ce9f58ea62a6",
   },
   {
     id: 3,
@@ -317,14 +309,13 @@ export const experiences = [
       "CSS",
       "JavaScript",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   },
   {
     id: 4,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/gdsc.jpeg?alt=media&token=c162329c-efaa-4be8-a173-8d3f4c48ea70",
     role: "Desarrollador Android",
     company: "Google Developers Student Club (GDSC) KIIT",
-    date: "12 Mar - Present",
+    date: "12 Mar, 2024",
     desc: "Como desarrollador de Android tome la iniciativa de particiar en Google Developers Student Club (GDCS), teniendo la oportunidad de trabajar en proyectos interesantes y colaborar con desarrolladores talentosos que comparten mi pasión por la tecnología. A través de mi participación en GDCS, también tuve la oportunidad de participar en numerosos eventos, incluidos hackathons, Study Jams y talleres.",
     skills: [
       "Leadership",
@@ -339,7 +330,7 @@ export const experiences = [
   {
     id: 5,
     img: "https://pbs.twimg.com/media/GLd3qwaXUAEOfDr?format=png&name=small",
-    role: "Open Source Contributor ",
+    role: "Contribuidor de Código Abierto",
     company: "Github Contributor of Code",
     date: "12 Mar 2023 - Present",
     desc: "Contribuí a diferentes proyectos de código abierto y aprendí de expertos de la industria.",
