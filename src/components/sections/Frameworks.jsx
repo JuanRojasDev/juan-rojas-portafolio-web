@@ -8,23 +8,20 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
-  align-items: center;
+  width: 100%;
+  padding: 0 20px;
 `;
 
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1100px;
   gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
 `;
 
 export const Title = styled.div`
@@ -33,6 +30,7 @@ export const Title = styled.div`
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -45,6 +43,7 @@ export const Desc = styled.div`
   font-weight: 600;
   max-width: 900px;
   color: ${({ theme }) => theme.text_secondary};
+
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -53,40 +52,53 @@ export const Desc = styled.div`
 const FrameworksContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
   margin-top: 20px;
-  justify-items: center;
-  align-items: start;
-  padding: 20px;
 
-  @media (max-width: 960px) {
-    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-    grid-template-rows: auto; /* Filas automáticas */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
   }
 `;
 
 const Framework = styled.div`
-  width: ${({ isLarge }) => (isLarge ? "500px" : "500px")};
-  height: ${({ isLarge }) => (isLarge ? "360px" : "297px")};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: ${({ theme }) => theme.card};
   border: 0.1px solid #854ce6;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
-  padding: 18px 36px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @media (max-width: 960px) {
+  &:nth-child(1),
+  &:nth-child(2) {
+    max-width: 500px;
     width: 100%;
-    max-width: ${({ isLarge }) => (isLarge ? "360px" : "297px")};
-    padding: 10px 36px;
+    height: 360px;
   }
-  @media (max-width: 500px) {
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    max-width: 500px;
     width: 100%;
-    max-width: ${({ isLarge }) => (isLarge ? "360px" : "297px")};
-    padding: 10px 36px;
+    height: 297px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 360px;
+    width: 100%;
+    height: 360px;
+    padding: 16px;
+    margin-bottom: 16px; /* Añadir margen inferior para separar los elementos */
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      height: 297px;
+    }
   }
 `;
 
@@ -100,12 +112,9 @@ const FrameworkTitle = styled.h2`
 
 const FrameworkList = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 2px; /* Mueve los elementos hacia el centro verticalmente */
-  margin-bottom: auto; /* Mueve los elementos hacia el centro verticalmente */
+  justify-content: center;
 `;
 
 const FrameworkItem = styled.div`
@@ -119,19 +128,10 @@ const FrameworkItem = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-shrink: 0;
 
   @media (max-width: 768px) {
     font-size: 14px;
-    padding: 8px 12px;
-    width: 180px;
-    height: 40px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-    width: 160px;
-    height: 35px;
+    padding: 10px;
   }
 `;
 
@@ -145,10 +145,10 @@ const Frameworks = () => {
 
   const translatedFrameworks = frameworks.map((framework) => ({
     ...framework,
-    title: translate(framework.title.charAt(0).toUpperCase() + framework.title.slice(1).toLowerCase()),
+    title: translate(framework.title.toLowerCase()),
     frameworks: framework.frameworks.map((item) => ({
       ...item,
-      name: translate(item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()),
+      name: translate(item.name.toLowerCase()),
     })),
   }));
 
@@ -162,7 +162,7 @@ const Frameworks = () => {
         <FrameworksContainer>
           {translatedFrameworks.map((framework, index) => (
             <Tilt key={`framework-${index}`}>
-              <Framework isLarge={index < 2}>
+              <Framework>
                 <FrameworkTitle>{framework.title}</FrameworkTitle>
                 <FrameworkList>
                   {framework.frameworks.map((item, index_x) => (

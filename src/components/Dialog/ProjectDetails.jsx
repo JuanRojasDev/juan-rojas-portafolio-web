@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
+import { CloseRounded } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Container = styled.div`
   width: 100%;
@@ -200,12 +201,10 @@ const StyledLinkedInIcon = styled(LinkedInIcon)`
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  const { translate } = useLanguage();
 
   return (
-    <Modal
-      open={openModal.state}
-      onClose={() => setOpenModal({ state: false, project: null })}
-    >
+    <Modal open={openModal.state} onClose={() => setOpenModal({ state: false, project: null })}>
       <Container>
         <Wrapper>
           <CloseRounded
@@ -220,7 +219,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           />
           <Image src={project?.image} />
           <Title>{project?.title}</Title>
-          <Date>{project.date}</Date>
+          <Date>{project?.date}</Date>
           <Tags>
             {project?.tags.map((tag, index) => (
               <Tag key={index}>{tag}</Tag>
@@ -229,7 +228,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           <Desc>{project?.description}</Desc>
           {project.member && (
             <>
-              <Label>Members</Label>
+              <Label>{translate("members")}</Label>
               <Members>
                 {project?.member.map((member, index) => (
                   <Member key={index}>
@@ -261,14 +260,14 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ir al Código
+              {translate("go_to_code")}
             </Button>
             <Button
               href={project?.webapp}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ir a la App en Vivo
+              {translate("go_to_live_app")}
             </Button>
           </ButtonGroup>
         </Wrapper>

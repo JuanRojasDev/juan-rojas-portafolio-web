@@ -187,12 +187,14 @@ const LanguageButton = styled.div`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const theme = useTheme();
   const navigate = useNavigate();
   const { language, setLanguage, translate } = useLanguage();
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
+    setIsLanguageOpen(false);
   };
 
   const scrollToSection = (sectionId) => {
@@ -242,9 +244,15 @@ const Navbar = () => {
             <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Experience"); }}>{translate("experience")}</NavLink>
             <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Projects"); }}>{translate("projects")}</NavLink>
             <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Education"); }}>{translate("education")}</NavLink>
-            <NavLink>Idioma</NavLink>
-            <NavLink onClick={() => handleLanguageChange("es")}>Español</NavLink>
-            <NavLink onClick={() => handleLanguageChange("en")}>Inglés</NavLink>
+            <NavLink onClick={() => setIsLanguageOpen(!isLanguageOpen)}>
+              {translate("language")} <span style={{ marginLeft: "2px" }}>▼</span>
+            </NavLink>
+            {isLanguageOpen && (
+              <>
+                <NavLink onClick={() => handleLanguageChange("es")}>{translate("spanish")}</NavLink>
+                <NavLink onClick={() => handleLanguageChange("en")}>{translate("english")}</NavLink>
+              </>
+            )}
             <GithubButton href={Bio.github} target="_Blank">
               Github Profile
             </GithubButton>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Container = styled.div`
 margin-top: 100px;
@@ -95,52 +96,53 @@ const CardContainer = styled.div`
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+  const { translate } = useLanguage();
+  
   return (
     <Container id="Projects">
       <Wrapper>
-        <Title>Proyectos</Title>
+        <Title>{translate("projects_title")}</Title>
         <Desc
           style={{
             marginBottom: "40px",
           }}
         >
-          He estado involucrado en una gran cantidad de proyectos, desde la
-          creación de aplicaciones web hasta el desarrollo de apps para Android.
-          Aquí tienes algunos ejemplos de lo que he hecho.
+          {translate("projects_desc")}
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton
             active={toggle === "all"}
             onClick={() => setToggle("all")}
           >
-            ALL
+            {translate("all")}
           </ToggleButton>
           <Divider />
           <ToggleButton
             active={toggle === "web app"}
             onClick={() => setToggle("web app")}
           >
-            WEB APP"S
+            {translate("web_apps")}
           </ToggleButton>
           <Divider />
           <ToggleButton
             active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
-            ANDROID APP'S
+            {translate("android_apps")}
           </ToggleButton>
           <Divider />
           <ToggleButton
             active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
-            MACHINE LEARNING
+            {translate("machine_learning")}
           </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => (
               <ProjectCard
+                key={project.id}
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
@@ -150,6 +152,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             .filter((item) => item.category === toggle)
             .map((project) => (
               <ProjectCard
+                key={project.id}
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}

@@ -7,7 +7,7 @@ export const Bio = {
     "Programmer",
   ],
   description:
-  "Soy una persona motivada y versátil, siempre dispuesta a enfrentar nuevos desafíos. Apasionado por el aprendizaje, me dedico a ofrecer resultados de alta calidad. Poseo una actitud positiva y una mentalidad de crecimiento, lo que me impulsa constantemente a mejorar y desarrollarme tanto personal como profesionalmente.",
+    "I am a motivated and versatile person, always ready to face new challenges. Passionate about learning, I am dedicated to delivering high-quality results. I possess a positive attitude and a growth mindset, which constantly drives me to improve and develop both personally and professionally.",
   github: "https://github.com/JuanRojasDev",
   resume: "https://drive.google.com/file/d/1-wXqcZvVIeq3jmmbLi20HZvWCLMaAASf/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
@@ -16,60 +16,60 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Habilidades Técnicas",
+    title: "Technical Skills",
     skills: [
       {
-        name: "Capacidad de aprender nuevos lenguajes de forma rápida y eficaz.",
+        name: "Ability to quickly and effectively learn new languages.",
         image:
           "https://cdn-icons-png.flaticon.com/512/11532/11532626.png",
       },
       {
-        name: "Experiencia con herramientas de desarrollo frameworks, APIs y librerías.",
+        name: "Experience with development tools, frameworks, APIs, and libraries.",
         image:
           "https://cdn-icons-png.flaticon.com/512/11532/11532626.png",
       },
       {
-        name: "Comprender la arquitectura de software y su diseño de manera efectiva.",
+        name: "Understanding software architecture and design effectively.",
         image:
           "https://cdn-icons-png.flaticon.com/512/11532/11532626.png",
       },
       {
-        name: "Capacidad de entender y utilizar APIs de terceros.",
+        name: "Ability to understand and use third-party APIs.",
         image:
           "https://cdn-icons-png.flaticon.com/512/11532/11532626.png",
       },
       {
-        name: "Conocimientos de base de datos y uso de diferentes herramientas.",
+        name: "Knowledge of databases and use of different tools.",
         image:
           "https://cdn-icons-png.flaticon.com/512/11532/11532626.png",
       },
     ],
   },
   {
-    title: "Habilidades Blandas",
+    title: "Soft Skills",
     skills: [
       {
-        name: "Capacidad de comunicación efectiva y clara.",
+        name: "Effective and clear communication skills.",
         image:
           "https://cdn-icons-png.flaticon.com/512/3062/3062533.png",
       },
       {
-        name: "Capacidad de adaptación a cambios y solución de problemas.",
+        name: "Ability to adapt to changes and solve problems.",
         image:
           "https://cdn-icons-png.flaticon.com/512/3062/3062533.png",
       },
       {
-        name: "Creatividad y habilidad de pensar en soluciones innovadoras y efectivas.",
+        name: "Creativity and ability to think of innovative and effective solutions.",
         image:
           "https://cdn-icons-png.flaticon.com/512/3062/3062533.png",
       },
       {
-        name: "Facilidad para trabajar en equipo y liderar equipos de trabajo.",
+        name: "Ease of working in teams and leading work teams.",
         image:
           "https://cdn-icons-png.flaticon.com/512/3062/3062533.png",
       },
       {
-        name: "Autogestión y capacidad de trabajar de forma autónoma.",
+        name: "Self-management and ability to work independently.",
         image:
           "https://cdn-icons-png.flaticon.com/512/3062/3062533.png",
       },
@@ -343,7 +343,7 @@ export const projects = [
     title: "Houseplant Store",
     date: "September 2024 - September 2024",
     description:
-    "Este proyecto se trata de una tienda de plantas desarrollada en React que utiliza Redux para la gestión del estado. El propósito principal del proyecto es ofrecer una plataforma para la venta de plantas, permitiendo a los usuarios explorar diferentes opciones de productos, agregar elementos al carrito de compras y gestionar sus transacciones de manera eficiente. El enfoque en Redux garantiza que la aplicación maneje el estado de manera eficiente, facilitando la actualización del inventario, el seguimiento de las selecciones del cliente y la gestión de pedidos. Además, el diseño de la interfaz busca ser atractivo y funcional, ofreciendo una experiencia fluida tanto en dispositivos móviles como en escritorio.",
+      "This project is about a plant store developed in React that uses Redux for state management. The main purpose of the project is to offer a platform for selling plants, allowing users to explore different product options, add items to the shopping cart, and manage their transactions efficiently. The focus on Redux ensures that the application handles state efficiently, facilitating inventory updates, tracking customer selections, and managing orders. Additionally, the interface design aims to be attractive and functional, offering a smooth experience on both mobile and desktop devices.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314558560-162c81c9-826a-4dbb-b354-2d24b9541e94.png?alt=media&token=19b7ddf7-a48c-46b1-ae31-7e720d3c9554",
     tags: [
@@ -371,7 +371,7 @@ export const projects = [
     title: "2 Type",
     date: "March 2024 - March 2023",
     description:
-    "Una página web conectada mediante 2 API'S, una de TheMobieDB y GoogleTranslate creada con VueJS y Material UI. Tiene una página de inicio donde los usuarios pueden visualizar una lista de peliculas. Tiene una barra de busqueda donde los usuarios pueden buscar las peliculas por su titulo, también tiene traductor, filtro de busquedad por género, cambio de modo y páginación. En la parte inferior de la página cree un footer con mis datos y los de la página.",
+      "A web page connected through 2 APIs, one from TheMovieDB and GoogleTranslate created with VueJS and Material UI. It has a home page where users can view a list of movies. It has a search bar where users can search for movies by their title, it also has a translator, search filter by genre, mode change, and pagination. At the bottom of the page, I created a footer with my data and the page's data.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?alt=media&token=1b9aff5e-f465-4dbf-b676-ee282154d858",
     tags: [
@@ -398,7 +398,7 @@ export const projects = [
     title: "Podstream",
     date: "Apr 2023 - May 2023",
     description:
-      "Apoye en una aplicación web completa que permite a los usuarios buscar, reproducir y pausar sus podcasts favoritos a pedido y crear podcasts. Se implementó la autenticación de usuario utilizando Google Auth y Jwt Auth, se creó una interfaz de usuario responsiva con React JS que brinda a los usuarios una experiencia perfecta en todos los dispositivos. Practiqué metodologías ágiles para optimizar la eficiencia y la comunicación del equipo.",
+      "Supported a complete web application that allows users to search, play, and pause their favorite podcasts on demand and create podcasts. User authentication was implemented using Google Auth and Jwt Auth, a responsive user interface was created with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314565375-7a4d7a7f-06d5-432f-b880-6a31ab57f05d.png?alt=media&token=affaab16-76d9-4784-85a0-29e792275521",
     tags: [
@@ -431,7 +431,7 @@ export const projects = [
     title: "IT Ingenieria - Landing Page",
     date: "March 2024 - March 2024",
     description:
-    "Desarrollé para mi clase de Programación Web una Landing Page para una empresa de Ingeniería. La Landing Page fue creada con HTML, CSS y JavaScript. Tiene una página de inicio con un slider de imágenes, una sección de servicios, una sección de proyectos, una sección de contacto y un footer.",
+      "Developed a Landing Page for an Engineering company for my Web Programming class. The Landing Page was created with HTML, CSS, and JavaScript. It has a home page with an image slider, a services section, a projects section, a contact section, and a footer.",
     image:
     "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314596712-711b5683-aa6f-4403-9daf-8dcaccc6ea67.png?alt=media&token=48b2f8a5-6ce7-4536-8dff-abedd2ca9a38",
     tags: [
@@ -457,7 +457,7 @@ export const projects = [
     title: "Brain Tumor Detection",
     date: "Jan 2023 - Mar 2023",
     description:
-      "Apoye en una Aplicación Web la cual Preprocesé y aumenté el conjunto de datos para mejorar la precisión del modelo, entrené el modelo, Mejore la API usando el modelo y Python, y usé la aplicación web React para la interfaz del proyecto. Logros: Logró una precisión del 99,2% para detectar con precisión tumores cerebrales a partir de imágenes médicas.",
+      "Supported a Web Application which preprocessed and augmented the dataset to improve model accuracy, trained the model, improved the API using the model and Python, and used the React web application for the project interface. Achievements: Achieved 99.2% accuracy in accurately detecting brain tumors from medical images.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image2.png?alt=media&token=b5434934-a5ec-4b26-9066-01353631320a",
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
@@ -484,7 +484,7 @@ export const projects = [
     title: "Snake - Meta",
     date: "Nov 2023 - Nov 2024",
     description:
-      "La Aplicación Móvil se quiere lanzar en Playstore en Noviembre del año 2024. Este Proyecto propone un “Desarollo de una Aplicación Móvil para prevenir, informar y preservar las distintas especies de serpientes en el Meta”. Lleva un registro de todas las serpientes del Departamento mediante una API con su Taxonomía, Datos, Informacion y Georeferenciacion. Tiene la API de Google Maps para georeferenciar la serpiente en la base de datos de la sala de usuarios. Hecho con Flutter en Arquitectura MVVM y Live Data.",
+      "The Mobile Application is planned to be launched on Playstore in November 2024. This project proposes the 'Development of a Mobile Application to prevent, inform, and preserve the different species of snakes in Meta'. It keeps a record of all the snakes in the Department through an API with their Taxonomy, Data, Information, and Georeferencing. It has the Google Maps API to georeference the snake in the user room database. Made with Flutter in MVVM Architecture and Live Data.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314591666-1aeb68fe-2a23-440d-b877-39d57a317eef.png?alt=media&token=24e9af9b-5027-4f25-a17f-611a303e1c5c",
     tags: [
@@ -514,7 +514,7 @@ export const projects = [
     title: "Aktua",
     date: "Feb 2024 - May 2024",
     description:
-      "Desarrolle una PWA (Progresive Web Application) en un marco de trabajo (Scrum) con el objetivo de crear y fomentar comunidades de vecinos unidas seguras y colaborativas. Utilize Python para conectarme con los servicios de FastAPI, Uvicorn, Poetry, SqlAlchemy para la conexion a la base datos con PostgreSQL. Cree servicios de Publicaciones, Comentarios y Calificacion para los usuarios y Dockerize el proyecto para que fuera multiplataforma. Con Flutter creamos la aplicación para dispositivos Móvile, para que fuera compatible con IOS y Android.",
+      "Developed a PWA (Progressive Web Application) in a Scrum framework with the aim of creating and fostering united, safe, and collaborative neighborhood communities. Used Python to connect with FastAPI, Uvicorn, Poetry services, and SqlAlchemy for database connection with PostgreSQL. Created services for Posts, Comments, and Ratings for users and Dockerized the project to make it cross-platform. With Flutter, we created the application for mobile devices, making it compatible with iOS and Android.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image3.png?alt=media&token=6476cf9e-c421-4bde-9457-181712350c13",
     tags: [
@@ -551,7 +551,7 @@ export const projects = [
     title: "Tableros",
     date: "March 2024 - March 2024",
     description:
-      "Es una aplicación que utiliza Vue.js para crear y gestionar tableros visuales, probablemente con el objetivo de mostrar datos, métricas o información organizada en tarjetas o paneles. Este proyecto podría incluir funcionalidades como: Creación, edición y eliminación de tableros o tarjetas personalizadas. Interacción con los datos de manera dinámica y en tiempo real. Uso de componentes Vue.js para estructurar la interfaz de forma modular, permitiendo una experiencia de usuario fluida y responsiva. Posible integración con gráficos o visualizaciones para representar información de manera visual. El proyecto puede ser ideal para practicar la creación de interfaces interactivas y reactivas, usando el framework Vue.js.",
+      "It is an application that uses Vue.js to create and manage visual boards, probably with the aim of displaying data, metrics, or information organized in cards or panels. This project could include functionalities such as: Creation, editing, and deletion of custom boards or cards. Interaction with data dynamically and in real-time. Use of Vue.js components to structure the interface modularly, allowing a smooth and responsive user experience. Possible integration with charts or visualizations to represent information visually. The project can be ideal for practicing the creation of interactive and reactive interfaces using the Vue.js framework.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/326130970-6b55f41f-f319-4be7-920a-89e2932d6bbe.png?alt=media&token=894dfbab-72c7-4a29-a83d-3e97fa5a18c7",
     tags: [
@@ -579,7 +579,7 @@ export const projects = [
     title: "Landing Page - Unillanos",
     date: "Oct 2022 - Jan 2023",
     description:
-      "Diseñé y desarrollé una Landing Page con Astro, Tailwind CSS y Material UI, se trata de una página web dedicada a los agradecimientos por nuestro grado de compañeros de estudio. Implementé un diseño creativo donde se podra ver el discurso de agradecimientos en varios Inglés y Español además que implemente un carrusel de fotos de los estudiantes que se irán a graduar. Di seguimiento a la landing-page para mejorar la eficazia y la calidez del proyecto.",
+      "Designed and developed a Landing Page with Astro, Tailwind CSS, and Material UI, it is a web page dedicated to acknowledgments for our graduation of study companions. I implemented a creative design where you can see the acknowledgment speech in several languages, English and Spanish, and I also implemented a photo carousel of the students who will graduate. I followed up on the landing page to improve the effectiveness and warmth of the project.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/339564117-1ae8ef4b-5976-46f3-a734-bf104aeef405.png?alt=media&token=e95c48ca-fdaf-4779-acbc-192d88e5263a",
     tags: [

@@ -105,11 +105,11 @@ const Button = styled.a`
 
 const ProjectCard = ({ project, setOpenModal }) => {
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
+    <Card onClick={() => setOpenModal({ state: true, project })}>
       <Image src={project.image} />
       <Tags>
         {project.tags?.map((tag, index) => (
-          <Tag>{tag}</Tag>
+          <Tag key={index}>{tag}</Tag>
         ))}
       </Tags>
       <Details>
@@ -119,7 +119,7 @@ const ProjectCard = ({ project, setOpenModal }) => {
       </Details>
       <Members>
         {project.member?.map((member) => (
-          <Avatar src={member.img} />
+          <Avatar key={member.img} src={member.img} />
         ))}
       </Members>
     </Card>
