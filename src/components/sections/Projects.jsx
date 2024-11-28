@@ -97,7 +97,9 @@ const CardContainer = styled.div`
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
   const { translate } = useLanguage();
-  
+
+  const filteredProjects = toggle === "all" ? projects : projects.filter((item) => item.category === toggle);
+
   return (
     <Container id="Projects">
       <Wrapper>
@@ -139,25 +141,14 @@ const Projects = ({ openModal, setOpenModal }) => {
           </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              openModal={openModal}
+              setOpenModal={setOpenModal}
+            />
+          ))}
         </CardContainer>
       </Wrapper>
     </Container>

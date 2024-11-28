@@ -183,7 +183,7 @@ export const translations = {
       role: "Open Source Contributor",
       company: "GitHub Contributor of Code",
       date: "Mar 12, 2023 - Present",
-      desc: "Contributed to various open-source projects and learned from industry experts.",
+        desc: "Contributed to various open-source projects and learned from industry experts.",
     },
     experience_0_role: "Fullstack Developer",
     experience_0_company: "Snake Meta",
@@ -244,6 +244,7 @@ export const translations = {
         date: "March 2024 - March 2024",
         description: "It is an application that uses Vue.js to create and manage visual boards, probably with the aim of displaying data, metrics, or information organized in cards or panels. This project could include functionalities such as: Creation, editing, and deletion of custom boards or cards. Interaction with data dynamically and in real-time. Use of Vue.js components to structure the interface modularly, allowing a smooth and responsive user experience. Possible integration with charts or visualizations to represent information visually. The project can be ideal for practicing the creation of interactive and reactive interfaces using the Vue.js framework.",
         tags: ["VueJs", "HTML", "CSS", "JavaScript", "GoogleAPI", "Material UI"],
+        category: "web app",
       },
       2: {
         title: "Brain Tumor Detection",
@@ -460,6 +461,7 @@ export const translations = {
         date: "Marzo 2024 - Marzo 2024",
         description: "Es una aplicación que utiliza Vue.js para crear y gestionar tableros visuales, probablemente con el objetivo de mostrar datos, métricas o información organizada en tarjetas o paneles. Este proyecto podría incluir funcionalidades como: creación, edición y eliminación de tableros o tarjetas personalizadas. Interacción con datos de manera dinámica y en tiempo real. Uso de componentes de Vue.js para estructurar la interfaz de manera modular, permitiendo una experiencia de usuario fluida y receptiva. Posible integración con gráficos o visualizaciones para representar información visualmente. El proyecto puede ser ideal para practicar la creación de interfaces interactivas y reactivas utilizando el marco Vue.js.",
         tags: ["VueJs", "HTML", "CSS", "JavaScript", "GoogleAPI", "Material UI"],
+        category: "web app",
       },
       2: {
         title: "Detección de Tumores Cerebrales",

@@ -547,7 +547,7 @@ export const projects = [
     ],
   },
   {
-    id: 1,
+    id: 12,
     title: "Tableros",
     date: "March 2024 - March 2024",
     description:
