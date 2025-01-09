@@ -4,6 +4,7 @@ import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Container = styled.div`
 margin-top: 100px;
@@ -51,21 +52,19 @@ const Desc = styled.div`
 `;
 
 const Education = () => {
+  const { translate } = useLanguage();
+
   return (
     <Container id="Education">
       <Wrapper>
-        <Title>Educación</Title>
+        <Title>{translate("education_title")}</Title>
         <Desc
           style={{
             marginBottom: "40px",
           }}
         >
-          Mi trayectoria educativa ha sido un viaje de autoexploración y
-          desarrollo personal, donde he tenido la oportunidad de descubrir y
-          crecer en diversos aspectos. A continuación, se detalla mi
-          formación educativa:
+          {translate("education_desc")}
         </Desc>
-
         <VerticalTimeline>
           {education.map((education, index) => (
             <EducationCard key={`education-${index}`} education={education} />

@@ -219,13 +219,13 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           />
           <Image src={project?.image} />
           <Title>{project?.title}</Title>
-          <Date>{project?.date}</Date>
+          <Date>{translate(`project_details.${project.id}.date`)}</Date>
           <Tags>
             {project?.tags.map((tag, index) => (
               <Tag key={index}>{tag}</Tag>
             ))}
           </Tags>
-          <Desc>{project?.description}</Desc>
+          <Desc>{translate(`project_details.${project.id}.description`)}</Desc>
           {project.member && (
             <>
               <Label>{translate("members")}</Label>

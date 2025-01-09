@@ -78,15 +78,15 @@ export const skills = [
 ];
 export const frameworks = [
   {
-    title: "Frontend",
+    title: "frontend",
     frameworks: [
       {
-        name: "React Js",
+        name: "React",
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
-        name: "Vue Js",
+        name: "Vue",
         image:
           "https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png?f=webp",
       },
@@ -110,11 +110,6 @@ export const frameworks = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
       },
       {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
-      {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
@@ -127,11 +122,16 @@ export const frameworks = [
     ],
   },
   {
-    title: "Backend",
+    title: "backend",
     frameworks: [
       {
         name: "Node Js",
         image: "https://nodejs.org/static/images/logo.svg",
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
         name: "Python",
@@ -149,7 +149,7 @@ export const frameworks = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
       },
       {
-        name: "Postgresql",
+        name: "PostgreSQL",
         image: "https://www.postgresql.org/media/img/about/press/elephant.png",
       },
       {
@@ -164,8 +164,13 @@ export const frameworks = [
     ],
   },  
   {
-    title: "Mobile",
+    title: "mobile",
     frameworks: [
+      {
+        name: "React Native",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+      },
       {
         name: "Flutter",
         image:
@@ -179,7 +184,7 @@ export const frameworks = [
       {
         name: "Kotlin",
         image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
+          "https://www.logo.wine/a/logo/Kotlin_(programming_language)/Kotlin_(programming_language)-Logo.wine.svg",
       },
       {
         name: "Hive",
@@ -199,7 +204,7 @@ export const frameworks = [
     ],
   },
   {
-    title: "Others",
+    title: "others",
     frameworks: [
       {
         name: "Git",
@@ -481,7 +486,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Snake - Meta",
+    title: "Snake Meta",
     date: "Nov 2023 - Nov 2024",
     description:
       "The Mobile Application is planned to be launched on Playstore in November 2024. This project proposes the 'Development of a Mobile Application to prevent, inform, and preserve the different species of snakes in Meta'. It keeps a record of all the snakes in the Department through an API with their Taxonomy, Data, Information, and Georeferencing. It has the Google Maps API to georeference the snake in the user room database. Made with Flutter in MVVM Architecture and Live Data.",
@@ -499,7 +504,7 @@ export const projects = [
     ],
     category: "android app",
     github: "https://github.com/JuanRojasDev/Snake-Meta/tree/main",
-    webapp: "https://drive.google.com/file/d/1RrLsgr70FYofL-tn7kAP9DgfDybAmnEs/view?usp=sharing",
+    webapp: "https://drive.google.com/file/d/1_r6n5F9CfS1D_fHqH1YTVAttY6iJlGXn/view?usp=sharing",
     member: [
       {
         name: "Juan Andres Rojas",
@@ -547,7 +552,7 @@ export const projects = [
     ],
   },
   {
-    id: 12,
+    id: 1,
     title: "Tableros",
     date: "March 2024 - March 2024",
     description:
@@ -575,8 +580,8 @@ export const projects = [
     ],
   },
   {
-    id: 1,
-    title: "Landing Page - Unillanos",
+    id: 12,
+    title: "Landing Page Unillanos",
     date: "Oct 2022 - Jan 2023",
     description:
       "Designed and developed a Landing Page with Astro, Tailwind CSS, and Material UI, it is a web page dedicated to acknowledgments for our graduation of study companions. I implemented a creative design where you can see the acknowledgment speech in several languages, English and Spanish, and I also implemented a photo carousel of the students who will graduate. I followed up on the landing page to improve the effectiveness and warmth of the project.",
@@ -611,7 +616,7 @@ export const education = [
     school: "Colegio Rembrandt",
     degree: "Bachillerato con Enfasís Empresarial",
     date: "Feb 2016 - Nov 2021",
-    grade: "100% Completado",
+    grade: "100%",
     desc: "Me gradué de bachillerato en 2021 del colegio Rembrandt en Bogotá, Colombia. Durante mi tiempo en esta institución, no solo adquirí conocimientos académicos, sino que también cultivé valores fundamentales que han moldeado mi carácter y guiado mis acciones. Aprendí el valor de la responsabilidad al cumplir con mis deberes escolares y participar activamente en actividades extracurriculares. La honestidad se convirtió en un pilar central en mi vida al ser transparente en mis acciones y relaciones. La empatía floreció en mí al entender las perspectivas de mis compañeros y brindar apoyo cuando era necesario.",
     skills: [
       "Comunicación Efectiva",
@@ -627,7 +632,7 @@ export const education = [
     school: "Corporación Universitaria Minuto de Dios sede San Juan Eudes",
     degree: "Tecnólogo En Desarollo de Software",
     date: "Feb 2022 - Nov 2024",
-    grade: "5 Semestre",
+    grade: "100%",
     desc: "Tecnólogo en formación en Desarrollo de Software en la Corporación Universitaria Minuto de Dios. Durante mi tiempo en la universidad, he adquirido una sólida comprensión de los principios fundamentales del desarrollo de software y técnicas avanzadas para la creación de aplicaciones innovadoras. Mi enfoque en el desarrollo de software me permitió alcanzar el quinto semestre de mi programa académico, lo que me brindó una base sólida en áreas como programación, diseño de bases de datos y desarrollo de aplicaciones web y móviles.",    
     skills: [
       "Liderazgo en Proyectos",

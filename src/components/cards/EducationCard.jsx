@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Top = styled.div`
   width: 100%;
@@ -100,6 +101,8 @@ const ItemWrapper = styled.div`
 const Span = styled.div``;
 
 const EducationCard = ({ education }) => {
+  const { translate } = useLanguage();
+
   return (
     <VerticalTimelineElement
       icon={
@@ -130,26 +133,26 @@ const EducationCard = ({ education }) => {
       <Top>
         <Image src={education.img} />
         <Body>
-          <Name>{education.school}</Name>
-          <Degree>{education.degree}</Degree>
+          <Name>{translate(`education_school_${education.id}`)}</Name>
+          <Degree>{translate(`education_degree_${education.id}`)}</Degree>
           <Date>{education.date}</Date>
         </Body>
       </Top>
       <Grade>
-        <b>Grade : </b>
+        <b>{translate("grade_label")}: </b>
         {education.grade}
       </Grade>
       <Description>
-        <Span>{education.desc}</Span>
+        <Span>{translate(`education_desc_${education.id}`)}</Span>
       </Description>
       <Description>
         {education?.skills && (
           <>
             <Skills>
-              <b>Enseñanzas: </b>
+              <b>{translate("skills_label")}:</b>
               <ItemWrapper>
                 {education?.skills?.map((skill, index) => (
-                  <Skill key={index}>• {skill}</Skill>
+                  <Skill key={index}>• {translate(`skill_${education.id}_${index}`)}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>

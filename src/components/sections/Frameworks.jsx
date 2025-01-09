@@ -145,10 +145,10 @@ const Frameworks = () => {
 
   const translatedFrameworks = frameworks.map((framework) => ({
     ...framework,
-    title: translate(framework.title.toLowerCase()),
+    title: translate(framework.title), 
     frameworks: framework.frameworks.map((item) => ({
       ...item,
-      name: translate(item.name.toLowerCase()),
+      name: translate(item.name),
     })),
   }));
 

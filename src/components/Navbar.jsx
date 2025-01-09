@@ -65,6 +65,7 @@ const NavLink = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  text-transform: none; // Asegúrate de que no haya transformación de texto
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
@@ -227,12 +228,16 @@ const Navbar = () => {
 
           <LanguageDropdown>
             <LanguageButton>
-              <span>{language.toUpperCase()}</span>
+              <img src={translate("language_icon")} style={{ width: "20px", height: "20px" }} />
               <span style={{ marginLeft: "2px" }}>▼</span>
             </LanguageButton>
             <DropdownContent>
-              <NavLink onClick={() => handleLanguageChange("es")}>ES</NavLink>
-              <NavLink onClick={() => handleLanguageChange("en")}>EN</NavLink>
+              <NavLink onClick={() => handleLanguageChange("es")}>
+                <img src="https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png" style={{ width: "20px", height: "20px" }} />
+              </NavLink>
+              <NavLink onClick={() => handleLanguageChange("en")}>
+                <img src="https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png" style={{ width: "20px", height: "20px" }} />
+              </NavLink>
             </DropdownContent>
           </LanguageDropdown>
         </NavItems>
@@ -254,14 +259,14 @@ const Navbar = () => {
               </>
             )}
             <GithubButton href={Bio.github} target="_Blank">
-              Github Profile
+              {translate("github_profile")}
             </GithubButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_Blank">
-            Github Profile
+            {translate("github_profile")}
           </GithubButton>
         </ButtonContainer>
       </NavbarContainer>
