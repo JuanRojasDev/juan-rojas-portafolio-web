@@ -191,7 +191,7 @@ const Navbar = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const theme = useTheme();
   const navigate = useNavigate();
-  const { language, setLanguage, translate } = useLanguage();
+  const { setLanguage, translate } = useLanguage();
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
@@ -228,15 +228,27 @@ const Navbar = () => {
 
           <LanguageDropdown>
             <LanguageButton>
-              <img src={translate("language_icon")} style={{ width: "20px", height: "20px" }} />
+              <img
+                src={translate("language_icon")}
+                alt={translate("language")}
+                style={{ width: "20px", height: "20px" }}
+              />
               <span style={{ marginLeft: "2px" }}>▼</span>
             </LanguageButton>
             <DropdownContent>
               <NavLink onClick={() => handleLanguageChange("es")}>
-                <img src="https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png" style={{ width: "20px", height: "20px" }} />
+                <img
+                  src="https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png"
+                  alt={translate("spanish")}
+                  style={{ width: "20px", height: "20px" }}
+                />
               </NavLink>
               <NavLink onClick={() => handleLanguageChange("en")}>
-                <img src="https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png" style={{ width: "20px", height: "20px" }} />
+                <img
+                  src="https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png"
+                  alt={translate("english")}
+                  style={{ width: "20px", height: "20px" }}
+                />
               </NavLink>
             </DropdownContent>
           </LanguageDropdown>
