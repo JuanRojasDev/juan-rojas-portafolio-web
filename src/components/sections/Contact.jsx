@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import EarthCanvas from "../canvas/Earth";
+import ReactDOM from "react-dom";
 
 const Container = styled.div`
   display: flex;
@@ -133,20 +134,60 @@ const Notification = styled.div`
   position: fixed;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -10px);
   background-color: #4caf50; /* Fondo verde */
   color: white;
-  padding: 15px;
+  padding: 15px 18px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+  will-change: transform, opacity;
+  opacity: 1; /* asegurar que sea visible cuando se monta */
+  animation: slideDown 360ms cubic-bezier(.2,.8,.2,1) both;
+
+  @keyframes slideDown {
+    0% { transform: translate(-50%, -10px); }
+    100% { transform: translate(-50%, 0); }
+  }
 `;
 
 const CheckIcon = styled.span`
   margin-right: 10px;
   font-size: 20px;
 `;
+
+const CloseButton = styled.button`
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 6px;
+`;
+
+const Snackbar = ({ show, onClose, children }) => {
+  useEffect(() => {
+    if (!show) return;
+    const id = setTimeout(() => onClose && onClose(), 3000);
+    return () => clearTimeout(id);
+  }, [show, onClose]);
+
+  if (!show) return null;
+
+  return ReactDOM.createPortal(
+    <Notification role="status" aria-live="polite">
+      <CheckIcon>✓</CheckIcon>
+      <div style={{ fontWeight: 600 }}>{children}</div>
+      <CloseButton aria-label="Cerrar notificación" onClick={onClose}>
+        ×
+      </CloseButton>
+    </Notification>,
+    document.body
+  );
+};
 
 const Contact = () => {
   const form = useRef();
@@ -174,9 +215,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setShowNotification(true);
-          form.current.reset();
-          setTimeout(() => setShowNotification(false), 3000); // Ocultar notificación después de 3 segundos
+          if (result.status === 200 ) {
+            setShowNotification(true);
+            form.current.reset();
+          } else {
+            alert("Error al enviar el mensaje: " + result.text);
+          }
         },
         (error) => {
           alert("Error al enviar el mensaje: " + error.text);
@@ -191,12 +235,9 @@ const Contact = () => {
 
   return (
     <Container>
-      {showNotification && (
-        <Notification>
-          <CheckIcon>✓</CheckIcon>
-          ¡Correo electrónico enviado correctamente!
-        </Notification>
-      )}
+      <Snackbar show={showNotification} onClose={() => setShowNotification(false)}>
+        ¡Correo electrónico enviado correctamente!
+      </Snackbar>
       <Wrapper>
         <EarthCanvas />
         <Title>Contactame</Title>
