@@ -1,15 +1,15 @@
 export const Bio = {
   name: "Juan Andres Rojas",
   roles: [
-    "Full Stack Developer",
-    "Android Developer",
+    "Full-Stack Developer",
+    "Mobile Developer",
     "UI/UX Designer",
-    "Programmer",
+    "AI Developer",
   ],
   description:
     "I am a motivated and versatile person, always ready to face new challenges. Passionate about learning, I am dedicated to delivering high-quality results. I possess a positive attitude and a growth mindset, which constantly drives me to improve and develop both personally and professionally.",
   github: "https://github.com/JuanRojasDev",
-  resume: "https://drive.google.com/file/d/1-wXqcZvVIeq3jmmbLi20HZvWCLMaAASf/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/171_sTgnxImwGVgEDIaILz0B0mko0e9YQ/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
   gmail: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DXDwSWxClxbMhjMTtxqgXlxCSLBWRlZKgdDqMKnqvBqbQlWzpthjTBZqRBmwLrnrnrGQctQFGjHFJcrkxCRcWNpcHBQBRBjzbDqgRkTsMJQvtfpWKxcvVjHL",
 };
@@ -78,46 +78,60 @@ export const skills = [
 ];
 export const frameworks = [
   {
+    title: "languages",
+    frameworks: [
+      {
+        name: "TypeScript",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "JavaScript",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "Python",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
+      {
+        name: "PHP",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      },
+      {
+        name: "Dart",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+      },
+    ],
+  },
+  {
     title: "frontend",
     frameworks: [
       {
         name: "React",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "Next.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
       {
         name: "Vue",
-        image:
-          "https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png?f=webp",
-      },
-      {
-        name: "Flask",
-        image:
-        "https://pbs.twimg.com/media/GLd6BhSXcAA1wo7?format=png&name=360x360",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
       },
       {
         name: "Astro",
-        image:
-          "https://astro.build/assets/press/astro-icon-light-gradient.svg",
+        image: "https://astro.build/assets/press/astro-icon-light-gradient.svg",
       },
       {
-        name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+        name: "HTML5",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       },
       {
-        name: "CSS",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-      },
-      {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+        name: "CSS3",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
       {
         name: "Tailwind CSS",
-        image:
-          "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
     ],
   },
@@ -125,126 +139,169 @@ export const frameworks = [
     title: "backend",
     frameworks: [
       {
-        name: "Node Js",
-        image: "https://nodejs.org/static/images/logo.svg",
+        name: "Node.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       },
       {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
-      {
-        name: "Python",
-        image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        name: "Express.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       },
       {
         name: "FastAPI",
-        image:
-          "https://cdn.worldvectorlogo.com/logos/fastapi.svg",
+        image: "https://cdn.worldvectorlogo.com/logos/fastapi.svg",
       },
       {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+        name: "Laravel",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
       },
       {
-        name: "PostgreSQL",
-        image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+        name: "GraphQL",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
       },
       {
-        name: "MongoDB",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        name: "JWT",
+        image: "https://cdn.worldvectorlogo.com/logos/jwt-3.svg",
       },
       {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
-    ],
-  },  
-  {
-    title: "mobile",
-    frameworks: [
-      {
-        name: "React Native",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      },
-      {
-        name: "Flutter",
-        image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
-      },
-      {
-        name: "Java",
-        image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      },
-      {
-        name: "Kotlin",
-        image:
-          "https://www.logo.wine/a/logo/Kotlin_(programming_language)/Kotlin_(programming_language)-Logo.wine.svg",
-      },
-      {
-        name: "Hive",
-        image:
-          "https://asset.brandfetch.io/idlol3X23K/idjPsZKpGc.svg?updated=1667778706414",
-      },
-      {
-        name: "XML",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-      },
-      {
-        name: "Android Studio",
-        image:
-          "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png",
+        name: "Redis",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
       },
     ],
   },
   {
-    title: "others",
+    title: "databases",
     frameworks: [
       {
-        name: "Git",
-        image:
-          "https://cdn.iconscout.com/icon/free/png-512/free-git-225996.png?f=webp&w=256",
+        name: "MySQL",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       },
       {
-        name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        name: "MongoDB",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       },
       {
-        name: "Jira",
-        image:
-          "https://w7.pngwing.com/pngs/619/869/png-transparent-jira-hd-logo.png",
+        name: "DynamoDB",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg",
       },
       {
-        name: "Notion",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+        name: "Supabase",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+      },
+      {
+        name: "Firebase",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      },
+    ],
+  },
+  {
+    title: "mobile",
+    frameworks: [
+      {
+        name: "Flutter",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+      },
+      {
+        name: "React Native",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "Android Studio",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+      },
+    ],
+  },
+  {
+    title: "ai",
+    frameworks: [
+      {
+        name: "OpenAI",
+        image: "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+      },
+      {
+        name: "Gemini",
+        image: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
+      },
+      {
+        name: "Claude",
+        image: "https://media.lantern.io/claude_logo_3ec57d87f2.svg",
+      },
+      {
+        name: "Pandas",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+      },
+      {
+        name: "Ollama",
+        image: "https://avatars.githubusercontent.com/u/151674099?s=200&v=4",
+      },
+      {
+        name: "n8n",
+        image: "https://avatars.githubusercontent.com/u/45487711?s=200&v=4",
+      },
+      {
+        name: "Make",
+        image: "https://images.ctfassets.net/dm4oa8qtogq0/4LP1ix40a63dpOPZhila2Z/6d22ac51f33854d1e759e0f5fa3dd210/make-app-icon-circle.png",
+      },
+    ],
+  },
+  {
+    title: "devops",
+    frameworks: [
+      {
+        name: "Docker",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      },
+      {
+        name: "GitHub Actions",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+      },
+      {
+        name: "Linux",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      },
+      {
+        name: "AWS",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      },
+      {
+        name: "Google Cloud",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
       },
       {
         name: "Vercel",
-        image:
-          "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/120x120.png",
+        image: "https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png",
+      },
+    ],
+  },
+  {
+    title: "tools",
+    frameworks: [
+      {
+        name: "Git",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      },
+      {
+        name: "RabbitMQ",
+        image: "https://www.rabbitmq.com/assets/files/rabbitmq-logo-e91cacd38fcef5219149bc5cfa10b384.svg",
+      },
+      {
+        name: "Jenkins",
+        image: "https://docs.device42.com/assets/images/Jenkins-logo-butler-transparent-9eb4225eb2cc214e61c9f37e0870ecc3.png",
       },
       {
         name: "VS Code",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      },
-      {
-        name: "Docker",
-        image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
       },
       {
         name: "Figma",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/400px-Figma-logo.svg.png",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      },
+      {
+        name: "Notion",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
+      },
+      {
+        name: "Jira",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
       },
     ],
   },
@@ -290,33 +347,22 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://media.licdn.com/dms/image/C4E0BAQE479kcnodujA/company-logo_200_200/0/1630632726020/it_ingenieria_logo?e=2147483647&v=beta&t=_QvNHf40ks8IfgoABzp8skWwLQHvbEZfqby0xMcN350",
-    role: "Desarrollador Web, Diseñador Web",
-    company: "IT Ingeniera",
-    date: "18 Feb 2024 - 22 Feb 2024",
-    desc: "En clase de Programación Web, Desarrolle una página web completa utilizando solo HTML y CSS para la venta y gestión de diferentes servicios implementando un diseño interactivo para el usuario. Fui el de mejor desempeño en el trabajo",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlHGUPUeRUP_KpYLUzWJLN5Ks8JGqLqBvvdA&s",
+    role: "Desarrollador Web Full Stack",
+    company: "Bodytech",
+    date: "Ene 2024 - Dic 2025",
+    desc: "• Desarrollé y mantuve aplicaciones web para la gestión de membresías y servicios de gimnasio. Implementé funcionalidades de reservas en línea, seguimiento de entrenamientos y gestión de usuarios. Trabajé con tecnologías modernas para crear interfaces responsivas y APIs eficientes.",
     skills: [
-      "HTML",
-      "CSS",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "TypeScript",
+      "REST API",
     ],
   },
   {
     id: 3,
-    img: "https://pbs.twimg.com/media/GLd3SqLWQAAvDQ2?format=png&name=small",
-    role: "Diseñador Web, Desarollador Frontend",
-    company: "InnovaHogarTV",
-    date: "1 Mar 2024 - 30 May 2024",
-    desc: "• Desarrollé un sitio web de comercio electrónico utilizando tecnologías como React JS, HTML, CSS y JavaScript para una empresa dedicada a la venta de productos para el hogar. En este proyecto, me enfoqué en mejorar la experiencia del usuario mediante la creación de una página altamente interactiva. Los usuarios tienen la capacidad de explorar fácilmente los productos ofrecidos, gracias a una interfaz intuitiva y receptiva. Además, implementé funcionalidades que permiten a los usuarios contactar directamente con la empresa, facilitando así la comunicación y la satisfacción del cliente.",
-    skills: [
-      "ReactJs",
-      "NodeJs",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-  },
-  {
-    id: 4,
     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/gdsc.jpeg?alt=media&token=c162329c-efaa-4be8-a173-8d3f4c48ea70",
     role: "Desarrollador Android",
     company: "Google Developers Student Club (GDSC) KIIT",
@@ -333,7 +379,7 @@ export const experiences = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     img: "https://pbs.twimg.com/media/GLd3qwaXUAEOfDr?format=png&name=small",
     role: "Contribuidor de Código Abierto",
     company: "Github Contributor of Code",
@@ -607,6 +653,170 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 13,
+    title: "AITEC - Sitio Web Corporativo",
+    date: "Ene 2021 - Dic 2022",
+    description:
+      "Desarrollé el sitio web corporativo completo para AITEC, una empresa líder en soluciones tecnológicas. El proyecto incluyó diseño responsivo, optimización SEO, integración de formularios de contacto, y secciones informativas sobre servicios y productos. Implementé un diseño moderno y profesional que refleja la identidad de la marca y mejora la experiencia del usuario.",
+    image:
+      "https://aitec.com.co/wp-content/uploads/2023/03/logo-aitec-blanco.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "WordPress",
+      "PHP",
+      "MySQL",
+    ],
+    category: "web app",
+    github: "",
+    webapp: "https://aitec.com.co/",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: "UEFA Champions League Bracket",
+    date: "Feb 2025 - Feb 2025",
+    description:
+      "Interactive bracket visualization for the UEFA Champions League tournament. Users can view match results, team statistics, and tournament progression in real-time. Built with modern JavaScript frameworks to provide a smooth and engaging user experience with dynamic updates and responsive design.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1200px-UEFA_Champions_League_logo_2.svg.png",
+    tags: [
+      "JavaScript",
+      "React",
+      "HTML",
+      "CSS",
+      "API Integration",
+    ],
+    category: "web app",
+    github: "https://github.com/JuanRojasDev/uefa-champions-league-bracket",
+    webapp: "",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: "Vite Clima - Weather App",
+    date: "Mar 2024 - Mar 2024",
+    description:
+      "Modern weather application built with Vite for fast development and optimal performance. Integrates with weather APIs to provide real-time weather information, forecasts, and location-based data. Features a clean, intuitive interface with smooth animations and responsive design for all devices.",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/1163/1163661.png",
+    tags: [
+      "Vite",
+      "JavaScript",
+      "React",
+      "Weather API",
+      "CSS",
+    ],
+    category: "web app",
+    github: "https://github.com/JuanRojasDev/vite-clima",
+    webapp: "",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
+  {
+    id: 16,
+    title: "React Calculator",
+    date: "Mar 2024 - Mar 2024",
+    description:
+      "Fully functional calculator application built with React. Implements basic arithmetic operations with a clean, modern interface. Demonstrates proficiency in React state management, component architecture, and event handling. Features responsive design and smooth user interactions.",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/4490/4490662.png",
+    tags: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
+    category: "web app",
+    github: "https://github.com/JuanRojasDev/react-calculadora",
+    webapp: "",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
+  {
+    id: 17,
+    title: "Realtime Chat Application",
+    date: "Jul 2025 - Jul 2025",
+    description:
+      "Real-time chat application built with TypeScript featuring instant messaging, user authentication, and online status indicators. Implements WebSocket technology for real-time communication, with a modern UI and support for multiple chat rooms. Includes message history, typing indicators, and user presence features.",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/2190/2190552.png",
+    tags: [
+      "TypeScript",
+      "React",
+      "WebSocket",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+    ],
+    category: "web app",
+    github: "https://github.com/JuanRojasDev/realtime-chat",
+    webapp: "",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
+  {
+    id: 18,
+    title: "TodoList API - .NET",
+    date: "Mar 2025 - Mar 2025",
+    description:
+      "RESTful API for task management built with C#, .NET, ASP.NET, and SQL Server. Implements full CRUD operations for todo items with user authentication and authorization. Features include task categorization, priority levels, due dates, and completion tracking. Demonstrates proficiency in backend development with Microsoft technologies.",
+    image:
+      "https://cdn-icons-png.flaticon.com/512/2387/2387635.png",
+    tags: [
+      "C#",
+      ".NET",
+      "ASP.NET",
+      "SQL Server",
+      "REST API",
+      "Entity Framework",
+    ],
+    category: "web app",
+    github: "https://github.com/JuanRojasDev/TodoListApi",
+    webapp: "",
+    member: [
+      {
+        name: "Juan Andres Rojas",
+        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
+        github: "https://github.com/JuanRojasDev",
+      },
+    ],
+  },
 ];
 
 export const education = [
@@ -628,7 +838,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://coopuniminuto.com/images/2019/02/28/umd.jpg",
+    img: "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092015/logo_minuto_de_dios.png?itok=JYHlyDUc",
     school: "Corporación Universitaria Minuto de Dios sede San Juan Eudes",
     degree: "Tecnólogo En Desarollo de Software",
     date: "Feb 2022 - Nov 2024",

@@ -1,288 +1,620 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import styled, { useTheme } from "styled-components";
+import React, { useState, useEffect, useRef } from "react";
+import styled, { keyframes } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
-const Nav = styled.div`
-  background-color: ${({ theme }) => theme.bg};
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
+// ─── Keyframes ───
+const activeDot = keyframes`
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.7); }
+`;
+
+// ─── Nav root — STICKY, full-width background ───
+const NavRoot = styled(motion.header)`
   position: sticky;
   top: 0;
-  z-index: 10;
-  color: white;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  /* Full-width background — completely transparent at top, solid when scrolled */
+  background: ${({ $scrolled }) =>
+    $scrolled
+      ? "rgba(9, 9, 23, 0.92)"
+      : "transparent"};
+  backdrop-filter: ${({ $scrolled }) => 
+    $scrolled ? "blur(28px) saturate(180%)" : "none"};
+  -webkit-backdrop-filter: ${({ $scrolled }) => 
+    $scrolled ? "blur(28px) saturate(180%)" : "none"};
+  border-bottom: 1px solid ${({ $scrolled }) =>
+    $scrolled ? "rgba(255,127,0,0.12)" : "transparent"};
+  box-shadow: ${({ $scrolled }) =>
+    $scrolled
+      ? "0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,127,0,0.06)"
+      : "none"};
+  transition: all 0.4s ease;
 `;
 
-const ColorText = styled.div`
-  color: ${({ theme }) => theme.primary};
-  font-size: 32px;
-`;
-
-const NavbarContainer = styled.div`
+// The actual bar — inner container, transparent (NavRoot handles bg)
+const NavBar = styled(motion.div)`
+  pointer-events: all;
   width: 100%;
   max-width: 1200px;
-  padding: 0 24px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1rem;
+  padding: 0 28px;
+  margin: 0;
+  background: transparent;
 `;
 
-const NavLogo = styled.a`
+// ─── Logo ───
+const NavLogo = styled(motion.button)`
   display: flex;
   align-items: center;
-  width: 80%;
-  padding: 0 6px;
-  font-weight: 500;
-  font-size: 18px;
-  text-decoration: none;
-  color: inherit;
+  gap: 0;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  background: none;
+  border: none;
   cursor: pointer;
-`;
-
-const NavItems = styled.ul`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  padding: 0 6px;
-  list-style: none;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  text-transform: none; // Asegúrate de que no haya transformación de texto
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
+  padding: 0;
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  line-height: 1;
+  /* Equal width to NavRight so links are truly centered */
+  flex: 0 0 auto;
+  min-width: 160px;
 `;
 
-const ButtonContainer = styled.div`
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 6px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const GithubButton = styled.a`
-  border: 1px solid ${({ theme }) => theme.primary};
+const LogoBracket = styled.span`
   color: ${({ theme }) => theme.primary};
+  font-family: var(--font-mono);
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1;
+  opacity: 0.9;
+`;
+
+const LogoSlash = styled.span`
+  color: ${({ theme }) => theme.primary};
+  font-family: var(--font-mono);
+  font-weight: 300;
+  margin: 0 1px;
+`;
+
+// ─── Center nav links — use flex with flex:1 trick for true centering ───
+const NavLinks = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  /* True centering: grow to fill space between logo and right */
+  flex: 1;
   justify-content: center;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const NavLinkItem = styled.li`
+  position: relative;
+`;
+
+const NavLinkBtn = styled(motion.button)`
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
   font-weight: 500;
-  transition: all 0.6s ease-in-out;
-  text-decoration: none;
+  color: ${({ $active, theme }) =>
+    $active ? theme.primary : theme.text_secondary};
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+
   &:hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.primaryLight};
   }
 `;
 
-const MobileIcon = styled.div`
-  height: 100%;
+// Animated underline indicator
+const ActiveIndicator = styled(motion.div)`
+  position: absolute;
+  bottom: 2px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.secondary});
+  box-shadow: 0 0 8px rgba(255, 127, 0, 0.6);
+`;
+
+// ─── Right side ───
+const NavRight = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.text_primary};
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
+  gap: 10px;
+  flex-shrink: 0;
+  /* Mirror logo width so links stay centered */
+  min-width: 160px;
+  justify-content: flex-end;
+`;
+
+// ─── Language dropdown — premium ───
+const LangWrapper = styled.div`
+  position: relative;
+`;
+
+const LangBtn = styled(motion.button)`
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_secondary};
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+
+  img {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+  }
+
+  .chevron {
+    font-size: 9px;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+    transform: ${({ $open }) => ($open ? "rotate(180deg)" : "rotate(0deg)")};
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
+    background: rgba(255, 127, 0, 0.08);
   }
 `;
 
-const MobileMenu = styled.ul`
+const LangDropdown = styled(motion.div)`
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(14, 14, 26, 0.96);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 130px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,127,0,0.06);
+  z-index: 200;
+`;
+
+const LangOption = styled(motion.button)`
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: ${({ $active, theme }) =>
+    $active ? "rgba(255,127,0,0.10)" : "transparent"};
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: ${({ $active, theme }) =>
+    $active ? theme.primary : theme.text_secondary};
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.02em;
+
+  img {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: rgba(255, 127, 0, 0.08);
+    color: ${({ theme }) => theme.primaryLight};
+  }
+
+  .check {
+    margin-left: auto;
+    color: ${({ theme }) => theme.primary};
+    font-size: 12px;
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+  }
+`;
+
+// ─── GitHub button — premium ───
+const GithubBtn = styled(motion.a)`
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1.5px solid ${({ theme }) => theme.primary};
+  background: transparent;
+  color: ${({ theme }) => theme.primary};
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s ease, box-shadow 0.25s ease;
+
+  /* Animated fill on hover */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.primaryDark});
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 24px rgba(255, 127, 0, 0.45), 0 0 48px rgba(255, 127, 0, 0.15);
+    &::before { opacity: 1; }
+  }
+
+  span, svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const GithubIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+  </svg>
+);
+
+// ─── Mobile ───
+const MobileMenuBtn = styled(motion.button)`
+  display: none;
+  background: rgba(255, 127, 0, 0.08);
+  border: 1px solid rgba(255, 127, 0, 0.2);
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: ${({ theme }) => theme.primary};
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+`;
+
+const MobileOverlay = styled(motion.div)`
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 9, 23, 0.97);
+  backdrop-filter: blur(32px);
+  z-index: 999;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 16px;
-  padding: 0 6px;
-  list-style: none;
-  width: 100%;
-  padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
-  position: absolute;
-  top: 80px;
-  right: 0;
-
-  transition: all 0.6s ease-in-out;
-  transform: ${({ isOpen }) =>
-    isOpen ? "translateY(0)" : "translateY(-100%)"};
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
+  padding: 100px 36px 48px;
 `;
 
-const LanguageDropdown = styled.div`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
+const MobileNavBtn = styled(motion.button)`
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 800;
+  color: ${({ theme }) => theme.text_secondary};
   cursor: pointer;
-  text-align: center;
+  padding: 14px 0;
+  text-align: left;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: color 0.2s ease;
 
-  @media screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
-  }
+  &:hover { color: ${({ theme }) => theme.primary}; }
 `;
 
-const DropdownContent = styled.div`
-  display: none;
+const MobileCloseBtn = styled(motion.button)`
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: ${({ theme }) => theme.bg};
-  min-width: 60px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-
-  ${LanguageDropdown}:hover & {
-    display: block;
-  }
-
-  a {
-    color: ${({ theme }) => theme.text_primary};
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    &:hover {
-      background-color: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.text_primary};
-    }
-  }
-`;
-
-const LanguageButton = styled.div`
-  display: inline-flex;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 127, 0, 0.1);
+  border: 1px solid rgba(255, 127, 0, 0.25);
+  border-radius: 9999px;
+  width: 44px;
+  height: 44px;
+  display: flex;
   align-items: center;
-  font-size: 16px;
-  color: ${({ theme }) => theme.text_primary};
+  justify-content: center;
   cursor: pointer;
-  margin-right: 2px;
+  color: ${({ theme }) => theme.primary};
+  font-size: 20px;
+  font-weight: 700;
 `;
 
+const MobileLangRow = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+`;
+
+const MobileLangBtn = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: 1.5px solid ${({ $active, theme }) =>
+    $active ? theme.primary : "rgba(255,255,255,0.10)"};
+  background: ${({ $active, theme }) =>
+    $active ? "rgba(255,127,0,0.10)" : "transparent"};
+  color: ${({ $active, theme }) =>
+    $active ? theme.primary : theme.text_secondary};
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+
+  img { width: 20px; height: 20px; border-radius: 3px; }
+`;
+
+// ─── Sections ───
+const NAV_SECTIONS = [
+  { key: "about",      id: "About" },
+  { key: "skills",     id: "Skills" },
+  { key: "experience", id: "Experience" },
+  { key: "projects",   id: "Projects" },
+  { key: "education",  id: "Education" },
+];
+
+// ─── Component ───
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const theme = useTheme();
-  const navigate = useNavigate();
-  const { setLanguage, translate } = useLanguage();
+  const [mobileOpen, setMobileOpen]     = useState(false);
+  const [activeSection, setActiveSection] = useState("About");
+  const [scrolled, setScrolled]         = useState(false);
+  const [langOpen, setLangOpen]         = useState(false);
+  const langRef                         = useRef(null);
+  const { language, setLanguage, translate } = useLanguage();
 
-  const handleLanguageChange = (newLanguage) => {
-    setLanguage(newLanguage);
-    setIsLanguageOpen(false);
+  // Scroll tracking
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      const y = window.scrollY + 100;
+      for (let i = NAV_SECTIONS.length - 1; i >= 0; i--) {
+        const el = document.getElementById(NAV_SECTIONS[i].id);
+        if (el && el.offsetTop <= y) {
+          setActiveSection(NAV_SECTIONS[i].id);
+          break;
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close lang dropdown on outside click
+  useEffect(() => {
+    const handler = (e) => {
+      if (langRef.current && !langRef.current.contains(e.target)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMobileOpen(false);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      navigate(`${sectionId}`);
-    }
+  const toggleLang = (lang) => {
+    setLanguage(lang);
+    setLangOpen(false);
+    setMobileOpen(false);
   };
+
+  const ES_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png";
+  const EN_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png";
+  const currentFlag = language === "es" ? ES_FLAG : EN_FLAG;
 
   return (
-    <Nav>
-      <NavbarContainer>
-        <NavLogo href="">
-          <ColorText>&lt;</ColorText>Juan
-          <div style={{ color: theme.primary }}>/</div>Rojas
-          <ColorText>&gt;</ColorText>
-        </NavLogo>
+    <>
+      <NavRoot
+        $scrolled={scrolled}
+        initial={{ y: -90, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.05 }}
+      >
+        <NavBar>
+          {/* ── Logo ── */}
+          <NavLogo
+            onClick={() => scrollTo("About")}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+          >
+            <LogoBracket>&lt;</LogoBracket>
+            Juan
+            <LogoSlash>/</LogoSlash>
+            Rojas
+            <LogoBracket>&gt;</LogoBracket>
+          </NavLogo>
 
-        <MobileIcon onClick={() => setIsOpen(!isOpen)}>
-          <MenuRounded style={{ color: "inherit" }} />
-        </MobileIcon>
+          {/* ── Centered nav links ── */}
+          <NavLinks>
+            {NAV_SECTIONS.map(({ key, id }) => {
+              const isActive = activeSection === id;
+              return (
+                <NavLinkItem key={id}>
+                  <NavLinkBtn
+                    $active={isActive}
+                    onClick={() => scrollTo(id)}
+                    whileTap={{ scale: 0.94 }}
+                  >
+                    {translate(key)}
+                    {isActive && (
+                      <ActiveIndicator
+                        layoutId="nav-active-indicator"
+                        transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                      />
+                    )}
+                  </NavLinkBtn>
+                </NavLinkItem>
+              );
+            })}
+          </NavLinks>
 
-        <NavItems>
-          <NavLink onClick={() => scrollToSection("About")}>{translate("about")}</NavLink>
-          <NavLink onClick={() => scrollToSection("Skills")}>{translate("skills")}</NavLink>
-          <NavLink onClick={() => scrollToSection("Experience")}>{translate("experience")}</NavLink>
-          <NavLink onClick={() => scrollToSection("Projects")}>{translate("projects")}</NavLink>
-          <NavLink onClick={() => scrollToSection("Education")}>{translate("education")}</NavLink>
+          {/* ── Right side ── */}
+          <NavRight>
+            {/* Language dropdown */}
+            <LangWrapper ref={langRef}>
+              <LangBtn
+                $open={langOpen}
+                onClick={() => setLangOpen((v) => !v)}
+                whileTap={{ scale: 0.96 }}
+                aria-label="Toggle language"
+              >
+                <img src={currentFlag} alt={language.toUpperCase()} />
+                {language.toUpperCase()}
+                <span className="chevron">▼</span>
+              </LangBtn>
 
-          <LanguageDropdown>
-            <LanguageButton>
-              <img
-                src={translate("language_icon")}
-                alt={translate("language")}
-                style={{ width: "20px", height: "20px" }}
-              />
-              <span style={{ marginLeft: "2px" }}>▼</span>
-            </LanguageButton>
-            <DropdownContent>
-              <NavLink onClick={() => handleLanguageChange("es")}>
-                <img
-                  src="https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png"
-                  alt={translate("spanish")}
-                  style={{ width: "20px", height: "20px" }}
-                />
-              </NavLink>
-              <NavLink onClick={() => handleLanguageChange("en")}>
-                <img
-                  src="https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png"
-                  alt={translate("english")}
-                  style={{ width: "20px", height: "20px" }}
-                />
-              </NavLink>
-            </DropdownContent>
-          </LanguageDropdown>
-        </NavItems>
+              <AnimatePresence>
+                {langOpen && (
+                  <LangDropdown
+                    initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                    transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
+                  >
+                    <LangOption
+                      $active={language === "es"}
+                      onClick={() => toggleLang("es")}
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      <img src={ES_FLAG} alt="ES" />
+                      Español
+                      <span className="check">✓</span>
+                    </LangOption>
+                    <LangOption
+                      $active={language === "en"}
+                      onClick={() => toggleLang("en")}
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      <img src={EN_FLAG} alt="EN" />
+                      English
+                      <span className="check">✓</span>
+                    </LangOption>
+                  </LangDropdown>
+                )}
+              </AnimatePresence>
+            </LangWrapper>
 
-        {isOpen && (
-          <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("About"); }}>{translate("about")}</NavLink>
-            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Skills"); }}>{translate("skills")}</NavLink>
-            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Experience"); }}>{translate("experience")}</NavLink>
-            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Projects"); }}>{translate("projects")}</NavLink>
-            <NavLink onClick={() => { setIsOpen(!isOpen); scrollToSection("Education"); }}>{translate("education")}</NavLink>
-            <NavLink onClick={() => setIsLanguageOpen(!isLanguageOpen)}>
-              {translate("language")} <span style={{ marginLeft: "2px" }}>▼</span>
-            </NavLink>
-            {isLanguageOpen && (
-              <>
-                <NavLink onClick={() => handleLanguageChange("es")}>{translate("spanish")}</NavLink>
-                <NavLink onClick={() => handleLanguageChange("en")}>{translate("english")}</NavLink>
-              </>
-            )}
-            <GithubButton href={Bio.github} target="_Blank">
-              {translate("github_profile")}
-            </GithubButton>
-          </MobileMenu>
+            {/* GitHub button */}
+            <GithubBtn
+              href={Bio.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+            >
+              <GithubIcon />
+              <span>{translate("github_profile")}</span>
+            </GithubBtn>
+
+            {/* Mobile hamburger */}
+            <MobileMenuBtn
+              onClick={() => setMobileOpen(true)}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Open menu"
+            >
+              <MenuRounded style={{ fontSize: 22 }} />
+            </MobileMenuBtn>
+          </NavRight>
+        </NavBar>
+      </NavRoot>
+
+      {/* ── Mobile overlay ── */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <MobileOverlay
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <MobileCloseBtn
+              onClick={() => setMobileOpen(false)}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Close menu"
+            >
+              ✕
+            </MobileCloseBtn>
+
+            {NAV_SECTIONS.map(({ key, id }, i) => (
+              <MobileNavBtn
+                key={id}
+                onClick={() => scrollTo(id)}
+                initial={{ opacity: 0, x: -32 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.06, duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+              >
+                {translate(key)}
+              </MobileNavBtn>
+            ))}
+
+            <MobileLangRow>
+              <MobileLangBtn $active={language === "es"} onClick={() => toggleLang("es")}>
+                <img src={ES_FLAG} alt="ES" /> Español
+              </MobileLangBtn>
+              <MobileLangBtn $active={language === "en"} onClick={() => toggleLang("en")}>
+                <img src={EN_FLAG} alt="EN" /> English
+              </MobileLangBtn>
+            </MobileLangRow>
+          </MobileOverlay>
         )}
-
-        <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
-            {translate("github_profile")}
-          </GithubButton>
-        </ButtonContainer>
-      </NavbarContainer>
-    </Nav>
+      </AnimatePresence>
+    </>
   );
 };
 

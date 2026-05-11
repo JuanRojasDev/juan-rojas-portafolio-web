@@ -1,117 +1,184 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useLanguage } from "../../context/LanguageContext";
+
+// ─── Keyframes ───
+const glowPulse = keyframes`
+  0%, 100% { box-shadow: 0 0 0 3px rgba(255,127,0,0.3), 0 0 16px rgba(255,127,0,0.15); }
+  50%       { box-shadow: 0 0 0 3px rgba(255,127,0,0.6), 0 0 28px rgba(255,127,0,0.30); }
+`;
+
+// ─── Styled Components ───
+
+const CardWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+
+  /* Left accent bar */
+  &::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+    background: linear-gradient(
+      180deg,
+      ${({ theme }) => theme.primary} 0%,
+      rgba(133,76,230,0.5) 100%
+    );
+    opacity: 0.6;
+  }
+`;
 
 const Top = styled.div`
   width: 100%;
   display: flex;
-  max-width: 100%;
-  gap: 12px;
+  gap: 14px;
+  align-items: flex-start;
 `;
-const Image = styled.img`
-  height: 50px;
-  border-radius: 10px;
-  margin-top: 4px;
+
+const CompanyLogo = styled.img`
+  height: 52px;
+  width: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 127, 0, 0.25);
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.04);
 
   @media only screen and (max-width: 768px) {
     height: 40px;
+    width: 40px;
+    border-radius: 10px;
   }
 `;
-const Body = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+
+const Info = styled.div`
+  flex: 1;
+  min-width: 0;
 `;
 
 const Role = styled.div`
-  font-size: 18px;
-  font-weight: 600px;
-  color: ${({ theme }) => theme.text_primary + 99};
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: 800;
+  color: ${({ theme }) => theme.text_primary};
+  letter-spacing: -0.02em;
+  line-height: 1.3;
 
   @media only screen and (max-width: 768px) {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 `;
-const Company = styled.div`
-  font-size: 14px;
-  font-weight: 500px;
-  color: ${({ theme }) => theme.text_secondary + 99};
 
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-const Date = styled.div`
-  font-size: 12px;
-  font-weight: 400px;
-  color: ${({ theme }) => theme.text_secondary + 80};
-
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
-const Description = styled.div`
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-const Span = styled.div`
-  display: -webkit-box;
-  max-width: 100%;
-`;
-const Skills = styled.div`
-  width: 100%;
+const CompanyRow = styled.div`
   display: flex;
-  gap: 12px;
-  margin-top: -10px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
 `;
-const Skill = styled.div`
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+
+const Company = styled.span`
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: ${({ theme }) => theme.primary};
+
   @media only screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 `;
 
-const ItemWrapper = styled.div`
+const DateBadge = styled.span`
+  font-size: 10px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_tertiary};
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2px 8px;
+  border-radius: 9999px;
+`;
+
+const Divider = styled.div`
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,127,0,0.3),
+    rgba(133,76,230,0.2),
+    transparent
+  );
+`;
+
+const Description = styled.p`
+  font-size: clamp(0.84rem, 1.2vw, 0.93rem);
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary};
+  line-height: 1.7;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 0.84rem;
+  }
+`;
+
+const SkillsSection = styled.div``;
+
+const SkillsLabel = styled.div`
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.text_tertiary};
+  font-family: var(--font-mono);
+  margin-bottom: 8px;
+`;
+
+const SkillsRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 `;
 
+const SkillTag = styled.span`
+  font-size: 11px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.primary};
+  background: rgba(255, 127, 0, 0.08);
+  border: 1px solid rgba(255, 127, 0, 0.20);
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-family: var(--font-mono);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  cursor: default;
+
+  &:hover {
+    background: rgba(255, 127, 0, 0.16);
+    border-color: rgba(255, 127, 0, 0.45);
+    color: ${({ theme }) => theme.primaryLight};
+  }
+`;
+
+// ─── Component ───
 const ExperienceCard = ({ experience }) => {
   const { translate } = useLanguage();
-  const [translatedExperience, setTranslatedExperience] = useState(null);
+  const [translated, setTranslated] = useState(null);
 
   useEffect(() => {
-    const translateExperience = async () => {
-      const skills = Array.isArray(experience.skills) ? experience.skills : [];
-
-      const translated = {
-        ...experience,
-        role: translate(`experience_${experience.id}_role`),
-        company: translate(`experience_${experience.id}_company`),
-        date: translate(`experience_${experience.id}_date`),
-        desc: translate(`experience_${experience.id}_desc`),
-        skills: skills.map((skill) => translate(skill)),
-      };
-
-      setTranslatedExperience(translated);
-    };
-
-    translateExperience();
+    const skills = Array.isArray(experience.skills) ? experience.skills : [];
+    setTranslated({
+      ...experience,
+      role:    translate(`experience_${experience.id}_role`),
+      company: translate(`experience_${experience.id}_company`),
+      date:    translate(`experience_${experience.id}_date`),
+      desc:    translate(`experience_${experience.id}_desc`),
+      skills,
+    });
   }, [experience, translate]);
 
-  if (!translatedExperience) {
-    return <div>Loading...</div>;
-  }
+  if (!translated) return null;
 
   return (
     <VerticalTimelineElement
@@ -119,51 +186,60 @@ const ExperienceCard = ({ experience }) => {
         <img
           width="100%"
           height="100%"
-          alt={translatedExperience.school}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={translatedExperience.img}
+          alt={translated.company}
+          style={{
+            borderRadius: "50%",
+            objectFit: "cover",
+            animation: "glowPulse 3s ease-in-out infinite",
+          }}
+          src={translated.img}
         />
       }
       contentStyle={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
-        border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
+        background: "rgba(17, 25, 40, 0.88)",
+        color: "#F2F3F4",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,127,0,0.10)",
+        border: "1px solid rgba(255, 255, 255, 0.08)",
+        borderRadius: "14px",
+        backdropFilter: "blur(16px)",
+        padding: "20px 24px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
+        borderRight: "7px solid rgba(255, 127, 0, 0.35)",
       }}
-      date={translatedExperience.date}
+      date={translated.date}
     >
-      <Top>
-        <Image src={translatedExperience.img} />
-        <Body>
-          <Role>{translatedExperience.role}</Role>
-          <Company>{translatedExperience.company}</Company>
-          <Date>{translatedExperience.date}</Date>
-        </Body>
-      </Top>
-      <Description>
-        {translatedExperience?.desc && <Span>{translatedExperience.desc}</Span>}
-        {translatedExperience?.skills.length > 0 && (
-          <>
-            <br />
-            <Skills>
-              <b>{translate("skills")}:</b>
-              <ItemWrapper>
-                {translatedExperience?.skills?.map((skill, index) => (
-                  <Skill key={index}>• {skill}</Skill>
-                ))}
-              </ItemWrapper>
-            </Skills>
-          </>
+      <CardWrap>
+        <Top>
+          <CompanyLogo
+            src={translated.img}
+            alt={translated.company}
+            loading="lazy"
+          />
+          <Info>
+            <Role>{translated.role}</Role>
+            <CompanyRow>
+              <Company>{translated.company}</Company>
+              <DateBadge>{translated.date}</DateBadge>
+            </CompanyRow>
+          </Info>
+        </Top>
+
+        <Divider />
+
+        <Description>{translated.desc}</Description>
+
+        {translated.skills.length > 0 && (
+          <SkillsSection>
+            <SkillsLabel>{translate("skills")}</SkillsLabel>
+            <SkillsRow>
+              {translated.skills.map((skill, i) => (
+                <SkillTag key={i}>{skill}</SkillTag>
+              ))}
+            </SkillsRow>
+          </SkillsSection>
         )}
-      </Description>
+      </CardWrap>
     </VerticalTimelineElement>
   );
 };
