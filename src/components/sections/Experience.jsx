@@ -15,9 +15,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   align-items: center;
   padding: 0 16px;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -29,6 +30,8 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1100px;
   gap: 12px;
+  z-index: 10;
+  overflow: hidden;
 `;
 
 const Title = styled(motion.div)`

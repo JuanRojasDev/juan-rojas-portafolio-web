@@ -15,14 +15,9 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 1;
-  /* Orange + purple gradient border-top — original identity */
-  border-top: 1px solid transparent;
-  background-image:
-    linear-gradient(${({ theme }) => theme.bg}, ${({ theme }) => theme.bg}),
-    linear-gradient(90deg, rgba(255,127,0,0.5), rgba(133,76,230,0.5), rgba(255,127,0,0.3));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  z-index: 10;
+  /* Subtle gradient border-top */
+  border-top: 1px solid rgba(255,127,0,0.08);
 `;
 
 const FooterWrapper = styled.div`

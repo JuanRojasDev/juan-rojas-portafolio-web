@@ -70,13 +70,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  background-color: #0E0E1A;
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse 900px 700px at 10% 30%, rgba(255,127,0,0.55) 0%, rgba(255,127,0,0.25) 35%, transparent 55%),
+    radial-gradient(ellipse 850px 650px at 90% 70%, rgba(133,76,230,0.5) 0%, rgba(133,76,230,0.2) 35%, transparent 55%),
+    radial-gradient(ellipse 700px 500px at 50% 50%, rgba(255,100,0,0.3) 0%, transparent 60%),
+    linear-gradient(135deg, #0a0a15 0%, #150a20 25%, #1a0f2e 40%, #2a1545 50%, #1a0f2e 60%, #150a20 75%, #0a0a15 100%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 400% 400%;
+  background-attachment: fixed;
+  animation: gradientShift 25s ease infinite;
   color: #F2F3F4;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle 700px at 20% 40%, rgba(255,127,0,0.4) 0%, rgba(255,127,0,0.15) 30%, transparent 50%),
+    radial-gradient(circle 650px at 80% 60%, rgba(133,76,230,0.35) 0%, rgba(133,76,230,0.12) 30%, transparent 50%);
+  animation: float 30s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255,127,0,0.06) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(133,76,230,0.06) 50%, transparent 52%);
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  overflow: hidden;
 }
 
 #root {
-  background-color: #0E0E1A;
+  position: relative;
+  z-index: 1;
+  background: transparent;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ─── Selection ─── */
@@ -194,6 +239,19 @@ a {
   box-shadow:
     0 0 0 3px rgba(255, 127, 0, 0.4),
     0 0 20px rgba(255, 127, 0, 0.2) !important;
+}
+
+.vertical-timeline {
+  overflow: hidden !important;
+}
+
+.vertical-timeline-element-content {
+  overflow: hidden !important;
+}
+
+.vertical-timeline-element-content::before,
+.vertical-timeline-element-content::after {
+  display: none !important;
 }
 
 /* ─── Responsive helpers ─── */

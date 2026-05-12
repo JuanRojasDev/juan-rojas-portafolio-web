@@ -55,8 +55,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   position: relative;
   padding: 80px 30px;
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  z-index: 10;
   /* Ambient purple glow from top */
   &::before {
     content: '';
@@ -115,7 +114,7 @@ const HeroInnerContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
-  z-index: 1;
+  z-index: 10;
 
   @media (max-width: 960px) {
     flex-direction: column;
@@ -202,9 +201,10 @@ const TextLoop = styled.div`
   min-width: 500px;
 
   @media (max-width: 960px) {
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
     margin-bottom: 16px;
     justify-content: center;
+    text-align: center;
     /* Allow wrap only on very small screens */
     flex-wrap: wrap;
     white-space: normal;
@@ -220,6 +220,12 @@ const Span = styled.span`
   display: inline-block;
   min-width: 400px;
   text-align: left;
+
+  @media (max-width: 960px) {
+    min-width: auto;
+    text-align: center;
+    width: 100%;
+  }
 `;
 
 const SubTitle = styled.div`

@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding: 0 20px;
 `;
 
@@ -58,6 +58,12 @@ const FilterRow = styled(motion.div)`
   margin: 20px 0 36px;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
 `;
 
 const FilterBtn = styled(motion.button)`
@@ -74,8 +80,13 @@ const FilterBtn = styled(motion.button)`
   transition: color 0.2s ease;
   z-index: 1;
   white-space: nowrap;
+  flex-shrink: 0;
 
   &:hover { color: ${({ theme }) => theme.text_primary}; }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const FilterIndicator = styled(motion.div)`
@@ -85,6 +96,91 @@ const FilterIndicator = styled(motion.div)`
   background: linear-gradient(135deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.primaryDark});
   box-shadow: 0 4px 16px rgba(255,127,0,0.35);
   z-index: 0;
+`;
+
+// ─── Mobile Custom Dropdown ───
+const MobileDropdownWrapper = styled.div`
+  display: none;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileDropdownButton = styled(motion.button)`
+  width: 100%;
+  min-width: 280px;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 127, 0, 0.15);
+  border: 2px solid rgba(255, 127, 0, 0.5);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 127, 0, 0.22);
+    border-color: rgba(255, 127, 0, 0.7);
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+    transform: ${({ $isOpen }) => $isOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
+    flex-shrink: 0;
+  }
+`;
+
+const MobileDropdownMenu = styled(motion.div)`
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  min-width: 280px;
+  background: #1e1e2d;
+  border: 2px solid rgba(255, 127, 0, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+`;
+
+const MobileDropdownOption = styled(motion.button)`
+  width: 100%;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: ${({ $active }) => $active ? '#FF7F00' : '#fff'};
+  background: ${({ $active }) => $active ? 'rgba(255, 127, 0, 0.15)' : 'transparent'};
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(255, 127, 0, 0.12);
+    color: #FF7F00;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+`;
+
+// Hide native select completely
+const MobileSelect = styled.select`
+  display: none !important;
 `;
 
 // ─── Bento grid ───
@@ -319,11 +415,19 @@ const FILTERS = [
 // ─── Component ───
 const Projects = ({ openModal, setOpenModal }) => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { translate } = useLanguage();
 
   const filtered = activeFilter === "all"
     ? projects
     : projects.filter((p) => p.category === activeFilter);
+
+  const handleFilterChange = (key) => {
+    setActiveFilter(key);
+    setDropdownOpen(false);
+  };
+
+  const activeFilterLabel = FILTERS.find(f => f.key === activeFilter)?.label || "all";
 
   return (
     <Container id="Projects">
@@ -345,7 +449,7 @@ const Projects = ({ openModal, setOpenModal }) => {
           {translate("projects_desc")}
         </Desc>
 
-        {/* Filter tabs */}
+        {/* Filter tabs - Desktop */}
         <FilterRow
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -370,6 +474,42 @@ const Projects = ({ openModal, setOpenModal }) => {
               </span>
             </FilterBtn>
           ))}
+          
+          {/* Mobile Custom Dropdown */}
+          <MobileDropdownWrapper>
+            <MobileDropdownButton
+              $isOpen={dropdownOpen}
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>{translate(activeFilterLabel)}</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="#FF7F00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </MobileDropdownButton>
+            
+            <AnimatePresence>
+              {dropdownOpen && (
+                <MobileDropdownMenu
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {FILTERS.map(({ key, label }) => (
+                    <MobileDropdownOption
+                      key={key}
+                      $active={activeFilter === key}
+                      onClick={() => handleFilterChange(key)}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {translate(label)}
+                    </MobileDropdownOption>
+                  ))}
+                </MobileDropdownMenu>
+              )}
+            </AnimatePresence>
+          </MobileDropdownWrapper>
         </FilterRow>
 
         {/* Bento grid */}

@@ -74,6 +74,7 @@ const CompanyRow = styled.div`
   align-items: center;
   gap: 8px;
   margin-top: 3px;
+  flex-wrap: wrap;
 `;
 
 const Company = styled.span`
@@ -95,6 +96,11 @@ const DateBadge = styled.span`
   border: 1px solid rgba(255,255,255,0.08);
   padding: 2px 8px;
   border-radius: 9999px;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Divider = styled.div`

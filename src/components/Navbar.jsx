@@ -305,10 +305,43 @@ const MobileMenuBtn = styled(motion.button)`
   justify-content: center;
   cursor: pointer;
   color: ${({ theme }) => theme.primary};
+  position: relative;
 
   @media (max-width: 900px) {
     display: flex;
   }
+
+  /* Animated hamburger to X */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
+    height: 14px;
+    position: relative;
+  }
+
+  .menu-line {
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  ${({ $open }) => $open && `
+    .menu-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .menu-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .menu-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  `}
 `;
 
 const MobileOverlay = styled(motion.div)`
@@ -558,11 +591,16 @@ const Navbar = () => {
 
             {/* Mobile hamburger */}
             <MobileMenuBtn
-              onClick={() => setMobileOpen(true)}
+              $open={mobileOpen}
+              onClick={() => setMobileOpen((prev) => !prev)}
               whileTap={{ scale: 0.9 }}
-              aria-label="Open menu"
+              aria-label="Toggle menu"
             >
-              <MenuRounded style={{ fontSize: 22 }} />
+              <div className="menu-icon">
+                <span className="menu-line"></span>
+                <span className="menu-line"></span>
+                <span className="menu-line"></span>
+              </div>
             </MobileMenuBtn>
           </NavRight>
         </NavBar>
@@ -577,14 +615,6 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
-            <MobileCloseBtn
-              onClick={() => setMobileOpen(false)}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Close menu"
-            >
-              ✕
-            </MobileCloseBtn>
-
             {NAV_SECTIONS.map(({ key, id }, i) => (
               <MobileNavBtn
                 key={id}
