@@ -5,12 +5,6 @@ import { MenuRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
-// ─── Keyframes ───
-const activeDot = keyframes`
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.6; transform: scale(0.7); }
-`;
-
 // ─── Nav root — STICKY, full-width background ───
 const NavRoot = styled(motion.header)`
   position: sticky;

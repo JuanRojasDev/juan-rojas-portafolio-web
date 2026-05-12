@@ -37,23 +37,6 @@ const orbitSpin = keyframes`
   to   { transform: rotate(360deg); }
 `;
 
-const meteorFall = keyframes`
-  0% {
-    transform: translate(-100px, -100px) rotate(-45deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(800px, 800px) rotate(-45deg);
-    opacity: 0;
-  }
-`;
-
 const borderGlow = keyframes`
   0%, 100% { box-shadow: 0 0 20px rgba(255,127,0,0.4), 0 0 60px rgba(133,76,230,0.15); }
   50%       { box-shadow: 0 0 40px rgba(255,127,0,0.7), 0 0 80px rgba(133,76,230,0.30); }

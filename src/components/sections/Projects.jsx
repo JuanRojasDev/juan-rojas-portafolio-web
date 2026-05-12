@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../../data/constants";
 import { useLanguage } from "../../context/LanguageContext";
-import ProjectDetails from "../Dialog/ProjectDetails";
-
-// ─── Keyframes ───
-const shimmer = keyframes`
-  0%   { background-position: -200% 0; }
-  100% { background-position:  200% 0; }
-`;
 
 // ─── Layout ───
 const Container = styled.div`

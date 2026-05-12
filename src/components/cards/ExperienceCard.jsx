@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useLanguage } from "../../context/LanguageContext";
-
-// ─── Keyframes ───
-const glowPulse = keyframes`
-  0%, 100% { box-shadow: 0 0 0 3px rgba(255,127,0,0.3), 0 0 16px rgba(255,127,0,0.15); }
-  50%       { box-shadow: 0 0 0 3px rgba(255,127,0,0.6), 0 0 28px rgba(255,127,0,0.30); }
-`;
 
 // ─── Styled Components ───
 
