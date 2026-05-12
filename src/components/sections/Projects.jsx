@@ -312,7 +312,7 @@ const cardVariants = {
 const FILTERS = [
   { key: "all",              label: "all" },
   { key: "web app",          label: "web_apps" },
-  { key: "android app",      label: "android_apps" },
+  { key: "mobile app",      label: "android_apps" },
   { key: "machine learning", label: "machine_learning" },
 ];
 

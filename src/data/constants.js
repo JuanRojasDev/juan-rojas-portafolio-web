@@ -410,78 +410,23 @@ export const experiences = [
 
 export const projects = [
   {
-    id: 9,
-    title: "Houseplant Store",
-    date: "September 2024 - September 2024",
-    description:
-      "This project is about a plant store developed in React that uses Redux for state management. The main purpose of the project is to offer a platform for selling plants, allowing users to explore different product options, add items to the shopping cart, and manage their transactions efficiently. The focus on Redux ensures that the application handles state efficiently, facilitating inventory updates, tracking customer selections, and managing orders. Additionally, the interface design aims to be attractive and functional, offering a smooth experience on both mobile and desktop devices.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314558560-162c81c9-826a-4dbb-b354-2d24b9541e94.png?alt=media&token=19b7ddf7-a48c-46b1-ae31-7e720d3c9554",
-    tags: [
-      "React Js",
-      "HTML",
-      "CSS",
-      "Redux",
-      "JavaScript",
-      "Material UI",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/Houseplant-Store",
-    webapp: "https://houseplant-store.vercel.app/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 11,
-    title: "2 Type",
-    date: "March 2024 - March 2023",
-    description:
-      "A web page connected through 2 APIs, one from TheMovieDB and GoogleTranslate created with VueJS and Material UI. It has a home page where users can view a list of movies. It has a search bar where users can search for movies by their title, it also has a translator, search filter by genre, mode change, and pagination. At the bottom of the page, I created a footer with my data and the page's data.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/333447692-2840b2ba-62c4-4136-9c98-634d90534577.png?alt=media&token=1b9aff5e-f465-4dbf-b676-ee282154d858",
-    tags: [
-      "Vue Js",
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "Material UI",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/API-Peliculas",
-    webapp: "https://2type.vercel.app/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
     id: 0,
-    title: "Podstream",
-    date: "Apr 2023 - May 2023",
+    title: "AITEC - Sitio Web Corporativo",
+    date: "Ene 2026 - Mar 2026",
     description:
-      "Supported a complete web application that allows users to search, play, and pause their favorite podcasts on demand and create podcasts. User authentication was implemented using Google Auth and Jwt Auth, a responsive user interface was created with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "Desarrollé el sitio web corporativo completo para AITEC, una empresa líder en soluciones tecnológicas. El proyecto incluyó diseño responsivo, optimización SEO, integración de formularios de contacto, y secciones informativas sobre servicios y productos. Implementé un diseño moderno y profesional que refleja la identidad de la marca y mejora la experiencia del usuario.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314565375-7a4d7a7f-06d5-432f-b880-6a31ab57f05d.png?alt=media&token=affaab16-76d9-4784-85a0-29e792275521",
+      "https://i.ibb.co/qMT4nS7D/Aitec-Website.png",
     tags: [
-    "React Js", 
-    "MongoDb", 
-    "Node Js", 
-    "Express Js", 
-    "Redux"
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Next.js",
+      "React",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/Podstream",
-    webapp: "https://podstream.netlify.app/",
+    github: "",
+    webapp: "https://aitec.com.co/",
     member: [
       {
         name: "Juan Andres Rojas",
@@ -489,31 +434,28 @@ export const projects = [
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
     ],
   },
+
   {
-    id: 5,
-    title: "IT Ingenieria - Landing Page",
-    date: "March 2024 - March 2024",
+    id: 1,
+    title: "Inventario Cardex Automotriz",
+    date: "Mar 2024 - Jun 2024",
     description:
-      "Developed a Landing Page for an Engineering company for my Web Programming class. The Landing Page was created with HTML, CSS, and JavaScript. It has a home page with an image slider, a services section, a projects section, a contact section, and a footer.",
+      "Sistema de gestión de inventario automotriz desarrollado con tecnologías modernas. Permite el control completo de piezas, repuestos y vehículos con funcionalidades de registro, búsqueda avanzada, reportes y seguimiento de stock. Implementa autenticación de usuarios, roles y permisos para gestión segura del inventario. Incluye dashboard con métricas en tiempo real y alertas de stock bajo.",
     image:
-    "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314596712-711b5683-aa6f-4403-9daf-8dcaccc6ea67.png?alt=media&token=48b2f8a5-6ce7-4536-8dff-abedd2ca9a38",
+      "https://i.ibb.co/v6ttfrzW/Kardex.png",
     tags: [
-      "HTML", 
-      "CSS", 
-      "JavaScript", 
-      "Material UI"
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Material UI",
+      "JWT",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/IT-Ingenieria-Landingpage/tree/main",
-    webapp: "https://juanrojasdev.github.io/IT-Ingenieria-Landingpage/",
+    github: "https://github.com/JuanRojasDev/inventario-cardex",
+    webapp: "https://frontend-aktua.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
@@ -525,42 +467,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Brain Tumor Detection",
-    date: "Jan 2023 - Mar 2023",
-    description:
-      "Supported a Web Application which preprocessed and augmented the dataset to improve model accuracy, trained the model, improved the API using the model and Python, and used the React web application for the project interface. Achievements: Achieved 99.2% accuracy in accurately detecting brain tumors from medical images.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image2.png?alt=media&token=b5434934-a5ec-4b26-9066-01353631320a",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/JuanRojasDev/Brain-Tumor-Detection/tree/main",
-    webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-    ],
-  },
-  {
-    id: 3,
     title: "Snake Meta",
     date: "Nov 2023 - Nov 2024",
     description:
       "The Mobile Application is planned to be launched on Playstore in November 2024. This project proposes the 'Development of a Mobile Application to prevent, inform, and preserve the different species of snakes in Meta'. It keeps a record of all the snakes in the Department through an API with their Taxonomy, Data, Information, and Georeferencing. It has the Google Maps API to georeference the snake in the user room database. Made with Flutter in MVVM Architecture and Live Data.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/314591666-1aeb68fe-2a23-440d-b877-39d57a317eef.png?alt=media&token=24e9af9b-5027-4f25-a17f-611a303e1c5c",
+      "https://i.ibb.co/ffbchB6/1710953065501.jpg",
     tags: [
       "Python",
-      "Flask",
       "FastAPI",
       "Flutter",
       "SQLAlchemy",
@@ -568,7 +482,7 @@ export const projects = [
       "Firebase",
       "Google Maps API",
     ],
-    category: "android app",
+    category: "mobile app",
     github: "https://github.com/JuanRojasDev/Snake-Meta/tree/main",
     webapp: "https://drive.google.com/file/d/1_r6n5F9CfS1D_fHqH1YTVAttY6iJlGXn/view?usp=sharing",
     member: [
@@ -581,17 +495,16 @@ export const projects = [
     ],
   },
   {
-    id: 10,
+    id: 3,
     title: "Aktua",
     date: "Feb 2024 - May 2024",
     description:
       "Developed a PWA (Progressive Web Application) in a Scrum framework with the aim of creating and fostering united, safe, and collaborative neighborhood communities. Used Python to connect with FastAPI, Uvicorn, Poetry services, and SqlAlchemy for database connection with PostgreSQL. Created services for Posts, Comments, and Ratings for users and Dockerized the project to make it cross-platform. With Flutter, we created the application for mobile devices, making it compatible with iOS and Android.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image3.png?alt=media&token=6476cf9e-c421-4bde-9457-181712350c13",
+      "https://i.ibb.co/rDfB3Hh/1710960857056.jpg",
     tags: [
       "Docker",
       "Python",
-      "Flask",
       "SQLAlchemy",
       "FastAPI",
       "PostgreSQL",
@@ -599,7 +512,7 @@ export const projects = [
       "Flutter",
       "JWT",
     ],
-    category: "android app",
+    category: "mobile app",
     github: "https://github.com/Aktua-co",
     webapp: "https://cloud.protopie.io/p/9e25b9516ea6b9c252f5179d",
     member: [
@@ -618,91 +531,7 @@ export const projects = [
     ],
   },
   {
-    id: 1,
-    title: "Tableros",
-    date: "March 2024 - March 2024",
-    description:
-      "It is an application that uses Vue.js to create and manage visual boards, probably with the aim of displaying data, metrics, or information organized in cards or panels. This project could include functionalities such as: Creation, editing, and deletion of custom boards or cards. Interaction with data dynamically and in real-time. Use of Vue.js components to structure the interface modularly, allowing a smooth and responsive user experience. Possible integration with charts or visualizations to represent information visually. The project can be ideal for practicing the creation of interactive and reactive interfaces using the Vue.js framework.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/326130970-6b55f41f-f319-4be7-920a-89e2932d6bbe.png?alt=media&token=894dfbab-72c7-4a29-a83d-3e97fa5a18c7",
-    tags: [
-      "VueJs",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "GoogleAPI",
-      "Material UI",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/Tableros-vue.js",
-    webapp: "https://tableros-vue-js.vercel.app/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: "Landing Page Unillanos",
-    date: "Oct 2022 - Jan 2023",
-    description:
-      "Designed and developed a Landing Page with Astro, Tailwind CSS, and Material UI, it is a web page dedicated to acknowledgments for our graduation of study companions. I implemented a creative design where you can see the acknowledgment speech in several languages, English and Spanish, and I also implemented a photo carousel of the students who will graduate. I followed up on the landing page to improve the effectiveness and warmth of the project.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/339564117-1ae8ef4b-5976-46f3-a734-bf104aeef405.png?alt=media&token=e95c48ca-fdaf-4779-acbc-192d88e5263a",
-    tags: [
-      "Astro",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind CSS",
-      "Material UI",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/landing-page-unillanos",
-    webapp: "https://acknowledgment-c1.vercel.app/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 13,
-    title: "AITEC - Sitio Web Corporativo",
-    date: "Ene 2021 - Dic 2022",
-    description:
-      "Desarrollé el sitio web corporativo completo para AITEC, una empresa líder en soluciones tecnológicas. El proyecto incluyó diseño responsivo, optimización SEO, integración de formularios de contacto, y secciones informativas sobre servicios y productos. Implementé un diseño moderno y profesional que refleja la identidad de la marca y mejora la experiencia del usuario.",
-    image:
-      "https://aitec.com.co/wp-content/uploads/2023/03/logo-aitec-blanco.png",
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "WordPress",
-      "PHP",
-      "MySQL",
-    ],
-    category: "web app",
-    github: "",
-    webapp: "https://aitec.com.co/",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 14,
+    id: 4,
     title: "UEFA Champions League Bracket",
     date: "Feb 2025 - Feb 2025",
     description:
@@ -729,49 +558,24 @@ export const projects = [
     ],
   },
   {
-    id: 15,
-    title: "Vite Clima - Weather App",
-    date: "Mar 2024 - Mar 2024",
+    id: 5,
+    title: "Landing Page Unillanos",
+    date: "Oct 2022 - Jan 2023",
     description:
-      "Modern weather application built with Vite for fast development and optimal performance. Integrates with weather APIs to provide real-time weather information, forecasts, and location-based data. Features a clean, intuitive interface with smooth animations and responsive design for all devices.",
+      "Designed and developed a Landing Page with Astro, Tailwind CSS, and Material UI, it is a web page dedicated to acknowledgments for our graduation of study companions. I implemented a creative design where you can see the acknowledgment speech in several languages, English and Spanish, and I also implemented a photo carousel of the students who will graduate. I followed up on the landing page to improve the effectiveness and warmth of the project.",
     image:
-      "https://cdn-icons-png.flaticon.com/512/1163/1163661.png",
+      "https://i.ibb.co/xbr5HwF/speechunillanos.png",
     tags: [
-      "Vite",
-      "JavaScript",
-      "React",
-      "Weather API",
-      "CSS",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/vite-clima",
-    webapp: "",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 16,
-    title: "React Calculator",
-    date: "Mar 2024 - Mar 2024",
-    description:
-      "Fully functional calculator application built with React. Implements basic arithmetic operations with a clean, modern interface. Demonstrates proficiency in React state management, component architecture, and event handling. Features responsive design and smooth user interactions.",
-    image:
-      "https://cdn-icons-png.flaticon.com/512/4490/4490662.png",
-    tags: [
-      "React",
-      "JavaScript",
+      "Astro",
       "HTML",
       "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Material UI",
     ],
     category: "web app",
-    github: "https://github.com/JuanRojasDev/react-calculadora",
-    webapp: "",
+    github: "https://github.com/JuanRojasDev/landing-page-unillanos",
+    webapp: "https://acknowledgment-c1.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
@@ -782,52 +586,17 @@ export const projects = [
     ],
   },
   {
-    id: 17,
-    title: "Realtime Chat Application",
-    date: "Jul 2025 - Jul 2025",
+    id: 6,
+    title: "Brain Tumor Detection",
+    date: "Jan 2023 - Mar 2023",
     description:
-      "Real-time chat application built with TypeScript featuring instant messaging, user authentication, and online status indicators. Implements WebSocket technology for real-time communication, with a modern UI and support for multiple chat rooms. Includes message history, typing indicators, and user presence features.",
+      "Supported a Web Application which preprocessed and augmented the dataset to improve model accuracy, trained the model, improved the API using the model and Python, and used the React web application for the project interface. Achievements: Achieved 99.2% accuracy in accurately detecting brain tumors from medical images.",
     image:
-      "https://cdn-icons-png.flaticon.com/512/2190/2190552.png",
-    tags: [
-      "TypeScript",
-      "React",
-      "WebSocket",
-      "Node.js",
-      "Socket.io",
-      "MongoDB",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/realtime-chat",
-    webapp: "",
-    member: [
-      {
-        name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
-        linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
-        github: "https://github.com/JuanRojasDev",
-      },
-    ],
-  },
-  {
-    id: 18,
-    title: "TodoList API - .NET",
-    date: "Mar 2025 - Mar 2025",
-    description:
-      "RESTful API for task management built with C#, .NET, ASP.NET, and SQL Server. Implements full CRUD operations for todo items with user authentication and authorization. Features include task categorization, priority levels, due dates, and completion tracking. Demonstrates proficiency in backend development with Microsoft technologies.",
-    image:
-      "https://cdn-icons-png.flaticon.com/512/2387/2387635.png",
-    tags: [
-      "C#",
-      ".NET",
-      "ASP.NET",
-      "SQL Server",
-      "REST API",
-      "Entity Framework",
-    ],
-    category: "web app",
-    github: "https://github.com/JuanRojasDev/TodoListApi",
-    webapp: "",
+      "https://i.ibb.co/C3ytVB25/314571746-55a41049-970d-43d0-adad-5f4d97d40ac6.png",
+    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
+    category: "machine learning",
+    github: "https://github.com/JuanRojasDev/Brain-Tumor-Detection/tree/main",
+    webapp: "https://brain-tumor.netlify.app/",
     member: [
       {
         name: "Juan Andres Rojas",
