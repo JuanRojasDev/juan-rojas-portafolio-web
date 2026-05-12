@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
