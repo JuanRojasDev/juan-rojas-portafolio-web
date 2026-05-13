@@ -178,11 +178,6 @@ const MobileDropdownOption = styled(motion.button)`
   }
 `;
 
-// Hide native select completely
-const MobileSelect = styled.select`
-  display: none !important;
-`;
-
 // ─── Bento grid ───
 // First project is featured (large), rest are standard
 const BentoGrid = styled(motion.div)`

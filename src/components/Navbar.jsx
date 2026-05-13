@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Bio } from "../data/constants";
-import { MenuRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -370,24 +369,6 @@ const MobileNavBtn = styled(motion.button)`
   transition: color 0.2s ease;
 
   &:hover { color: ${({ theme }) => theme.primary}; }
-`;
-
-const MobileCloseBtn = styled(motion.button)`
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background: rgba(255, 127, 0, 0.1);
-  border: 1px solid rgba(255, 127, 0, 0.25);
-  border-radius: 9999px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: ${({ theme }) => theme.primary};
-  font-size: 20px;
-  font-weight: 700;
 `;
 
 const MobileLangRow = styled.div`
