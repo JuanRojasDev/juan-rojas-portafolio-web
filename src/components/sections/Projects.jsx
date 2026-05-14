@@ -196,7 +196,7 @@ const BentoGrid = styled(motion.div)`
   }
 `;
 
-// ─── Project card — cinematic hover reveal ───
+// ─── Project card ───
 const CardRoot = styled(motion.article)`
   position: relative;
   border-radius: 16px;
@@ -242,7 +242,6 @@ const CardOverlay = styled.div`
   transition: opacity 0.4s ease;
 `;
 
-// Content that slides up on hover
 const CardContent = styled.div`
   position: absolute;
   bottom: 0;
@@ -260,14 +259,9 @@ const CardTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  opacity: 0;
-  transform: translateY(12px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
-
-  ${CardRoot}:hover & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 `;
 
 const CardTag = styled.span`
@@ -306,28 +300,18 @@ const CardDesc = styled.p`
   -webkit-line-clamp: ${({ $featured }) => $featured ? 3 : 2};
   -webkit-box-orient: vertical;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
-
-  ${CardRoot}:hover & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 `;
 
 const CardFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0;
-  transform: translateY(8px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.35s ease 0.15s, transform 0.35s ease 0.15s;
-
-  ${CardRoot}:hover & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 `;
 
 const CardMembers = styled.div`

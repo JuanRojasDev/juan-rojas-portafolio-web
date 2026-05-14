@@ -4,9 +4,9 @@ import { Bio } from "../data/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
-// ─── Nav root — STICKY, full-width background ───
+// ─── Nav root — fixed, full-width background ───
 const NavRoot = styled(motion.header)`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -30,6 +30,14 @@ const NavRoot = styled(motion.header)`
       ? "0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,127,0,0.06)"
       : "none"};
   transition: all 0.4s ease;
+
+  @media (max-width: 900px) {
+    background: rgba(9, 9, 23, 0.94);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border-bottom: 1px solid rgba(255,127,0,0.12);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,127,0,0.06);
+  }
 `;
 
 // The actual bar — inner container, transparent (NavRoot handles bg)

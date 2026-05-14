@@ -16,8 +16,6 @@ const FooterContainer = styled.footer`
   justify-content: center;
   position: relative;
   z-index: 10;
-  /* Subtle gradient border-top */
-  border-top: 1px solid rgba(255,127,0,0.08);
 `;
 
 const FooterWrapper = styled.div`
@@ -116,20 +114,6 @@ const SocialIcon = styled(motion.a)`
   }
 `;
 
-const Divider = styled.div`
-  width: 100%;
-  max-width: 600px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(133,76,230,0.3),
-    rgba(255,127,0,0.3),
-    transparent
-  );
-  margin: 4px 0;
-`;
-
 const Copyright = styled.p`
   font-size: 0.82rem;
   color: ${({ theme }) => theme.soft2};
@@ -207,8 +191,6 @@ const Footer = () => {
             <GmailIcon fontSize="inherit" />
           </SocialIcon>
         </SocialRow>
-
-        <Divider />
 
         <Copyright>© 2026 Juan Andres Rojas. All rights reserved.</Copyright>
       </FooterWrapper>

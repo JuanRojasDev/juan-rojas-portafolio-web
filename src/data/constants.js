@@ -366,7 +366,7 @@ export const experiences = [
     role: "Desarrollador Web Full Stack",
     company: "BodyTech y Athletic Gym",
     date: "27 Mar, 2025 - 19 Ene, 2026",
-    desc: "• Diseñé y desarrollé aplicaciones web utilizando PHP (Phalcon) y React, priorizando rendimiento, seguridad y mantenibilidad. Implementé autenticación y control de acceso basado en roles (RBAC) con políticas de permisos granulares para módulos internos. Desarrollé APIs REST y modelé bases de datos relacionales optimizadas para consultas de alto volumen. Integré el sistema de PQRS con la plataforma web, WhatsApp Business API y correo electrónico, automatizando la captura, enrutamiento y seguimiento de casos. Además, colaboré con los equipos de producto y diseño para entregar interfaces responsivas y accesibles alineadas con la identidad de marca. Mejoré la calidad del código mediante code reviews y pruebas automatizadas, reduciendo defectos en producción. También implementé tareas programadas (cron jobs) para actualizar datos periódicamente de forma confiable y optimicé consultas backend, logrando reducir los tiempos de carga de aplicaciones internas en más del 30% y agilizando procesos comerciales.",
+    desc: "• Desarrollé aplicaciones web con PHP (Phalcon) y React, creando APIs REST, autenticación RBAC y módulos internos seguros. Integré PQRS con web, WhatsApp Business API y correo, automaticé procesos clave y optimicé consultas backend, reduciendo tiempos de carga en más del 30%.",
     skills: [
       "React",
       "PHP",
@@ -414,7 +414,7 @@ export const projects = [
     title: "AITEC - Sitio Web Corporativo",
     date: "Ene 2026 - Mar 2026",
     description:
-      "Desarrollé el sitio web corporativo completo para AITEC, una empresa líder en soluciones tecnológicas. El proyecto incluyó diseño responsivo, optimización SEO, integración de formularios de contacto, y secciones informativas sobre servicios y productos. Implementé un diseño moderno y profesional que refleja la identidad de la marca y mejora la experiencia del usuario.",
+      "Desarrollé el sitio web corporativo completo para AITEC, una empresa líder en soluciones ambientales. El proyecto incluyó diseño responsivo, optimización SEO, integración de formularios de contacto y secciones informativas sobre servicios y productos. Implementé una experiencia moderna y profesional alineada con la identidad de la marca.",
     image:
       "https://i.ibb.co/qMT4nS7D/Aitec-Website.png",
     tags: [
@@ -430,7 +430,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -440,7 +440,7 @@ export const projects = [
   {
     id: 1,
     title: "Inventario Cardex Automotriz",
-    date: "Mar 2024 - Jun 2024",
+    date: "Abr 2026 - May 2026",
     description:
       "Sistema de gestión de inventario automotriz desarrollado con tecnologías modernas. Permite el control completo de piezas, repuestos y vehículos con funcionalidades de registro, búsqueda avanzada, reportes y seguimiento de stock. Implementa autenticación de usuarios, roles y permisos para gestión segura del inventario. Incluye dashboard con métricas en tiempo real y alertas de stock bajo.",
     image:
@@ -459,7 +459,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -488,7 +488,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -518,7 +518,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -533,11 +533,11 @@ export const projects = [
   {
     id: 4,
     title: "UEFA Champions League Bracket",
-    date: "Feb 2025 - Feb 2025",
+    date: "May 2026 - May 2026",
     description:
-      "Interactive bracket visualization for the UEFA Champions League tournament. Users can view match results, team statistics, and tournament progression in real-time. Built with modern JavaScript frameworks to provide a smooth and engaging user experience with dynamic updates and responsive design.",
+      "Pronóstico interactivo para la UEFA Champions League. Permite arrastrar equipos entre rondas y armar, de forma simple, quién crees que gana cada cruce hasta llegar al campeón.",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1200px-UEFA_Champions_League_logo_2.svg.png",
+      "https://i.ibb.co/RG4vPKXV/mi-bracket-champions-league-1.png",
     tags: [
       "JavaScript",
       "React",
@@ -547,11 +547,11 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/JuanRojasDev/uefa-champions-league-bracket",
-    webapp: "",
+    webapp: "https://uefa-champions-league-bracket.vercel.app/",
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -560,7 +560,7 @@ export const projects = [
   {
     id: 5,
     title: "Landing Page Unillanos",
-    date: "Oct 2022 - Jan 2023",
+    date: "May 2024 - Jun 2024",
     description:
       "Designed and developed a Landing Page with Astro, Tailwind CSS, and Material UI, it is a web page dedicated to acknowledgments for our graduation of study companions. I implemented a creative design where you can see the acknowledgment speech in several languages, English and Spanish, and I also implemented a photo carousel of the students who will graduate. I followed up on the landing page to improve the effectiveness and warmth of the project.",
     image:
@@ -579,7 +579,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },
@@ -600,7 +600,7 @@ export const projects = [
     member: [
       {
         name: "Juan Andres Rojas",
-        img: "https://firebasestorage.googleapis.com/v0/b/images-38de5.appspot.com/o/Image4.png?alt=media&token=1dd89fc8-3170-46fc-b62e-b7dc32da860f",
+        img: "https://i.ibb.co/n83kbthZ/114270458.jpg",
         linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
         github: "https://github.com/JuanRojasDev",
       },

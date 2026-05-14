@@ -20,6 +20,7 @@ import ProjectDetails from "./components/Dialog/ProjectDetails";
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
+  padding-top: 72px;
   overflow-x: hidden;
   position: relative;
 `;
