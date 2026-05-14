@@ -10,6 +10,7 @@ export const Bio = {
     "I am a motivated and versatile person, always ready to face new challenges. Passionate about learning, I am dedicated to delivering high-quality results. I possess a positive attitude and a growth mindset, which constantly drives me to improve and develop both personally and professionally.",
   github: "https://github.com/JuanRojasDev",
   resume: "https://drive.google.com/file/d/171_sTgnxImwGVgEDIaILz0B0mko0e9YQ/view?usp=sharing",
+  resume_en: "https://drive.google.com/file/d/1CiLBtWyJ9Rxx-1AUw_R3hRajIYIoDDKM/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/",
   gmail: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DXDwSWxClxbMhjMTtxqgXlxCSLBWRlZKgdDqMKnqvBqbQlWzpthjTBZqRBmwLrnrnrGQctQFGjHFJcrkxCRcWNpcHBQBRBjzbDqgRkTsMJQvtfpWKxcvVjHL",
 };
@@ -404,7 +405,7 @@ export const experiences = [
     role: "Contribuidor de Código Abierto",
     company: "Github Contributor of Code",
     date: "12 Mar 2023 - Present",
-    desc: "Contribuí a diferentes proyectos de código abierto y aprendí de expertos de la industria.",
+    desc: "Contribuyo actualmente a proyectos de código abierto, colaborando con desarrolladores de diferentes partes del mundo y fortaleciendo buenas prácticas de desarrollo.",
   },
 ];
 

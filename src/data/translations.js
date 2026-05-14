@@ -7,6 +7,23 @@ export const translations = {
     projects: "Projects",
     education: "Education",
     contact: "Contact",
+    contact_desc: "Feel free to reach out if you have any questions or opportunities.",
+    contact_info_title: "Let's build something together",
+    contact_info_text: "Open to full-time roles, freelance projects, and interesting collaborations. I usually reply within 24 hours.",
+    contact_available: "Available for work",
+    contact_connect: "Connect with me",
+    contact_form_title: "Send me an email",
+    contact_email_placeholder: "you@email.com",
+    contact_email_error: "Please enter a valid email address.",
+    contact_name_label: "Name",
+    contact_name_placeholder: "Your full name",
+    contact_subject_label: "Subject",
+    contact_subject_placeholder: "How can I help you?",
+    contact_message_label: "Message",
+    contact_message_placeholder: "Tell me about your project...",
+    contact_sending: "Sending...",
+    contact_send: "Send Message",
+    contact_success: "Email sent successfully!",
     hi: "Hi, I am",
     i_am_a: "I am a",
     view_cv: "View CV",
@@ -57,7 +74,7 @@ export const translations = {
   
     {
       id: 1,
-      role: "Fullstack Developer",
+      role: "Full-Stack Developer",
       company: "Snake Meta",
       date: "Nov 10, 2023 - Nov 25, 2024",
       desc: "• Enhanced user experiences using Flutter and Hive for offline-first functionality and local storage. Built JWT authentication and seamless REST API integrations using FastAPI, Flask, and Python. Exported the application to Android and iOS while maintaining updated dependencies and integrating SQLAlchemy with SQLite for database management. Implemented geolocation features using the Google Maps API.",
@@ -94,8 +111,8 @@ export const translations = {
   
     {
       id: 3,
-      role: "Frontend Developer & UI Designer",
-      company: "Bodytech",
+      role: "Full-Stack Developer",
+      company: "Bodytech and Athletic Gym",
       date: "Jan 15, 2024 - Feb 10, 2025",
       desc: "• Collaborated on the development and optimization of modern web interfaces focused on user experience and performance. Worked with React, TypeScript, and Tailwind CSS to build reusable components and responsive designs. Integrated frontend services with REST APIs and contributed to performance optimization, accessibility improvements, and visually engaging interfaces for fitness and wellness platforms.",
       skills: [
@@ -131,7 +148,7 @@ export const translations = {
       role: "Open Source Contributor",
       company: "GitHub Open Source Contributor",
       date: "Mar 12, 2023 - Present",
-      desc: "• Contributed to various open-source projects, collaborating with developers worldwide while learning industry best practices in software development, system architecture, and collaborative engineering.",
+      desc: "• I actively contribute to open-source projects, collaborating with developers worldwide while strengthening best practices in software development, system architecture, and collaborative engineering.",
       skills: [
         "Git",
         "GitHub",
@@ -150,7 +167,7 @@ export const translations = {
   },
   
   experience_1: {
-    role: "Fullstack Developer",
+    role: "Full-Stack Developer",
     company: "Snake Meta",
     date: "Nov 10, 2023 - Nov 25, 2024",
     desc: "• Enhanced user experiences using Flutter and Hive for offline-first functionality and local storage. Built JWT authentication and seamless REST API integrations using FastAPI, Flask, and Python. Exported the application to Android and iOS while maintaining updated dependencies and integrating SQLAlchemy with SQLite for database management. Implemented geolocation features using the Google Maps API.",
@@ -185,8 +202,8 @@ export const translations = {
   },
   
   experience_3: {
-    role: "Frontend Developer & UI Designer",
-    company: "Bodytech",
+    role: "Full-Stack Developer",
+    company: "Bodytech and Athletic Gym",
     date: "Jan 15, 2024 - Feb 10, 2025",
     desc: "• Collaborated on the development and optimization of modern web interfaces focused on user experience and performance. Worked with React, TypeScript, and Tailwind CSS to build reusable components and responsive designs. Integrated frontend services with REST APIs and contributed to performance optimization, accessibility improvements, and visually engaging interfaces for fitness and wellness platforms.",
     skills: [
@@ -220,7 +237,7 @@ export const translations = {
     role: "Open Source Contributor",
     company: "GitHub Open Source Contributor",
     date: "Mar 12, 2023 - Present",
-    desc: "• Contributed to various open-source projects, collaborating with developers worldwide while learning industry best practices in software development, system architecture, and collaborative engineering.",
+    desc: "• I actively contribute to open-source projects, collaborating with developers worldwide while strengthening best practices in software development, system architecture, and collaborative engineering.",
     skills: [
       "Git",
       "GitHub",
@@ -233,7 +250,7 @@ export const translations = {
     experience_0_date: "Mar 1, 2021 - May 30, 2022",
     experience_0_desc: "• Developed an e-commerce website using React JS, HTML, CSS, and JavaScript for a home products company. Focused on improving user experience by creating a highly interactive and responsive interface. Users could easily explore products and directly contact the company through intuitive navigation and optimized UI components.",
 
-    experience_1_role: "Fullstack Developer",
+    experience_1_role: "Full-Stack Developer",
     experience_1_company: "Snake Meta",
     experience_1_date: "Nov 10, 2023 - Nov 25, 2024",
     experience_1_desc: "• Enhanced user experiences using Flutter and Hive for offline-first functionality and local storage. Built JWT authentication and seamless REST API integrations using FastAPI, Flask, and Python. Exported the application to Android and iOS while maintaining updated dependencies and integrating SQLAlchemy with SQLite for database management. Implemented geolocation features using the Google Maps API.",
@@ -243,8 +260,8 @@ export const translations = {
     experience_2_date: "Feb 13, 2024 - May 18, 2024",
     experience_2_desc: "• Developed a PWA using Python, implementing Poetry, Uvicorn, Flask, and FastAPI. Managed PostgreSQL database queries with SQLAlchemy and designed high-level software architecture alongside UI prototypes using ProtoPie Cloud. Built secure and efficient backend endpoints with JWT authentication and optimized API performance by reducing unnecessary requests by 20%. Containerized the application using Docker to streamline deployment and automation workflows.",
 
-    experience_3_role: "Frontend Developer & UI Designer",
-    experience_3_company: "Bodytech",
+    experience_3_role: "Full-Stack Developer",
+    experience_3_company: "Bodytech and Athletic Gym",
     experience_3_date: "Jan 2024 - Dec 2025",
     experience_3_desc: "• Collaborated on the development and optimization of modern web interfaces focused on user experience and performance. Worked with React, TypeScript, and Tailwind CSS to build reusable components and responsive designs. Integrated frontend services with REST APIs and contributed to performance optimization, accessibility improvements, and visually engaging interfaces for fitness and wellness platforms.",
 
@@ -256,7 +273,7 @@ export const translations = {
     experience_5_role: "Open Source Contributor",
     experience_5_company: "GitHub Open Source Contributor",
     experience_5_date: "Mar 12, 2023 - Present",
-    experience_5_desc: "• Contributed to various open-source projects, collaborating with developers worldwide while learning industry best practices in software development, system architecture, and collaborative engineering.",
+    experience_5_desc: "• I actively contribute to open-source projects, collaborating with developers worldwide while strengthening best practices in software development, system architecture, and collaborative engineering.",
     education_school_0: "Rembrandt School",
     education_degree_0: "High School with Business Emphasis",
     education_desc_0: "I graduated from high school in 2021 from Rembrandt School in Bogotá, Colombia. During my time at this institution, I not only acquired academic knowledge but also cultivated fundamental values that have shaped my character and guided my actions. I learned the value of responsibility by fulfilling my school duties and actively participating in extracurricular activities. Honesty became a central pillar in my life by being transparent in my actions and relationships. Empathy flourished in me by understanding my peers' perspectives and providing support when needed.",
@@ -351,6 +368,23 @@ export const translations = {
     projects: "Proyectos",
     education: "Educación",
     contact: "Contacto",
+    contact_desc: "No dudes en comunicarte conmigo si tienes alguna pregunta u oportunidad.",
+    contact_info_title: "Construyamos algo juntos",
+    contact_info_text: "Abierto a roles full-time, proyectos freelance y colaboraciones interesantes. Respondo en menos de 24 horas.",
+    contact_available: "Disponible para trabajar",
+    contact_connect: "Conecta conmigo",
+    contact_form_title: "Envíame un e-mail",
+    contact_email_placeholder: "tu@email.com",
+    contact_email_error: "Por favor ingresa un correo válido.",
+    contact_name_label: "Nombre",
+    contact_name_placeholder: "Tu nombre completo",
+    contact_subject_label: "Asunto",
+    contact_subject_placeholder: "¿En qué puedo ayudarte?",
+    contact_message_label: "Mensaje",
+    contact_message_placeholder: "Cuéntame sobre tu proyecto...",
+    contact_sending: "Enviando...",
+    contact_send: "Enviar mensaje",
+    contact_success: "Correo electrónico enviado correctamente.",
     hi: "Hola, soy",
     i_am_a: "Soy un",
     view_cv: "Ver Hoja de Vida",
@@ -478,7 +512,7 @@ export const translations = {
       role: "Contribuidor de Código Abierto",
       company: "GitHub Open Source Contributor",
       date: "12 Mar, 2023 - Present",
-      desc: "• Contribuí a diferentes proyectos de código abierto, colaborando con desarrolladores de distintas partes del mundo y aprendiendo buenas prácticas de desarrollo, arquitectura de software y trabajo colaborativo.",
+      desc: "• Contribuyo actualmente a proyectos de código abierto, colaborando con desarrolladores de distintas partes del mundo mientras fortalezco buenas prácticas de desarrollo, arquitectura de software y trabajo colaborativo.",
       skills: [
         "Git",
         "GitHub",
@@ -514,7 +548,7 @@ export const translations = {
     experience_5_role: "Contribuidor de Código Abierto",
     experience_5_company: "GitHub Open Source Contributor",
     experience_5_date: "12 Mar, 2023 - Presente",
-    experience_5_desc: "• Contribuí a distintos proyectos de código abierto, colaborando con desarrolladores de diferentes partes del mundo mientras aprendía buenas prácticas de desarrollo de software, arquitectura de sistemas y trabajo colaborativo.",
+    experience_5_desc: "• Contribuyo actualmente a proyectos de código abierto, colaborando con desarrolladores de diferentes partes del mundo mientras fortalezco buenas prácticas de desarrollo de software, arquitectura de sistemas y trabajo colaborativo.",
     // Education translations
     education_school_0: "Colegio Rembrandt",
     education_degree_0: "Bachillerato con Enfasís Empresarial",

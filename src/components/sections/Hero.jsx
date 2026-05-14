@@ -482,9 +482,10 @@ function useMagnetic(strength = 0.35) {
 
 // ─── Component ───
 const Hero = () => {
-  const { translate } = useLanguage();
+  const { language, translate } = useLanguage();
   const primaryMag  = useMagnetic(0.3);
   const secondaryMag = useMagnetic(0.25);
+  const resumeLink = language === "en" && Bio.resume_en ? Bio.resume_en : Bio.resume;
 
   const roles = [
     translate("full_stack_developer"),
@@ -538,7 +539,7 @@ const Hero = () => {
                   onMouseLeave={primaryMag.handleMouseLeave}
                 >
                   <PrimaryBtn
-                    href={Bio.resume}
+                    href={resumeLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileTap={{ scale: 0.96 }}

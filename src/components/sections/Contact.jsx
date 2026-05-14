@@ -425,7 +425,7 @@ const Contact = () => {
   return (
     <Container id="Contact">
       <Snackbar show={sent} onClose={() => setSent(false)}>
-        ¡Correo electrónico enviado correctamente!
+        {translate("contact_success")}
       </Snackbar>
 
       <Wrapper>
@@ -443,7 +443,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          ¡No dudes en comunicarte conmigo si tienes alguna pregunta u oportunidad!
+          {translate("contact_desc")}
         </Desc>
 
         <ContactLayout>
@@ -455,19 +455,18 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <InfoCard>
-              <InfoTitle>Construyamos algo juntos</InfoTitle>
+              <InfoTitle>{translate("contact_info_title")}</InfoTitle>
               <InfoText>
-                Abierto a roles full-time, proyectos freelance y colaboraciones interesantes.
-                Respondo en menos de 24 horas.
+                {translate("contact_info_text")}
               </InfoText>
               <AvailBadge>
                 <span className="dot" />
-                Disponible para trabajar
+                {translate("contact_available")}
               </AvailBadge>
             </InfoCard>
 
             <InfoCard>
-              <InfoTitle style={{ marginBottom: "14px" }}>Conecta conmigo</InfoTitle>
+              <InfoTitle style={{ marginBottom: "14px" }}>{translate("contact_connect")}</InfoTitle>
               <SocialLinks>
                 <SocialLink
                   href={Bio.github}
@@ -516,34 +515,34 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <FormTitle>Enviame un E-Mail 🚀</FormTitle>
+              <FormTitle>{translate("contact_form_title")}</FormTitle>
 
               <FieldGroup>
                 <FieldLabel>Email</FieldLabel>
                 <Input
                   type="email"
                   name="from_email"
-                  placeholder="tu@email.com"
+                  placeholder={translate("contact_email_placeholder")}
                   $error={emailError}
                   onChange={() => setEmailError(false)}
                   required
                 />
-                {emailError && <ErrorMsg>Por favor ingresa un correo válido.</ErrorMsg>}
+                {emailError && <ErrorMsg>{translate("contact_email_error")}</ErrorMsg>}
               </FieldGroup>
 
               <FieldGroup>
-                <FieldLabel>Nombre</FieldLabel>
-                <Input type="text" name="from_name" placeholder="Tu nombre completo" required />
+                <FieldLabel>{translate("contact_name_label")}</FieldLabel>
+                <Input type="text" name="from_name" placeholder={translate("contact_name_placeholder")} required />
               </FieldGroup>
 
               <FieldGroup>
-                <FieldLabel>Asunto</FieldLabel>
-                <Input type="text" name="subject" placeholder="¿En qué puedo ayudarte?" />
+                <FieldLabel>{translate("contact_subject_label")}</FieldLabel>
+                <Input type="text" name="subject" placeholder={translate("contact_subject_placeholder")} />
               </FieldGroup>
 
               <FieldGroup>
-                <FieldLabel>Mensaje</FieldLabel>
-                <Textarea name="message" placeholder="Cuéntame sobre tu proyecto..." rows={4} required />
+                <FieldLabel>{translate("contact_message_label")}</FieldLabel>
+                <Textarea name="message" placeholder={translate("contact_message_placeholder")} rows={4} required />
               </FieldGroup>
 
               <SubmitBtn
@@ -557,7 +556,7 @@ const Contact = () => {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ animation: "spin 1s linear infinite" }}>
                       <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
                     </svg>
-                    Enviando...
+                    {translate("contact_sending")}
                   </>
                 ) : (
                   <>
@@ -565,7 +564,7 @@ const Contact = () => {
                       <line x1="22" y1="2" x2="11" y2="13"/>
                       <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                     </svg>
-                    Enviar Mensaje
+                    {translate("contact_send")}
                   </>
                 )}
               </SubmitBtn>
