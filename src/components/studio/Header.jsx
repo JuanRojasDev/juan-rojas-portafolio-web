@@ -154,8 +154,9 @@ const LANGS = [
 const FLAGS = {
   es: (
     <svg viewBox="0 0 12 8">
-      <rect width="12" height="8" fill="#c60b1e" />
-      <rect y="2" width="12" height="4" fill="#ffc400" />
+      <rect width="12" height="8" fill="#C8102E" />
+      <rect y="2" width="12" height="4" fill="#003087" />
+      <rect width="12" height="4" fill="#FFCD00" />
     </svg>
   ),
   en: (

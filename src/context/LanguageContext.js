@@ -9,7 +9,7 @@ export const LanguageProvider = ({ children }) => {
   const translate = (key) => {
     if (key === "language_icon") {
       return language === "es"
-        ? "https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png"
+        ? "https://em-content.zobj.net/source/apple/129/flag-for-colombia_1f1e8-1f1f4.png"
         : "https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png";
     }
     const keys = key.split('.');

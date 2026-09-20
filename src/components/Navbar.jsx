@@ -470,7 +470,7 @@ const Navbar = () => {
     setMobileOpen(false);
   };
 
-  const CO_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png";
+  const CO_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-colombia_1f1e8-1f1f4.png";
   const EN_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png";
   const currentFlag = language === "es" ? CO_FLAG : EN_FLAG;
 
