@@ -1,6 +1,138 @@
 // src/data/translations.js
+// ─── Copy de la Studio Edition ───
+// Vive aparte del copy antiguo para poder ajustarlo sin tocar lo demás.
+// TODO(Juan): el lede de About sigue siendo un borrador.
+const studioEn = {
+  signature: "Code by",
+  nav_home: "Home",
+  nav_work: "Work",
+  nav_about: "About",
+  nav_contact: "Contact",
+  menu: "Open menu",
+  menu_label: "Menu",
+  close: "Close menu",
+  socials: "Socials",
+  navigation: "Navigation",
+  language: "Language",
+  get_in_touch: "Get in touch",
+  based_in: "Based in",
+  version: "Version",
+  local_time: "Local time",
+
+  available: "Available for work",
+  hero_line_1: "Full-Stack",
+  hero_line_2: "Developer",
+  located: "Located in Bogotá, D.C Colombia",
+  located_l1: "Located in",
+  located_l2: "Bogotá, D.C",
+  located_l3: "Colombia",
+  scroll: "Scroll",
+  statement:
+    "I turn scattered data into systems people actually use: analysis, report automation, AI models, applications — and the design that holds them together.",
+  about_short:
+    "Full stack developer working across web, mobile and AI. I care about systems that hold up after launch, not just demos that look good on a slide.",
+  about_link: "About me",
+  recent_work: "Recent work",
+  more_work: "All work",
+  cta_title: "Let's work together",
+
+  work_title: "Work",
+  cat_all: "All",
+  cat_web: "Web",
+  cat_mobile: "Mobile",
+  cat_ml: "Machine learning",
+
+  meta_role: "Role / Services",
+  meta_credits: "Credits",
+  meta_where: "Location & Year",
+  meta_stack: "Stack",
+  demo_access: "Demo access",
+  demo_user: "User",
+  demo_pass: "Password",
+  live_site: "Live site",
+  next_case: "Next project",
+  all_work: "All work",
+
+  about_title: "About",
+  about_lede:
+    "I am a developer from Colombia. I work across the full stack and I like the part of the job nobody posts about: making the thing actually work.",
+  experience: "Experience",
+  stack: "Stack",
+  education: "Education",
+  resume: "Résumé",
+
+  contact_title: "Contact",
+  send: "Send",
+  send_error: "Something went wrong. Write me directly instead.",
+};
+
+const studioEs = {
+  signature: "Código por",
+  nav_home: "Inicio",
+  nav_work: "Proyectos",
+  nav_about: "Acerca",
+  nav_contact: "Contacto",
+  menu: "Abrir menú",
+  menu_label: "Menú",
+  close: "Cerrar menú",
+  socials: "Redes",
+  navigation: "Navegación",
+  language: "Idioma",
+  get_in_touch: "Escríbeme",
+  based_in: "Ubicado en",
+  version: "Versión",
+  local_time: "Hora local",
+
+  available: "Disponible para trabajar",
+  hero_line_1: "Desarrollador",
+  hero_line_2: "Full-Stack",
+  located: "Ubicado en Bogotá, D.C Colombia",
+  located_l1: "Ubicado en",
+  located_l2: "Bogotá, D.C",
+  located_l3: "Colombia",
+  scroll: "Scroll",
+  statement:
+    "Convierto datos dispersos en sistemas que se usan a diario: análisis, automatización de informes, modelos de IA, aplicaciones — y el diseño que los sostiene.",
+  about_short:
+    "Desarrollador full stack entre web, móvil e IA. Me importa que los sistemas aguanten después del lanzamiento, no que se vean bien en una diapositiva.",
+  about_link: "Sobre mí",
+  recent_work: "Trabajo reciente",
+  more_work: "Todo el trabajo",
+  cta_title: "Trabajemos juntos",
+
+  work_title: "Proyectos",
+  cat_all: "Todos",
+  cat_web: "Web",
+  cat_mobile: "Móvil",
+  cat_ml: "Machine learning",
+
+  meta_role: "Rol / Servicios",
+  meta_credits: "Créditos",
+  meta_where: "Lugar & Año",
+  meta_stack: "Stack",
+  demo_access: "Acceso de prueba",
+  demo_user: "Usuario",
+  demo_pass: "Contraseña",
+  live_site: "Ver sitio",
+  next_case: "Siguiente proyecto",
+  all_work: "Todo el trabajo",
+
+  about_title: "Acerca",
+  about_lede:
+    "Soy desarrollador, de Colombia. Trabajo en todo el stack y me gusta la parte del oficio que nadie publica: que la cosa funcione de verdad.",
+  experience: "Experiencia",
+  stack: "Stack",
+  education: "Educación",
+  resume: "Hoja de vida",
+
+  contact_title: "Contacto",
+  send: "Enviar",
+  send_error: "Algo falló. Escríbeme directamente.",
+};
+
 export const translations = {
   en: {
+    studio: studioEn,
     about: "About",
     skills: "Skills",
     experience: "Experience",
@@ -362,6 +494,7 @@ export const translations = {
     },
   },
   es: {
+    studio: studioEs,
     about: "Acerca",
     skills: "Habilidades",
     experience: "Experiencia",

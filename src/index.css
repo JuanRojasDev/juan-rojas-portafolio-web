@@ -1,54 +1,123 @@
-/* ─── Juan Rojas Portfolio 2026 — Global Styles ─── */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");
+/* ─── Tipografía: PP Neue Montreal (misma familia que dennissnellenberg.com) ─── */
+/* Pack personal Free Use v3.0 — sin Medium; 500 usa Semibold. */
 
-/* ─── CSS Custom Properties ─── */
-:root {
-  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
-
-  /* Fluid type scale — bold, cinematic */
-  --text-xs:   clamp(0.72rem,  0.9vw,  0.78rem);
-  --text-sm:   clamp(0.85rem,  1.1vw,  0.9rem);
-  --text-base: clamp(0.95rem,  1.3vw,  1rem);
-  --text-lg:   clamp(1.05rem,  1.6vw,  1.15rem);
-  --text-xl:   clamp(1.15rem,  2vw,    1.3rem);
-  --text-2xl:  clamp(1.4rem,   2.5vw,  1.6rem);
-  --text-3xl:  clamp(1.7rem,   3vw,    2rem);
-  --text-4xl:  clamp(2.1rem,   4vw,    2.8rem);
-  --text-5xl:  clamp(2.6rem,   5vw,    3.8rem);
-  --text-6xl:  clamp(3.2rem,   6vw,    5rem);
-  --text-7xl:  clamp(3.8rem,   8vw,    6.5rem);
-
-  /* Spacing */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 9999px;
-
-  /* Transitions */
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --duration-fast: 150ms;
-  --duration-base: 250ms;
-  --duration-slow: 400ms;
-  --duration-slower: 600ms;
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* ─── Reset ─── */
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 450 */
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Regular.otf") format("opentype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Semibold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontreal-Extrabold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("./fonts/neue-montreal/PPNeueMontrealText-Book.otf") format("opentype");
+  font-weight: 375;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Misma familia tipográfica del referente (PP Neue Montreal) */
+  --font-sans: "PP Neue Montreal", "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  /* ─── Color: los mismos valores del referente ─── */
+  --paper: #ffffff;
+  --paper-white: #ffffff;
+  --paper-warm: #e9eaeb;
+  --ink: #1c1d20;
+  --ink-dark: #141517;
+  --ink-soft: #999d9e;
+  --ink-faint: #999d9e;
+  --rule: rgba(28, 29, 32, 0.175);
+  --rule-solid: #d2d2d2;
+
+  --accent: #455ce9;
+  --accent-deep: #334bd3;
+  --accent-hover: #5c6ef5;
+
+  --color-white: #ffffff;
+  --paper-on-ink: #ffffff;
+  --ink-soft-on-ink: rgba(255, 255, 255, 0.55);
+  --rule-on-ink: rgba(255, 255, 255, 0.2);
+  --color-border-light: rgba(255, 255, 255, 0.2);
+  --shadow-inset: rgba(255, 255, 255, 0.2) 0 0 0 1px inset;
+
+  /* ─── Tipografía ───
+     El referente parte de 16px y escala en em. El h1 de un caso mide
+     100.8px a 1440 (7vw) y los rótulos 10.368px (0.648em). */
+  --display-hero: clamp(5.5rem, 17vw, 14.375rem);
+  --display-1: clamp(3.4rem, 7vw, 6.3rem);
+  --display-2: clamp(2.4rem, 5vw, 4em);
+  --display-3: clamp(1.75rem, 3.5vw, 2.05rem);
+  --body-lg: clamp(1.35rem, 2.2vw, 1.7rem);
+  --body: 1rem;
+  --body-sm: 0.875rem;
+  --nav: 1rem;
+  --label: 0.648rem;
+
+  /* El referente no aprieta el texto: todo va con tracking normal */
+  --tracking-display: normal;
+  --tracking-tight: normal;
+  --tracking-body: normal;
+  --tracking-label: 0.05em;
+
+  /* ─── Espaciado del referente ─── */
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+  --gutter: clamp(2.5em, 8vw, 8em);
+  --section: clamp(5em, 21vh, 12em);
+  --max: 1600px;
+  --radius-pill: 36.72px;
+
+  /* ─── Curvas del referente ─── */
+  --ease: cubic-bezier(0.7, 0, 0.3, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
 *,
 *::before,
 *::after {
@@ -58,206 +127,105 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
   font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.6;
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: var(--tracking-body);
+  background: var(--paper);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   min-height: 100vh;
-  background: 
-    radial-gradient(ellipse 900px 700px at 10% 30%, rgba(255,127,0,0.55) 0%, rgba(255,127,0,0.25) 35%, transparent 55%),
-    radial-gradient(ellipse 850px 650px at 90% 70%, rgba(133,76,230,0.5) 0%, rgba(133,76,230,0.2) 35%, transparent 55%),
-    radial-gradient(ellipse 700px 500px at 50% 50%, rgba(255,100,0,0.3) 0%, transparent 60%),
-    linear-gradient(135deg, #0a0a15 0%, #150a20 25%, #1a0f2e 40%, #2a1545 50%, #1a0f2e 60%, #150a20 75%, #0a0a15 100%);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 400% 400%;
-  background-attachment: fixed;
-  animation: gradientShift 25s ease infinite;
-  color: #F2F3F4;
-  position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: 
-    radial-gradient(circle 700px at 20% 40%, rgba(255,127,0,0.4) 0%, rgba(255,127,0,0.15) 30%, transparent 50%),
-    radial-gradient(circle 650px at 80% 60%, rgba(133,76,230,0.35) 0%, rgba(133,76,230,0.12) 30%, transparent 50%);
-  animation: float 30s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
+/* El cursor del sistema se mantiene siempre: la bolita va ADEMAS de el,
+   igual que en el referente. Los clicables llevan su puntero de mano. */
+a,
+button,
+[role="button"],
+label,
+summary,
+input[type="submit"] {
+  cursor: pointer;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(45deg, transparent 48%, rgba(255,127,0,0.06) 50%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(133,76,230,0.06) 50%, transparent 52%);
-  background-size: 100px 100px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.5;
-  overflow: hidden;
-}
-
-#root {
-  position: relative;
-  z-index: 1;
-  background: transparent;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* ─── Selection ─── */
-::selection {
-  background: rgba(255, 127, 0, 0.30);
-  color: #F2F3F4;
-}
-
-/* ─── Scrollbar ─── */
-::-webkit-scrollbar {
-  width: 4px;
-  height: 80px;
-}
-::-webkit-scrollbar-track {
-  background: #222a35;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 127, 0, 0.5);
-  border-radius: var(--radius-full);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 127, 0, 0.8);
-}
-
-/* ─── Focus visible ─── */
-:focus-visible {
-  outline: 2px solid rgba(255, 127, 0, 0.6);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* ─── Images ─── */
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
-/* ─── Links ─── */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* ─── Gradient text utility ─── */
-.gradient-text {
-  background: linear-gradient(90deg, #FF7F00 0%, #FFA040 50%, #FFD700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
 }
 
-/* ─── Glass surface ─── */
-.glass {
-  background: rgba(17, 17, 30, 0.80);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+::selection {
+  background: var(--ink);
+  color: var(--paper-on-ink);
 }
 
-/* ─── Orange glow ─── */
-.glow-orange {
-  box-shadow: 0 0 40px rgba(255,127,0,0.25), 0 0 80px rgba(255,127,0,0.08);
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
-/* ─── Keyframes ─── */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(28, 29, 32, 0.28);
+  border-radius: 99px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--label);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  line-height: 1.2;
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
+.reveal-line {
+  display: block;
+  overflow: hidden;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-@keyframes orbitSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* ─── Vertical Timeline overrides ─── */
-.vertical-timeline::before {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 127, 0, 0.7) 0%,
-    rgba(133, 76, 230, 0.4) 60%,
-    transparent 100%
-  ) !important;
-  width: 2px !important;
-}
-
-.vertical-timeline-element-icon {
-  box-shadow:
-    0 0 0 3px rgba(255, 127, 0, 0.4),
-    0 0 20px rgba(255, 127, 0, 0.2) !important;
-}
-
-.vertical-timeline {
-  overflow: hidden !important;
-}
-
-.vertical-timeline-element-content {
-  overflow: hidden !important;
-}
-
-.vertical-timeline-element-content::before,
-.vertical-timeline-element-content::after {
-  display: none !important;
-}
-
-/* ─── Responsive helpers ─── */
-@media (max-width: 768px) {
-  .hide-mobile { display: none !important; }
-}
-@media (min-width: 769px) {
-  .hide-desktop { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

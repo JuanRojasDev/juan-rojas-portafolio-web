@@ -1,82 +1,152 @@
-# My Portfolio
-Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
+# Juan Andrés Rojas - Portfolio
 
-### Weblink: [Live Website](https://juanrojas.vercel.app/)
+Portfolio personal de desarrollo web con diseño inspirado en las mejores prácticas de la industria. Presenta mis habilidades, proyectos y experiencia como desarrollador Full-Stack.
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/17e0e958-e7e5-403a-b077-0a467dd20730)
+### 🌐 Website: [juanrojas.vercel.app](https://juanrojas.vercel.app/)
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/00db3baf-9907-4411-8e34-0b24490cd061)
+## ✨ Características
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/00f5a556-6193-4097-a4ee-13743b0533d1)
+- **Diseño Moderno**: Implementación pixel-perfect con animaciones suaves y transiciones elegantes
+- **Cursor Personalizado**: Cursor interactivo con `mix-blend-mode` y efectos magnéticos
+- **Smooth Scrolling**: Integración de Lenis para navegación fluida
+- **Animaciones Avanzadas**: GSAP y Framer Motion para efectos visuales impactantes
+- **Preloader Animado**: Carga inicial con contador y saludos multiidioma
+- **Responsive Design**: Optimizado para todos los dispositivos
+- **Multiidioma**: Soporte completo para Español e Inglés
+- **Modo Oscuro**: Secciones con paleta oscura para mejor contraste
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/24256f7d-bbff-44fa-9dbb-1d8c32d64ec5)
+## 🚀 Tecnologías
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/f8377390-4322-4a4f-a9ff-e7ecb83e2086)
+- **Frontend**: React 18, React Router DOM
+- **Styling**: Styled Components
+- **Animaciones**: GSAP, Framer Motion, Lenis
+- **3D**: Three.js, React Three Fiber
+- **Formularios**: EmailJS
+- **Internacionalización**: React i18next
+- **Build**: React Scripts
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d11257c0-59a5-4347-aa2d-3acb7c232836)
+## 📦 Instalación
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d7848372-400e-4445-9f2d-872aa0c6da90)
+```bash
+# Clonar el repositorio
+git clone https://github.com/JuanRojasDev/juan-rojas-portafolio-web.git
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/d8461d05-f94f-4f0c-9909-e5768b726faa)
+# Navegar al directorio
+cd juan-rojas-portafolio-web
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/aa61d29e-75ec-47bd-911a-cb444380dd57)
+# Instalar dependencias
+npm install
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/007eda7b-23ce-423f-b8fe-4fd082dea58d)
+# Iniciar servidor de desarrollo
+npm start
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/14b8ecc9-3efd-4575-b991-c84832e88804)
+# Construir para producción
+npm run build
+```
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/2323007d-159c-4a7e-aed4-576d0b720249)
+## 🎨 Estructura del Proyecto
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/105d5fff-b991-467a-bcf8-a1c1a957b1d4)
+```
+src/
+├── components/
+│   ├── canvas/          # Componentes 3D (Three.js)
+│   ├── cards/           # Tarjetas de proyectos, experiencia
+│   ├── sections/        # Secciones principales
+│   └── studio/          # Componentes reutilizables
+├── pages/               # Páginas del sitio
+├── data/                # Datos y constantes
+├── context/             # Context API (idioma, etc.)
+├── hooks/               # Custom hooks
+├── images/              # Imágenes y assets
+└── utils/               # Utilidades y helpers
+```
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/daf590b5-db80-40fc-bb16-2338d42208c1)
+## 🎯 Secciones
 
-![image](https://github.com/JuanRojasDev/juan-rojas-portafolio-web/assets/114270458/0277f181-a97e-48fc-abb5-98825851e89e)
+1. **Hero** - Presentación con animación marquee y foto
+2. **About** - Información personal y profesional
+3. **Work** - Portfolio de proyectos destacados
+4. **Skills** - Habilidades técnicas y frameworks
+5. **Experience** - Experiencia laboral
+6. **Education** - Formación académica
+7. **Contact** - Formulario de contacto
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## 🔧 Configuración
 
-## Introduction
-My Portfolio is a React.js application that serves as an online portfolio to showcase my work, skills, and achievements. It provides an overview of my background, displays my projects, and offers a way to contact me.
+### Variables de Entorno
 
-## Features
-- About Me: An overview of my background, skills, and experiences.
-- Projects: A collection of my notable projects with descriptions, screenshots, and links.
-- Skills: A list of my technical skills and proficiencies.
-- Resume: A link to download my resume.
-- Contact: A form to send me messages or inquiries.
+```env
+REACT_APP_EMAILJS_SERVICE_ID=tu_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=tu_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=tu_public_key
+```
 
-## Technologies Used
-- React.js: A JavaScript library for building user interfaces.
-- HTML5 & CSS3: Markup and styling languages for building web pages.
-- JavaScript: A programming language for adding interactivity to web applications.
-- Style-Components: A CSS framework for creating responsive and mobile-first designs.
-- Git: A version control system for tracking changes and collaborating on projects.
-- GitHub Pages: A platform for hosting and deploying web applications.
+### Personalización
 
-## Installation
-To run this portfolio locally, follow these steps:
+1. Actualiza `src/data/constants.js` con tu información personal
+2. Reemplaza las imágenes en `public/` y `src/images/`
+3. Modifica los colores en `src/index.css` (variables CSS)
+4. Ajusta las traducciones en `src/data/translations.js`
 
-1. Clone the repository: `git clone https://github.com/JuanRojasDev/juan-rojas-portafolio-web.git`
-2. Navigate to the project directory: `cd juan-rojas-portafolio-web`
-3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and visit: `http://localhost:3000`
+## 📱 Características Responsive
 
-## Usage
-After installing and running the project locally, you can navigate through the different sections of the portfolio using the navigation menu. Explore the About Me section to learn more about my background and skills. Visit the Projects section to see detailed information about my projects, including descriptions and screenshots. Use the Contact section to send me a message or inquiry.
+- **Desktop** (> 960px): Experiencia completa con cursor personalizado
+- **Tablet** (720px - 960px): Layout adaptado, animaciones optimizadas
+- **Mobile** (< 720px): Diseño vertical, navegación simplificada
 
-## Contributing
-Contributions are welcome! If you'd like to contribute to My Portfolio, please follow these steps:
+## 🎨 Sistema de Diseño
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b my-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-feature`
-5. Open a pull request.
+### Tipografía
+- **Principal**: PP Neue Montreal
+- **Fallback**: Inter, System Sans
+
+### Paleta de Colores
+- **Paper**: `#999d9e` (Fondo claro)
+- **Ink**: `#1c1d20` (Texto principal)
+- **Accent**: `#455ce9` (Color de énfasis)
+
+### Animaciones
+- **Entrada**: `expo.out` (1.2s)
+- **Hover**: `ease` (0.4s)
+- **Scroll**: ScrollTrigger con reveal effects
+
+## 🚀 Deploy
+
+### Vercel (Recomendado)
+```bash
+npm run build
+vercel --prod
+```
+
+### GitHub Pages
+```bash
+npm run deploy
+```
+
+## 📄 Documentación Adicional
+
+Consulta [DENNIS-SNELLENBERG-IMPLEMENTATION.md](./DENNIS-SNELLENBERG-IMPLEMENTATION.md) para detalles técnicos de la implementación del diseño.
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Para cambios importantes:
+
+1. Fork el repositorio
+2. Crea una rama (`git checkout -b feature/nueva-caracteristica`)
+3. Commit tus cambios (`git commit -m 'Agrega nueva característica'`)
+4. Push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
+
+## 📧 Contacto
+
+- **Email**: rojassalinasjuanandres@gmail.com
+- **LinkedIn**: [Juan Andrés Rojas](https://www.linkedin.com/in/juan-andres-rojas-salinas-2a74b31bb/)
+- **GitHub**: [@JuanRojasDev](https://github.com/JuanRojasDev)
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+Desarrollado con ❤️ por Juan Andrés Rojas

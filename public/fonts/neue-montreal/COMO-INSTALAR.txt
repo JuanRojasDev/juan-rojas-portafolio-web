@@ -1,0 +1,9 @@
+# PP Neue Montreal — Free for Personal Use v3.0
+# Instalado desde Downloads. Solo para portafolio personal (EULA Pangram).
+#
+# Archivos:
+#   PPNeueMontreal-Light.otf
+#   PPNeueMontreal-Regular.otf
+#   PPNeueMontreal-Semibold.otf   (usado como weight 500 y 600; el pack no incluye Medium)
+#   PPNeueMontreal-Extrabold.otf
+#   PPNeueMontrealText-Book.otf
