@@ -122,19 +122,7 @@ vercel --prod
 ```bash
 npm run deploy
 ```
-
-## 📄 Documentación Adicional
-
-Consulta [DENNIS-SNELLENBERG-IMPLEMENTATION.md](./DENNIS-SNELLENBERG-IMPLEMENTATION.md) para detalles técnicos de la implementación del diseño.
-
-## 🤝 Contribuir
-
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-1. Fork el repositorio
-2. Crea una rama (`git checkout -b feature/nueva-caracteristica`)
-3. Commit tus cambios (`git commit -m 'Agrega nueva característica'`)
-4. Push a la rama (`git push origin feature/nueva-caracteristica`)
+re/nueva-caracteristica`)
 5. Abre un Pull Request
 
 ## 📧 Contacto
