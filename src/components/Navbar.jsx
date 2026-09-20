@@ -470,9 +470,9 @@ const Navbar = () => {
     setMobileOpen(false);
   };
 
-  const ES_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png";
+  const CO_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-spain_1f1ea-1f1f8.png";
   const EN_FLAG = "https://em-content.zobj.net/source/apple/129/flag-for-united-states_1f1fa-1f1f8.png";
-  const currentFlag = language === "es" ? ES_FLAG : EN_FLAG;
+  const currentFlag = language === "es" ? CO_FLAG : EN_FLAG;
 
   return (
     <>
@@ -548,7 +548,7 @@ const Navbar = () => {
                       onClick={() => toggleLang("es")}
                       whileTap={{ scale: 0.97 }}
                     >
-                      <img src={ES_FLAG} alt="ES" />
+                      <img src={CO_FLAG} alt="ES" />
                       Español
                       <span className="check">✓</span>
                     </LangOption>
@@ -618,7 +618,7 @@ const Navbar = () => {
 
             <MobileLangRow>
               <MobileLangBtn $active={language === "es"} onClick={() => toggleLang("es")}>
-                <img src={ES_FLAG} alt="ES" /> Español
+                <img src={CO_FLAG} alt="ES" /> Español
               </MobileLangBtn>
               <MobileLangBtn $active={language === "en"} onClick={() => toggleLang("en")}>
                 <img src={EN_FLAG} alt="EN" /> English
